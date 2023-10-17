@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.logoSection {
+  display: flex;
+  margin-right: auto;
+}
+
+.navigation {
+  display: flex;
+  list-style-type: none;
+}
+
+.navigation > li > a {
+  text-decoration: none;
+}
