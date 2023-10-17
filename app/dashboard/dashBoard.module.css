@@ -21,3 +21,17 @@
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
+
+.video {
+  display: flex;
+  width: 200px;
+  height: 350px;
+  border: 1px solid black;
+  margin: 0.8rem;
+}
+
+.videoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem;
+}
