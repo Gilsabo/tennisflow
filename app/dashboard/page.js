@@ -37,8 +37,34 @@ export default function Dashboard() {
           </ul>
         </sidebar>
 
-        <div>
-          <div></div>
+        <div className={styles.videoContainer}>
+          <div className={styles.video}>
+            <div>video</div>
+          </div>
+          <div className={styles.video}>
+            <div>video</div>
+          </div>
+          <div className={styles.video}>
+            <div>video</div>
+          </div>
+          <div className={styles.video}>
+            <div>video</div>
+          </div>
+          <div className={styles.video}>
+            <div>video</div>
+          </div>
+          <div className={styles.video}>
+            <div>video</div>
+          </div>
+          <div className={styles.video}>
+            <div>video</div>
+          </div>
+          <div className={styles.video}>
+            <div>video</div>
+          </div>
+          <div className={styles.video}>
+            <div>video</div>
+          </div>
         </div>
       </main>
     </>
