@@ -34,6 +34,12 @@ export default function Dashboard() {
             <li>
               <a href="/">History</a>
             </li>
+            <li>
+              <a href="/">Most viewed</a>
+            </li>
+            <li>
+              <a href="/">Most commented</a>
+            </li>
           </ul>
         </sidebar>
 
