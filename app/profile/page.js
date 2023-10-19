@@ -1,4 +1,5 @@
 import styles from './profile.module.css';
+import ProfileImage from './ProfileImage';
 
 export default function Profile() {
   return (
@@ -33,6 +34,7 @@ export default function Profile() {
           Repeat passowrd
           <input />
         </label>
+        <ProfileImage />
       </form>
     </div>
   );
