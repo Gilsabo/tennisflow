@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "next dev",
+    "lint": "next lint",
+    "migrate": "ley",
+    "start": "next start"
   },
   "dependencies": {
+    "cloudinary": "^1.41.0",
+    "dotenv": "^16.3.1",
+    "ley": "^0.8.1",
     "next": "13.5.5",
     "react": "^18",
     "react-dom": "^18",
