@@ -1,4 +1,5 @@
 import styles from './dashBoard.module.css';
+import Video from './video';
 
 export default function Dashboard() {
   return (
@@ -9,6 +10,7 @@ export default function Dashboard() {
           <div>tennisoverflow - </div>
           <span>- logo </span>
         </div>
+
         <nav>
           <form action="/search" method="get">
             <label>
@@ -18,7 +20,10 @@ export default function Dashboard() {
             <button type="button">Search</button>
           </form>
         </nav>
-        <a href="/">upload</a>
+        <label>
+          Upload:
+          <input type="file" />
+        </label>
         <a href="/">notification</a>
         <button>log out</button>
       </header>
@@ -35,6 +40,9 @@ export default function Dashboard() {
               <a href="/">History</a>
             </li>
             <li>
+              <a href="/">Players</a>
+            </li>
+            <li>
               <a href="/">Most viewed</a>
             </li>
             <li>
@@ -45,7 +53,7 @@ export default function Dashboard() {
 
         <div className={styles.videoContainer}>
           <div className={styles.video}>
-            <div>video</div>
+            <Video />
           </div>
           <div className={styles.video}>
             <div>video</div>
