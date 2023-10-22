@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './dashBoard.module.css';
 import Video from './video';
 
@@ -31,22 +32,23 @@ export default function Dashboard() {
         <sidebar>
           <ul>
             <li>
-              <a href="/">Profile</a>
+              <Link href="/dashboard/history"> History</Link>
             </li>
             <li>
-              <a href="/">My videos</a>
+              <Link href="/dashboard/profile"> Profile</Link>
             </li>
             <li>
-              <a href="/">History</a>
+              <Link href="/dashboard/my-videos"> My videos</Link>
             </li>
             <li>
-              <a href="/">Players</a>
+              <Link href="/dashboard/players"> Players</Link>
+            </li>
+
+            <li>
+              <Link href="/dashboard/most-commented"> Most commented</Link>
             </li>
             <li>
-              <a href="/">Most viewed</a>
-            </li>
-            <li>
-              <a href="/">Most commented</a>
+              <Link href="/dashboard/most-viewed"> Most viewed</Link>
             </li>
           </ul>
         </sidebar>
