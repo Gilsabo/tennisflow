@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function Myvidos() {
-  return <div>Myvidos</div>;
+  return <div>My vidos</div>;
 }
