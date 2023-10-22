@@ -37,4 +37,3 @@ cloudinary.v2.uploader
   .catch((err) => {
     console.err(err);
   });
-cloudinary();
