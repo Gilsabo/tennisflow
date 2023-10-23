@@ -1,5 +1,26 @@
 import { Sql } from 'postgres';
 
+export type Animal = {
+  id: number;
+  firstName: string;
+  type: string;
+  accessory: string | null;
+};
+
+export type Users = {
+  id: string;
+  userName: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+  age: number;
+  profilePictureUrl: string | null;
+  yearsExperience: number;
+  dominantHand: string;
+  description: string;
+};
+
 export async function up(sql: Sql) {
   await sql`
   CREATE TABLE users(
