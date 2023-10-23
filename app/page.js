@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -31,8 +32,8 @@ export default function Home() {
           </ul>
         </nav>
         <div>
-          <button>Sign up</button>
-          <button>Log in</button>
+          <Link href="/register">Register</Link>
+          <Link href="/login">Log in</Link>
         </div>
       </header>
       <main>
