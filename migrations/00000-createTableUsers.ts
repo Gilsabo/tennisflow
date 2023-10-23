@@ -1,13 +1,6 @@
 import { Sql } from 'postgres';
 
-export type Animal = {
-  id: number;
-  firstName: string;
-  type: string;
-  accessory: string | null;
-};
-
-export type Users = {
+export type User = {
   id: string;
   userName: string;
   firstName: string;
