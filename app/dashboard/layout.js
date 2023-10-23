@@ -31,7 +31,7 @@ export default function Layout({ children }) {
         <sidebar>
           <ul>
             <li>
-              <Link href="/dashboard"> Main</Link>
+              <Link href="/dashboard"> Home</Link>
             </li>
             <li>
               <Link href="/dashboard/history"> History</Link>
