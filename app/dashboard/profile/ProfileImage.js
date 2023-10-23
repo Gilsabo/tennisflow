@@ -7,7 +7,7 @@ export default function ProfileImage() {
     const formData = new FormData();
     formData.append('file', imageSelected);
     formData.append('upload_preset', 'gm0xdnab');
-    fetch('https://api.cloudinary.com/v1_1/dqiq3eutn/video/upload', {
+    fetch('https://api.cloudinary.com/v1_1/dqiq3eutn/image/upload', {
       method: 'POST',
       body: formData,
     })
