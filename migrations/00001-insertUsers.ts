@@ -82,7 +82,7 @@ export async function up(sql: Sql) {
 export async function down(sql: Sql) {
   for (const user of users) {
     await sql`
-  DELETE FROM user WHERE id = ${user.id}
+  DELETE FROM users WHERE id = ${user.id}
   `;
   }
 }
