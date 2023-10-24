@@ -26,7 +26,7 @@ export default function RegistrationForm() {
       return;
     }
 
-    router.push('/');
+    router.push(`/dashboard/profile/${data.user.userName}`);
   }
 
   return (

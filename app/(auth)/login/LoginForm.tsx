@@ -25,7 +25,7 @@ export default function LoginFrom() {
       return;
     }
 
-    router.push('/');
+    router.push(`/dashboard/profile/${data.user.userName}`);
   }
 
   return (
