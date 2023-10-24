@@ -24,7 +24,7 @@ export const createUser = cache(
       (${userName}, ${passwordHash})
     RETURNING
       id,
-      userName
+      user_name
     `;
     return user;
   },
