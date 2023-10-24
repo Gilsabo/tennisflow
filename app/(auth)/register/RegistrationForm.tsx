@@ -14,11 +14,12 @@ export default function RegistrationForm() {
     const response = await fetch('/api/register', {
       method: 'POST',
       body: JSON.stringify({
-        userName: userName,
-        password: password,
+        userName,
+        password,
       }),
     });
     const data: RegisterResponseBodyPost = await response.json();
+    console.log('data', data);
 
     if ('errors' in data) {
       setErrors(data.errors);
@@ -27,6 +28,7 @@ export default function RegistrationForm() {
 
     router.push('/');
   }
+
   return (
     <>
       <div>RegistrationForm</div>
