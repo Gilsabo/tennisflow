@@ -29,3 +29,30 @@ export const createUser = cache(
     return user;
   },
 );
+
+export const getUserByUsername = cache(async (userName: string) => {
+  const [user] = await sql<User[]>`
+    SELECT
+      id,
+      user_name
+    FROM
+      users
+    WHERE
+      user_name = ${userName.toLowerCase()}
+  `;
+  return user;
+});
+
+export const getUserWithPasswordHashByUsername = cache(
+  async (userName: string) => {
+    const [user] = await sql<UserWithPasswordHash[]>`
+    SELECT
+      *
+    FROM
+      users
+    WHERE
+      user_Name = ${userName.toLowerCase()}
+  `;
+    return user;
+  },
+);
