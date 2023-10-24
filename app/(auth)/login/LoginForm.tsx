@@ -1,9 +1,12 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { getSafeReturnToPath } from '../../../util/validation';
 import { LoginResponseBodyPost } from '../../api/(auth)/login/route';
 
-export default function LoginFrom() {
+type Props = { returnTo?: string | string[] };
+
+export default function LoginFrom(props: Props) {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState<{ message: string }[]>([]);
@@ -24,8 +27,15 @@ export default function LoginFrom() {
       setErrors(data.errors);
       return;
     }
+    // not secure way
+    // if (props.returnTo) {
+    //   router.push(props.returnTo);
+    // }
 
-    router.push(`/dashboard/profile/${data.user.userName}`);
+    router.push(
+      getSafeReturnToPath(props.returnTo) ||
+        `/dashboard/profile/${data.user.userName}`,
+    );
   }
 
   return (
