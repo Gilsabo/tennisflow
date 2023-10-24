@@ -3,7 +3,6 @@ import { Sql } from 'postgres';
 export type User = {
   id: number;
   userName: string;
-  passwordHash: string;
 };
 
 export async function up(sql: Sql) {
