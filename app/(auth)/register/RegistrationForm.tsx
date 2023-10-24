@@ -1,9 +1,13 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { RegisterResponseBodyPost } from '../../api/(auth)/register/route';
 
 export default function RegistrationForm() {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState<{ message: string }[]>([]);
+  const router = useRouter();
 
   async function handleRegister(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -14,8 +18,14 @@ export default function RegistrationForm() {
         password: password,
       }),
     });
-    const data = response.json();
-    console.log('check:', data);
+    const data: RegisterResponseBodyPost = await response.json();
+
+    if ('errors' in data) {
+      setErrors(data.errors);
+      return;
+    }
+
+    router.push('/');
   }
   return (
     <>
@@ -33,6 +43,11 @@ export default function RegistrationForm() {
           />
         </label>
         <button>Register</button>
+        {errors.map((error) => (
+          <div className="error" key={`error-${error.message}`}>
+            Error: {error.message}
+          </div>
+        ))}
       </form>
     </>
   );
