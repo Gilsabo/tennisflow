@@ -5,6 +5,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { createSession } from '../../../../database/sessions';
 import { getUserWithPasswordHashByUsername } from '../../../../database/users';
+import { secureCookieOptions } from '../../../../util/cookies';
 
 const loginSchema = z.object({
   userName: z.string().min(3),
@@ -73,11 +74,7 @@ export async function POST(
   cookies().set({
     name: 'sessionToken',
     value: session.token,
-    httpOnly: true,
-    path: '/',
-    secure: process.env.NODE_ENV === 'production',
-    maxAge: 60 * 60 * 24, // expire in 24 hours
-    sameSite: 'lax', // this prevents CSRF attacks
+    ...secureCookieOptions,
   });
 
   return NextResponse.json({
