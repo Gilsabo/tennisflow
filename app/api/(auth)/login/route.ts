@@ -1,5 +1,6 @@
 import crypto from 'node:crypto';
 import bcrypt from 'bcrypt';
+import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { createSession } from '../../../../database/sessions';
@@ -62,7 +63,22 @@ export async function POST(
 
   const session = await createSession(userWithPasswordHash.id, token);
 
-  console.log('sessions', session);
+  if (!session) {
+    return NextResponse.json(
+      { errors: [{ message: 'Error creating the new session' }] },
+      { status: 401 },
+    );
+  }
+
+  cookies().set({
+    name: 'sessionToken',
+    value: session.token,
+    httpOnly: true,
+    path: '/',
+    secure: process.env.NODE_ENV === 'production',
+    maxAge: 60 * 60 * 24, // expire in 24 hours
+    sameSite: 'lax', // this prevents CSRF attacks
+  });
 
   return NextResponse.json({
     user: { userName: userWithPasswordHash.userName },
