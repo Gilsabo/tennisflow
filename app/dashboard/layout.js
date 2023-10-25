@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import LogoutButton from '../(auth)/logout/LogoutButton';
 import styles from './dashBoard.module.css';
 
 export default function Layout({ children }) {
@@ -25,7 +26,7 @@ export default function Layout({ children }) {
           <input type="file" />
         </label>
         <a href="/">notification</a>
-        <button>log out</button>
+        <LogoutButton />
       </header>
       <main className={styles.mainContainer}>
         <sidebar>
