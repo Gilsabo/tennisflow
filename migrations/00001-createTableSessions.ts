@@ -2,7 +2,7 @@ import { Sql } from 'postgres';
 
 export type Session = {
   id: number;
-  toke: string;
+  token: string;
   userId: number;
 };
 
