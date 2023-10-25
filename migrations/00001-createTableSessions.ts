@@ -8,12 +8,12 @@ export type Session = {
 
 export async function up(sql: Sql) {
   await sql`
-    CREATE TABLE sessions{
+    CREATE TABLE sessions(
       id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
       token varchar(150) NOT NULL UNIQUE,
       expiry_timestamp timestamp NOT NULL DEFAULT NOW() + INTERVAL '24 hours',
       user_id integer NOT NULL REFERENCES users (id) ON DELETE CASCADE
-    };
+    );
   `;
 }
 
