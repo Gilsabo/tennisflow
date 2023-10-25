@@ -1,3 +1,4 @@
+import crypto from 'node:crypto';
 import bcrypt from 'bcrypt';
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
@@ -36,7 +37,6 @@ export async function POST(
   const userWithPasswordHash = await getUserWithPasswordHashByUsername(
     result.data.userName,
   );
-  console.log('userrrrr', userWithPasswordHash);
 
   if (!userWithPasswordHash) {
     return NextResponse.json(
@@ -50,19 +50,16 @@ export async function POST(
     userWithPasswordHash.passwordHash,
   );
 
-  console.log(
-    'checkkk',
-    isPasswordValid,
-    result.data.password,
-    userWithPasswordHash.passwordHash,
-  );
-
   if (!isPasswordValid) {
     return NextResponse.json(
       { errors: [{ message: 'username or password not valid' }] },
       { status: 401 },
     );
   }
+
+  const token = crypto.randomBytes(100).toString('base64');
+
+  console.log('token', token);
 
   return NextResponse.json({
     user: { userName: userWithPasswordHash.userName },
