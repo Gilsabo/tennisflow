@@ -2,6 +2,7 @@ import crypto from 'node:crypto';
 import bcrypt from 'bcrypt';
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
+import { createSession } from '../../../../database/sessions';
 import { getUserWithPasswordHashByUsername } from '../../../../database/users';
 
 const loginSchema = z.object({
@@ -59,7 +60,9 @@ export async function POST(
 
   const token = crypto.randomBytes(100).toString('base64');
 
-  console.log('token', token);
+  const session = await createSession(userWithPasswordHash.id, token);
+
+  console.log('sessions', session);
 
   return NextResponse.json({
     user: { userName: userWithPasswordHash.userName },
