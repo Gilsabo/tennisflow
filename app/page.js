@@ -1,7 +1,16 @@
+import { cookies } from 'next/headers';
 import Link from 'next/link';
+import { getUserBySessionToken } from '../database/users';
+import LogoutButton from './(auth)/logout/LogoutButton';
 import styles from './page.module.css';
 
-export default function Home() {
+export default async function Home() {
+  const cookieStore = cookies();
+  const sessionToken = cookieStore.get('sessionToken');
+
+  const user =
+    sessionToken && (await getUserBySessionToken(sessionToken.value));
+
   return (
     <>
       <header className={styles.header}>
@@ -32,8 +41,17 @@ export default function Home() {
           </ul>
         </nav>
         <div>
-          <Link href="/register">Register</Link>
-          <Link href="/login">Log in</Link>
+          {user ? (
+            <>
+              <div>{user.userName}</div>
+              <LogoutButton />
+            </>
+          ) : (
+            <>
+              <Link href="/register">Register</Link>
+              <Link href="/login">Log in</Link>
+            </>
+          )}
         </div>
       </header>
       <main>
