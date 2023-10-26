@@ -36,6 +36,8 @@ export default function LoginFrom(props: Props) {
       getSafeReturnToPath(props.returnTo) ||
         `/dashboard/profile/${data.user.userName}`,
     );
+    // solves problems with refreshing. RevalidatePath()
+    router.refresh();
   }
 
   return (

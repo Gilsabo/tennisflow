@@ -27,6 +27,8 @@ export default function RegistrationForm() {
     }
 
     router.push(`/dashboard/profile/${data.user.userName}`);
+    // solves problems with refreshing. RevalidatePath()
+    router.refresh();
   }
 
   return (
