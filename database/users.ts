@@ -61,7 +61,7 @@ export const getUserBySessionToken = cache(async (token: string) => {
   const [user] = await sql<User[]>`
    SELECT
       users.id,
-      users.username
+      users.user_name
     FROM
       users
     INNER JOIN
