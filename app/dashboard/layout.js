@@ -27,6 +27,7 @@ export default function Layout({ children }) {
         </label>
         <a href="/">notification</a>
         <LogoutButton />
+        <Link href="/dashboard/admin">Admin</Link>
       </header>
       <main className={styles.mainContainer}>
         <sidebar>
