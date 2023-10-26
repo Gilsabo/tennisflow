@@ -1,8 +1,16 @@
+import { cookies } from 'next/headers';
 import Link from 'next/link';
 import LogoutButton from '../(auth)/logout/LogoutButton';
+import { getUserBySessionToken } from '../../database/users';
 import styles from './dashBoard.module.css';
 
-export default function Layout({ children }) {
+export default async function Layout({ children }) {
+  const cookieStore = cookies();
+  const sessionToken = cookieStore.get('sessionToken');
+
+  const user =
+    sessionToken && (await getUserBySessionToken(sessionToken.value));
+
   return (
     <>
       <div>Dashboard</div>
@@ -26,6 +34,7 @@ export default function Layout({ children }) {
           <input type="file" />
         </label>
         <a href="/">notification</a>
+        {user ? <div>{user.userName}</div> : ''}
         <LogoutButton />
         <Link href="/dashboard/admin">Admin</Link>
       </header>
