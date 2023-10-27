@@ -56,7 +56,13 @@ export default async function Layout({ children }) {
               <Link href="/dashboard/history"> History</Link>
             </li>
             <li>
-              <Link href={`/dashboard/profile/${user.userName}`}> Profile</Link>
+              {user ? (
+                <Link href={`/dashboard/profile/${user.userName}`}>
+                  Profile
+                </Link>
+              ) : (
+                <Link href="/dashboard/profile"> Profile</Link>
+              )}
             </li>
             <li>
               <Link href="/dashboard/my-videos"> My videos</Link>
