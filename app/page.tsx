@@ -55,14 +55,14 @@ export default async function Home() {
         </div>
       </header>
       <main>
-        <hero className={styles.container} id="#home">
+        <div className={styles.container} id="#home">
           <h1>Elevate Your Game with Tennis Enthusiasts Community!</h1>
           <h3>
             Upload your tennis strokes, get expert feedback, and level up your
             skills with our supportive community.
           </h3>
           <p>Get started</p>
-        </hero>
+        </div>
         <section className={styles.container}>
           <h1>Elevate Your Game with Tennis Enthusiasts Community!</h1>
           <h3>
