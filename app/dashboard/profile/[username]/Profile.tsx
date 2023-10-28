@@ -15,6 +15,10 @@ export default function Profile() {
           <input required />
         </label>
         <label>
+          E-mail
+          <input required />
+        </label>
+        <label>
           Age
           <input required />
         </label>
@@ -26,10 +30,7 @@ export default function Profile() {
           Dominant hand
           <input required />
         </label>
-        <label>
-          E-mail
-          <input required />
-        </label>
+
         <textarea rows={25} cols={50} maxLength={250}>
           Description
         </textarea>
