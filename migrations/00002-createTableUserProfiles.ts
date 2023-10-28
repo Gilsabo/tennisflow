@@ -15,7 +15,7 @@ export type UserProfile = {
 
 export async function up(sql: Sql) {
   await sql`
-  CREATE TABLE user_profiles{
+  CREATE TABLE user_profiles(
     id integer PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     first_name varchar(30) NOT NULL,
     last_name varchar(30) NOT NULL,
@@ -26,7 +26,7 @@ export async function up(sql: Sql) {
     description varchar(250) NOT NULL,
     profile_picture_url varchar(250),
     user_id integer NOT NULL REFERENCES users (id) ON DELETE CASCADE
-  }
+  )
 
   `;
 }
