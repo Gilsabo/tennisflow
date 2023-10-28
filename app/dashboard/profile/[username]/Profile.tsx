@@ -7,33 +7,33 @@ export default function Profile() {
       <div>Profile</div>
       <form className={styles.form}>
         <label>
-          Player
-          <input />
+          First name
+          <input required />
+        </label>
+        <label>
+          Last name
+          <input required />
         </label>
         <label>
           Age
-          <input />
+          <input required />
         </label>
         <label>
           Years of experience
-          <input />
+          <input required />
         </label>
         <label>
           Dominant hand
-          <input />
+          <input required />
         </label>
         <label>
           E-mail
-          <input />
+          <input required />
         </label>
-        <label>
-          Password
-          <input />
-        </label>
-        <label>
-          Repeat passowrd
-          <input />
-        </label>
+        <textarea rows={25} cols={50} maxLength={250}>
+          Description
+        </textarea>
+
         <UploadProfileImage />
         <button>Confirm</button>
       </form>
