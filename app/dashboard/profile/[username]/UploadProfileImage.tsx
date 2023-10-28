@@ -2,8 +2,12 @@
 import { useState } from 'react';
 
 export default function UploadProfileImage() {
-  const [imageSelected, setImageSelected] = useState('');
+  const [imageSelected, setImageSelected] = useState<File>();
   const uploadImage = () => {
+    if (!imageSelected) {
+      console.error('No image selected');
+      return;
+    }
     const formData = new FormData();
     formData.append('file', imageSelected);
     formData.append('upload_preset', 'gm0xdnab');
@@ -30,6 +34,7 @@ export default function UploadProfileImage() {
         <input
           type="file"
           onChange={(e) => {
+            if (!e.target.files) return;
             setImageSelected(e.target.files[0]);
           }}
         />
