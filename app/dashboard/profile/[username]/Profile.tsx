@@ -35,6 +35,7 @@ export default function Profile() {
           <input />
         </label>
         <UploadProfileImage />
+        <button>Confirm</button>
       </form>
     </div>
   );
