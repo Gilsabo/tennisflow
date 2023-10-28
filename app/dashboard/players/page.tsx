@@ -1,26 +1,24 @@
-import { getUsers } from '../../../database/users';
+import { getUserProfiles } from '../../../database/profiles';
 
 export default async function Players() {
-  const users = await getUsers();
-  console.log(users);
+  const userProfiles = await getUserProfiles();
+
   return (
     <div>
       <div>Players</div>
       <div>
-        {users.map((user) => {
+        {userProfiles.map((userProfile) => {
           return (
-            <div key={`div-players-${user.id}`}>
-              {/* <div>{user.userName}</div>
-              <div> {user.age}</div>
-              <div> {user.dominantHand}</div> */}
-              {/* <img
-                src={`../images/${user.profilePictureUrl}.jpeg`}
-                alt={`${user.firstName}${user.lastName}`}
+            <div key={`div-players-${userProfile.id}`}>
+              <div>{userProfile.firstName}</div>
+              <div> {userProfile.age}</div>
+              <div> {userProfile.dominantHand}</div>
+              <img
+                src={`../images/${userProfile.profilePictureUrl}.jpeg`}
+                alt={`${userProfile.firstName}${userProfile.lastName}`}
                 width={100}
                 height={100}
-              /> */}
-              <div>{user.id}</div>
-              <div>{user.userName}</div>
+              />
             </div>
           );
         })}
