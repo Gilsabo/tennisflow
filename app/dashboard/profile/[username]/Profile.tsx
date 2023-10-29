@@ -1,10 +1,12 @@
 'use client';
+
 import { useState } from 'react';
+// import { getUserProfileIdByUsername } from '../../../../database/profiles';
 import styles from './Profile.module.css';
 
 // import UploadProfileImage from './UploadProfileImage';
 type Props = {
-  params: { username: string };
+  params: { username: string; id: number };
 };
 
 export default function Profile({ params }: Props) {
@@ -16,7 +18,11 @@ export default function Profile({ params }: Props) {
   const [dominantHandInput, setDominantHandInput] = useState('');
   const [descriptionInput, setDescriptionInput] = useState('');
   const [profilePictureUrlInput, setProfilePictureUrlInput] = useState('');
-  console.log('params', params);
+  console.log('paramsss', params.id);
+
+  // const userId = await getUserProfileIdByUsername(params.username);
+
+  // console.log(userId);
 
   const requestBody = {
     firstName: firstNameInput,
@@ -27,7 +33,7 @@ export default function Profile({ params }: Props) {
     dominantHand: dominantHandInput,
     description: descriptionInput,
     profilePictureUrl: profilePictureUrlInput.toString(), // Convert File to string URL if needed
-    userId: 15,
+    userId: params.id,
   };
 
   console.log('Request Body:', requestBody); // Log the request body
