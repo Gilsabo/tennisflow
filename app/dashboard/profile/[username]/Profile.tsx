@@ -6,10 +6,10 @@ import styles from './Profile.module.css';
 
 // import UploadProfileImage from './UploadProfileImage';
 type Props = {
-  params: { username: string; id: number };
+  userId: number;
 };
 
-export default function Profile({ params }: Props) {
+export default function Profile({ userId }: Props) {
   const [firstNameInput, setFirstNameInput] = useState('');
   const [lastNameInput, setLastNameInput] = useState('');
   const [emailInput, setEmailInput] = useState('');
@@ -18,7 +18,6 @@ export default function Profile({ params }: Props) {
   const [dominantHandInput, setDominantHandInput] = useState('');
   const [descriptionInput, setDescriptionInput] = useState('');
   const [profilePictureUrlInput, setProfilePictureUrlInput] = useState('');
-  console.log('paramsss', params.id);
 
   // const userId = await getUserProfileIdByUsername(params.username);
 
@@ -33,7 +32,7 @@ export default function Profile({ params }: Props) {
     dominantHand: dominantHandInput,
     description: descriptionInput,
     profilePictureUrl: profilePictureUrlInput.toString(), // Convert File to string URL if needed
-    userId: params.id,
+    userId: userId,
   };
 
   console.log('Request Body:', requestBody); // Log the request body
@@ -50,7 +49,7 @@ export default function Profile({ params }: Props) {
         dominantHand: dominantHandInput,
         description: descriptionInput,
         profilePictureUrl: profilePictureUrlInput,
-        userId: 15,
+        userId: userId,
       }),
     });
     const data = await response.json();

@@ -2,7 +2,7 @@ import { getUserIdByUserName } from '../../../../database/users';
 import Profile from './Profile';
 
 type Props = {
-  params: { username: string; id: number };
+  params: { username: string };
 };
 
 export default async function UserProfilePage({ params }: Props) {
@@ -15,10 +15,14 @@ export default async function UserProfilePage({ params }: Props) {
 
   console.log('user', userId);
 
+  if (userId === undefined) {
+    return;
+  }
+  // handel error------------------>>>>>>>>
   return (
     <div>
       <h2>{removeSpacesFromUri} Profile</h2>
-      <Profile params={params} />
+      <Profile userId={userId.id} />
     </div>
   );
 }
