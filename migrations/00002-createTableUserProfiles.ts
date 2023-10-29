@@ -9,7 +9,7 @@ export type UserProfile = {
   yearsExperience: number;
   dominantHand: string;
   description: string;
-  profilePictureUrl: string | null;
+  profilePictureUrl: string | undefined;
   userId: number;
 };
 
