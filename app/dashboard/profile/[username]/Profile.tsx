@@ -19,10 +19,6 @@ export default function Profile({ userId }: Props) {
   const [descriptionInput, setDescriptionInput] = useState('');
   const [profilePictureUrlInput, setProfilePictureUrlInput] = useState('');
 
-  // const userId = await getUserProfileIdByUsername(params.username);
-
-  // console.log(userId);
-
   const requestBody = {
     firstName: firstNameInput,
     lastName: lastNameInput,
