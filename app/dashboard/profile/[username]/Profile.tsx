@@ -3,8 +3,11 @@ import { useState } from 'react';
 import styles from './Profile.module.css';
 
 // import UploadProfileImage from './UploadProfileImage';
+type Props = {
+  params: { username: string };
+};
 
-export default function Profile() {
+export default function Profile({ params }: Props) {
   const [firstNameInput, setFirstNameInput] = useState('');
   const [lastNameInput, setLastNameInput] = useState('');
   const [emailInput, setEmailInput] = useState('');
@@ -12,17 +15,22 @@ export default function Profile() {
   const [yearsExperienceInput, setYearsExperienceInput] = useState<number>();
   const [dominantHandInput, setDominantHandInput] = useState('');
   const [descriptionInput, setDescriptionInput] = useState('');
-  const [profilePictureUrlInput, setProfilePictureUrlInput] = useState<File>();
+  const [profilePictureUrlInput, setProfilePictureUrlInput] = useState('');
+  console.log('params', params);
 
-  // id: number;
-  // firstName: string;
-  // lastName: string;
-  // email: string;
-  // age: number;
-  // yearsExperience: number;
-  // dominantHand: string;
-  // description: string;
-  // profilePictureUrl: string | null;
+  const requestBody = {
+    firstName: firstNameInput,
+    lastName: lastNameInput,
+    email: emailInput,
+    age: ageInput,
+    yearsExperience: yearsExperienceInput,
+    dominantHand: dominantHandInput,
+    description: descriptionInput,
+    profilePictureUrl: profilePictureUrlInput.toString(), // Convert File to string URL if needed
+    userId: 15,
+  };
+
+  console.log('Request Body:', requestBody); // Log the request body
 
   async function createUserProfile() {
     const response = await fetch('/api/userprofiles', {
@@ -36,11 +44,13 @@ export default function Profile() {
         dominantHand: dominantHandInput,
         description: descriptionInput,
         profilePictureUrl: profilePictureUrlInput,
+        userId: 15,
       }),
     });
     const data = await response.json();
     console.log('adata', data);
   }
+
   return (
     <div className={styles.mainContainer}>
       <div>Profile</div>
@@ -109,9 +119,8 @@ export default function Profile() {
           value={descriptionInput}
           onChange={(e) => setDescriptionInput(e.currentTarget.value)}
           required
-        >
-          Description
-        </textarea>
+        />
+
         {/* <UploadProfileImage
           profilePictureUrlInput={profilePictureUrlInput}
           setProfilePictureUrlInput={setProfilePictureUrlInput}
@@ -122,7 +131,7 @@ export default function Profile() {
             type="file"
             onChange={(event) => {
               if (!event.target.files) return;
-              setProfilePictureUrlInput(event.target.files[0]);
+              setProfilePictureUrlInput('');
             }}
           />
         </label>

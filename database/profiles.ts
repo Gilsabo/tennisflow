@@ -22,3 +22,37 @@ export const getUserProfileById = cache(async (id: number) => {
   `;
   return userProfile;
 });
+
+// id: number;
+// firstName: string;
+// lastName: string;
+// email: string;
+// age: number;
+// yearsExperience: number;
+// dominantHand: string;
+// description: string;
+// profilePictureUrl: string | null;
+
+export const createUserProfile = cache(
+  async (
+    firstName: string,
+    lastName: string,
+    email: string,
+    age: number,
+    yearsExperience: number,
+    dominantHand: string,
+    description: string,
+    profilePictureUrl: string | undefined,
+    userId: number,
+  ) => {
+    const [userProfile] = await sql<UserProfile[]>`
+    INSERT INTO user_profiles
+    (first_name, last_name, email, age, years_experience, dominant_hand, description, profile_picture_url, user_id)
+    VALUES
+    (${firstName},${lastName},${email},${age},${yearsExperience},${dominantHand},${description},${
+      profilePictureUrl || null
+    }, ${userId})
+    RETURNING *`;
+    return userProfile;
+  },
+);
