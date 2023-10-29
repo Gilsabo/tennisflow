@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { getUserProfiles } from '../../../database/profiles';
 
 export default async function Players() {
@@ -10,15 +11,17 @@ export default async function Players() {
         {userProfiles.map((userProfile) => {
           return (
             <div key={`div-players-${userProfile.id}`}>
-              <div>{userProfile.firstName}</div>
-              <div> {userProfile.age}</div>
-              <div> {userProfile.dominantHand}</div>
-              <img
-                src={`../images/${userProfile.profilePictureUrl}.jpeg`}
-                alt={`${userProfile.firstName}${userProfile.lastName}`}
-                width={100}
-                height={100}
-              />
+              <Link href={`/dashboard/players/${userProfile.id}`}>
+                <div>{userProfile.firstName}</div>
+                <div> {userProfile.age}</div>
+                <div> {userProfile.dominantHand}</div>
+                <img
+                  src={`../images/${userProfile.profilePictureUrl}.jpeg`}
+                  alt={`${userProfile.firstName}${userProfile.lastName}`}
+                  width={100}
+                  height={100}
+                />
+              </Link>
             </div>
           );
         })}
