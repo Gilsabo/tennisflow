@@ -19,6 +19,7 @@ export default async function UserProfilePage({ params }: Props) {
     return;
   }
   // handel error------------------>>>>>>>>
+
   return (
     <div>
       <h2>{removeSpacesFromUri} Profile</h2>
