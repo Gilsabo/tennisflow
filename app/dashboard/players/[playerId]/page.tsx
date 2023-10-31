@@ -8,6 +8,7 @@ type Props = {
 };
 
 export default async function PlayerPage(props: Props) {
+  const imageURL = 'https://res.cloudinary.com/dqiq3eutn/image/upload/';
   const singlePlayer = await getUserProfileById(Number(props.params.playerId));
 
   if (!singlePlayer) {
@@ -23,7 +24,7 @@ export default async function PlayerPage(props: Props) {
       <div>{singlePlayer.dominantHand}</div>
       <div>{singlePlayer.description}</div>
       <img
-        src={`./../../images/${singlePlayer.profilePictureUrl}.jpeg`}
+        src={`${imageURL}${singlePlayer.profilePictureUrl}`}
         alt={`${singlePlayer.firstName}${singlePlayer.lastName}`}
         width={100}
         height={100}

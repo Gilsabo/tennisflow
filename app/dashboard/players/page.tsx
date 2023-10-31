@@ -3,6 +3,7 @@ import { getUserProfiles } from '../../../database/profiles';
 
 export default async function Players() {
   const userProfiles = await getUserProfiles();
+  const imageURL = 'https://res.cloudinary.com/dqiq3eutn/image/upload/';
 
   return (
     <div>
@@ -16,7 +17,7 @@ export default async function Players() {
                 <div> {userProfile.age}</div>
                 <div> {userProfile.dominantHand}</div>
                 <img
-                  src={`../images/${userProfile.profilePictureUrl}.jpeg`}
+                  src={`${imageURL}${userProfile.profilePictureUrl}`}
                   alt={`${userProfile.firstName}${userProfile.lastName}`}
                   width={100}
                   height={100}
