@@ -83,6 +83,7 @@ export default function Profile({ userId }: Props) {
           <input
             value={emailInput}
             onChange={(e) => setEmailInput(e.currentTarget.value)}
+            type="email"
             required
           />
         </label>
@@ -91,6 +92,7 @@ export default function Profile({ userId }: Props) {
           <input
             value={ageInput}
             onChange={(e) => setAgeInput(Number(e.currentTarget.value))}
+            type="number"
             required
           />
         </label>
@@ -101,6 +103,7 @@ export default function Profile({ userId }: Props) {
             onChange={(e) =>
               setYearsExperienceInput(Number(e.currentTarget.value))
             }
+            type="number"
             required
           />
         </label>
