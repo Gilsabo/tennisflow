@@ -55,7 +55,6 @@ export default function UploadProfileImage(props: Props) {
     reader.readAsDataURL(selectedFile);
     reader.onloadend = async () => {
       await uploadImage(reader.result);
-      console.log('readeeer', typeof reader.result);
     };
     reader.onerror = () => {
       console.error('AHHHHHHHH!!');
