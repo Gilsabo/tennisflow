@@ -1,47 +1,113 @@
-// 'use client';
-// import { useState } from 'react';
+'use client';
+import { useState } from 'react';
 
-// export default function UploadProfileImage(props) {
-//   const [imageSelected, setImageSelected] = useState<File>();
-//   const uploadImage = () => {
-//     if (!imageSelected) {
-//       console.error('No image selected');
-//       return;
-//     }
+export default function UploadProfileImage() {
+  const [fileInputState, setFileInputState] = useState<any>('');
+  const [previewSource, setPreviewSource] = useState<any>('');
+  const [selectedFile, setSelectedFile] = useState<any>();
+
+  const previewFile = (file: any) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onloadend = () => {
+      setPreviewSource(reader.result);
+    };
+  };
+  const handleFileInputChange = (e: any) => {
+    const file = e.target.files[0];
+    previewFile(file);
+    setSelectedFile(file);
+    setFileInputState(e.target.value);
+  };
+
+  const uploadImage = async (base64EncodedImage: any) => {
+    try {
+      const response = await fetch('/api/uploadprofileimages', {
+        method: 'POST',
+        body: JSON.stringify({ data: base64EncodedImage }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+      setFileInputState('');
+      setPreviewSource('');
+      const data = await response.json();
+      console.log('dame la public id!', data);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const handleSubmitFile = (e: any) => {
+    e.preventDefault();
+    if (!selectedFile) return;
+    const reader = new FileReader();
+    reader.readAsDataURL(selectedFile);
+    reader.onloadend = async () => {
+      await uploadImage(reader.result);
+    };
+    reader.onerror = () => {
+      console.error('AHHHHHHHH!!');
+    };
+  };
+  return (
+    <div>
+      <h1 className="title">Upload an Image</h1>
+
+      <form onSubmit={handleSubmitFile} className="form">
+        <input
+          id="fileInput"
+          type="file"
+          name="image"
+          onChange={handleFileInputChange}
+          value={fileInputState}
+          className="form-input"
+        />
+        <button className="btn">Submit</button>
+      </form>
+      {previewSource && (
+        <img
+          src={previewSource}
+          alt="chosen"
+          style={{ height: '150px', width: '150px' }}
+        />
+      )}
+    </div>
+  );
+}
+
+// export default function UploadProfileImage() {
+//   const [result, setResult] = useState('');
+
+//   const handleImageUpload = (event: any) => {
+//     event.preventDefault();
+//     const file = event.currentTarget['fileInput'].files[0];
+
 //     const formData = new FormData();
-//     formData.append('file', imageSelected);
-//     formData.append('upload_preset', 'gm0xdnab');
-//     fetch('https://api.cloudinary.com/v1_1/dqiq3eutn/image/upload', {
+//     formData.append('file', file);
+//     console.log('file', file, 'formData', formData);
+
+//     fetch('/api/uploadprofileimages', {
 //       method: 'POST',
 //       body: formData,
 //     })
-//       .then((response) => {
-//         console.log(response);
-//         return response.json(); // Assuming the response is in JSON format
-//       })
+//       .then((response) => response.json())
 //       .then((data) => {
-//         console.log(data);
+//         setResult(data);
 //       })
 //       .catch((error) => {
-//         console.error('Error:', error);
+//         console.error('errorrrr', error);
 //       });
 //   };
-
 //   return (
-//     <>
-//       <label>
-//         Insert profile image
-//         <input
-//           type="file"
-//           onChange={(event) => {
-//             if (!event.target.files) return;
-//             setImageSelected(event.target.files[0]);
-//           }}
-//         />
-//       </label>
-//       <button type="button" onClick={uploadImage}>
-//         Upload image
-//       </button>
-//     </>
+//     <div>
+//       <form onSubmit={handleImageUpload}>
+//         <input id="fileInput" type="file" />
+//         <input type="submit" />
+//       </form>
+//       <br />
+//       <br />
+//       Result:
+//       <br />
+//       <pre>{JSON.stringify(result, null, 2)}</pre>
+//     </div>
 //   );
 // }
