@@ -1,26 +1,36 @@
 'use client';
 import { useState } from 'react';
 
-export default function UploadProfileImage() {
-  const [fileInputState, setFileInputState] = useState<any>('');
-  const [previewSource, setPreviewSource] = useState<any>('');
-  const [selectedFile, setSelectedFile] = useState<any>();
+type Props = {
+  setProfilePictureUrlInput: React.Dispatch<React.SetStateAction<string>>;
+};
 
-  const previewFile = (file: any) => {
+export default function UploadProfileImage(props: Props) {
+  const [fileInputState, setFileInputState] = useState('');
+  const [previewSource, setPreviewSource] = useState<any>('');
+  const [selectedFile, setSelectedFile] = useState<File>();
+
+  const previewFile = (file: File) => {
     const reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onloadend = () => {
       setPreviewSource(reader.result);
     };
   };
-  const handleFileInputChange = (e: any) => {
-    const file = e.target.files[0];
-    previewFile(file);
-    setSelectedFile(file);
+  const handleFileInputChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+  ): void => {
+    const file = e.target.files?.[0];
+    if (file) {
+      previewFile(file);
+      setSelectedFile(file);
+    }
     setFileInputState(e.target.value);
   };
 
-  const uploadImage = async (base64EncodedImage: any) => {
+  const uploadImage = async (
+    base64EncodedImage: string | ArrayBuffer | null,
+  ) => {
     try {
       const response = await fetch('/api/uploadprofileimages', {
         method: 'POST',
@@ -30,19 +40,22 @@ export default function UploadProfileImage() {
       setFileInputState('');
       setPreviewSource('');
       const data = await response.json();
-      console.log('dame la public id!', data);
+      props.setProfilePictureUrlInput(data.formDATA);
+
+      console.log('dame la public id!', data, typeof data.formDATA);
     } catch (err) {
       console.error(err);
     }
   };
 
-  const handleSubmitFile = (e: any) => {
+  const handleSubmitFile = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!selectedFile) return;
     const reader = new FileReader();
     reader.readAsDataURL(selectedFile);
     reader.onloadend = async () => {
       await uploadImage(reader.result);
+      console.log('readeeer', typeof reader.result);
     };
     reader.onerror = () => {
       console.error('AHHHHHHHH!!');
@@ -73,41 +86,3 @@ export default function UploadProfileImage() {
     </div>
   );
 }
-
-// export default function UploadProfileImage() {
-//   const [result, setResult] = useState('');
-
-//   const handleImageUpload = (event: any) => {
-//     event.preventDefault();
-//     const file = event.currentTarget['fileInput'].files[0];
-
-//     const formData = new FormData();
-//     formData.append('file', file);
-//     console.log('file', file, 'formData', formData);
-
-//     fetch('/api/uploadprofileimages', {
-//       method: 'POST',
-//       body: formData,
-//     })
-//       .then((response) => response.json())
-//       .then((data) => {
-//         setResult(data);
-//       })
-//       .catch((error) => {
-//         console.error('errorrrr', error);
-//       });
-//   };
-//   return (
-//     <div>
-//       <form onSubmit={handleImageUpload}>
-//         <input id="fileInput" type="file" />
-//         <input type="submit" />
-//       </form>
-//       <br />
-//       <br />
-//       Result:
-//       <br />
-//       <pre>{JSON.stringify(result, null, 2)}</pre>
-//     </div>
-//   );
-// }
