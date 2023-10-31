@@ -21,7 +21,7 @@ const userProfiles = [
     yearsExperience: 38,
     dominantHand: 'right-handed',
     description: 'I am crazy about tennis. I would like to improve my backhand',
-    profilePictureUrl: 'RogerFederer',
+    profilePictureUrl: 'mgvcb0c4jdqhdgliazwr',
   },
   {
     userId: 13,
@@ -33,7 +33,7 @@ const userProfiles = [
     dominantHand: 'left-handed',
     description:
       'I am fed up of tennis but my uncle forces me to play. I want to improve my serve',
-    profilePictureUrl: 'RafaelNadal',
+    profilePictureUrl: 'xj8newemwyrpujge6rq1',
   },
   {
     userId: 12,
@@ -42,10 +42,10 @@ const userProfiles = [
     email: 'idemo@gmail.com',
     password: 'ilovetennis',
     age: 36,
-    profilePictureUrl: 'NovakDjokovic',
     yearsExperience: 35,
     dominantHand: 'right-handed',
     description: 'I want to be loved by every fun. How can I do it?',
+    profilePictureUrl: 'kbljx60sfd6ymmwupslr',
   },
   {
     userId: 14,
@@ -56,7 +56,18 @@ const userProfiles = [
     yearsExperience: 35,
     dominantHand: 'right-handed',
     description: 'I want to quit. help me!',
-    profilePictureUrl: 'GilSala',
+    profilePictureUrl: 'cqupemlrrdpyua4jyfiz',
+  },
+  {
+    userId: 15,
+    firstName: 'Gil',
+    lastName: 'Sala',
+    email: 'gilato@gmail.com',
+    age: 34,
+    yearsExperience: 35,
+    dominantHand: 'right-handed',
+    description: 'I want to quit. help me!',
+    profilePictureUrl: 'cqupemlrrdpyua4jyfiz',
   },
 ];
 
