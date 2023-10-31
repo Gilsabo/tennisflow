@@ -56,3 +56,16 @@ export const createUserProfile = cache(
     return userProfile;
   },
 );
+
+export const getUserProfileByUserId = cache(async (userId: number) => {
+  // Postgres always returns an array
+  const [userProfile] = await sql<UserProfile[]>`
+    SELECT
+      *
+    FROM
+      user_profiles
+    WHERE
+      user_id = ${userId}
+  `;
+  return userProfile;
+});
