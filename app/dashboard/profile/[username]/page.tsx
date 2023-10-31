@@ -12,7 +12,8 @@ export default async function UserProfilePage({ params }: Props) {
   const userNameWithoutURIelements = decodeURIComponent(
     params.username.replace(/\+/g, ' '),
   );
-  // this function allows me to get the id that I need for the profile component throught his id
+  // takes the id by passing the name. this is needed to create the profile. We need the id from users table and pass it as foreing
+  // in user_profiles table so that we have the foreign kew
   const userId = await getUserIdByUserName(userNameWithoutURIelements);
   console.log('user', userId);
 
