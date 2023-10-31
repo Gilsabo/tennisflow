@@ -42,10 +42,7 @@ export default async function Layout(props: Props) {
             <button type="button">Search</button>
           </form>
         </nav>
-        <label>
-          Upload:
-          <input type="file" />
-        </label>
+        <Link href="/dashboard/upload">Upload</Link>
         <a href="/">notification</a>
         {user ? <div>{user.userName}</div> : ''}
         <LogoutButton />
