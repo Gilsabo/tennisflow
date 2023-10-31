@@ -39,7 +39,7 @@ export async function POST(
   if (!parsedBody.success) {
     return NextResponse.json(
       {
-        error: 'Invalid image. Upload with .jpeg',
+        error: 'Invalid image format.',
       },
       { status: 400 },
     );
