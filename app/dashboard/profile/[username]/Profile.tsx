@@ -5,7 +5,6 @@ import { useState } from 'react';
 import styles from './Profile.module.css';
 import UploadProfileImage from './UploadProfileImage';
 
-// import UploadProfileImage from './UploadProfileImage';
 type Props = {
   userId: number;
 };
@@ -18,7 +17,7 @@ export default function Profile({ userId }: Props) {
   const [yearsExperienceInput, setYearsExperienceInput] = useState<number>();
   const [dominantHandInput, setDominantHandInput] = useState('');
   const [descriptionInput, setDescriptionInput] = useState('');
-  // const [profilePictureUrlInput, setProfilePictureUrlInput] = useState<Blob>();
+  const [profilePictureUrlInput, setProfilePictureUrlInput] = useState('');
 
   const requestBody = {
     firstName: firstNameInput,
@@ -28,7 +27,7 @@ export default function Profile({ userId }: Props) {
     yearsExperience: yearsExperienceInput,
     dominantHand: dominantHandInput,
     description: descriptionInput,
-    // profilePictureUrl: profilePictureUrlInput, // Convert File to string URL if needed
+    profilePictureUrl: profilePictureUrlInput, // Convert File to string URL if needed
     userId: userId,
   };
 
@@ -45,7 +44,7 @@ export default function Profile({ userId }: Props) {
         yearsExperience: yearsExperienceInput,
         dominantHand: dominantHandInput,
         description: descriptionInput,
-        // profilePictureUrl: profilePictureUrlInput,
+        profilePictureUrl: profilePictureUrlInput,
         userId: userId,
       }),
     });
@@ -113,7 +112,6 @@ export default function Profile({ userId }: Props) {
             required
           />
         </label>
-
         <textarea
           rows={25}
           cols={50}
@@ -122,25 +120,11 @@ export default function Profile({ userId }: Props) {
           onChange={(e) => setDescriptionInput(e.currentTarget.value)}
           required
         />
-
-        {/* <UploadProfileImage
-          profilePictureUrlInput={profilePictureUrlInput}
-          setProfilePictureUrlInput={setProfilePictureUrlInput}
-        /> */}
-        {/* <label>
-          Insert profile image
-          <input
-            type="file"
-            onChange={(event) => {
-              if (!event.target.files) return;
-              setProfilePictureUrlInput(event.target.files[0]);
-            }}
-          />
-        </label> */}
-
         <button>Confirm</button>
       </form>
-      <UploadProfileImage />
+      <UploadProfileImage
+        setProfilePictureUrlInput={setProfilePictureUrlInput}
+      />
     </div>
   );
 }
