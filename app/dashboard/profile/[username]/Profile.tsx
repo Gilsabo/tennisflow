@@ -3,6 +3,7 @@
 import { useState } from 'react';
 // import { getUserProfileIdByUsername } from '../../../../database/profiles';
 import styles from './Profile.module.css';
+import UploadProfileImage from './UploadProfileImage';
 
 // import UploadProfileImage from './UploadProfileImage';
 type Props = {
@@ -17,7 +18,7 @@ export default function Profile({ userId }: Props) {
   const [yearsExperienceInput, setYearsExperienceInput] = useState<number>();
   const [dominantHandInput, setDominantHandInput] = useState('');
   const [descriptionInput, setDescriptionInput] = useState('');
-  const [profilePictureUrlInput, setProfilePictureUrlInput] = useState('');
+  // const [profilePictureUrlInput, setProfilePictureUrlInput] = useState<Blob>();
 
   const requestBody = {
     firstName: firstNameInput,
@@ -27,7 +28,7 @@ export default function Profile({ userId }: Props) {
     yearsExperience: yearsExperienceInput,
     dominantHand: dominantHandInput,
     description: descriptionInput,
-    profilePictureUrl: profilePictureUrlInput.toString(), // Convert File to string URL if needed
+    // profilePictureUrl: profilePictureUrlInput, // Convert File to string URL if needed
     userId: userId,
   };
 
@@ -44,7 +45,7 @@ export default function Profile({ userId }: Props) {
         yearsExperience: yearsExperienceInput,
         dominantHand: dominantHandInput,
         description: descriptionInput,
-        profilePictureUrl: profilePictureUrlInput,
+        // profilePictureUrl: profilePictureUrlInput,
         userId: userId,
       }),
     });
@@ -126,19 +127,20 @@ export default function Profile({ userId }: Props) {
           profilePictureUrlInput={profilePictureUrlInput}
           setProfilePictureUrlInput={setProfilePictureUrlInput}
         /> */}
-        <label>
+        {/* <label>
           Insert profile image
           <input
             type="file"
             onChange={(event) => {
               if (!event.target.files) return;
-              setProfilePictureUrlInput('');
+              setProfilePictureUrlInput(event.target.files[0]);
             }}
           />
-        </label>
+        </label> */}
 
         <button>Confirm</button>
       </form>
+      <UploadProfileImage />
     </div>
   );
 }
