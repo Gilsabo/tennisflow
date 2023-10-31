@@ -7,24 +7,23 @@ type Props = {
 };
 
 export default async function UserProfilePage({ params }: Props) {
-  // removes URICODE in case user typed user name with spaces OR OTHER CHARACTERS
-
   console.log('params', params.username);
-  const removeSpacesFromUri = decodeURIComponent(
+  // removes URICODE in case user typed user name with spaces OR OTHER CHARACTERS
+  const userNameWithoutURIelements = decodeURIComponent(
     params.username.replace(/\+/g, ' '),
   );
-  const userId = await getUserIdByUserName(removeSpacesFromUri);
+  // this function allows me to get the id that I need for the profile component throught his id
+  const userId = await getUserIdByUserName(userNameWithoutURIelements);
   console.log('user', userId);
 
+  // handel error when the profile does not match------------------>>>>>>>>
   if (userId === undefined) {
     return notFound();
   }
 
-  // handel error------------------>>>>>>>>
-
   return (
     <div>
-      <h2>{removeSpacesFromUri} Profile</h2>
+      <h2>{userNameWithoutURIelements} Profile</h2>
       <Profile userId={userId.id} />
     </div>
   );
