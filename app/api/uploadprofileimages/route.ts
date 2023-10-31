@@ -1,6 +1,7 @@
 import { v2 as cloudinary } from 'cloudinary';
 import dotenv from 'dotenv';
 import { NextRequest, NextResponse } from 'next/server';
+import { z } from 'zod';
 
 dotenv.config();
 
@@ -23,17 +24,42 @@ type ResponsDataBodyFormData =
     }
   | Error;
 
+const uploadImageSchema = z.object({
+  data: z.string(),
+});
+
 export async function POST(
   request: NextRequest,
 ): Promise<NextResponse<ResponsDataBodyFormData>> {
   const body = await request.json();
-  const fileStr = body.data;
+  const parsedBody = uploadImageSchema.safeParse(body);
+  // const fileStr = body.data;
   console.log('body', body);
+
+  if (!parsedBody.success) {
+    return NextResponse.json(
+      {
+        error: 'Invalid image. Upload with .jpeg',
+      },
+      { status: 400 },
+    );
+  }
+  const fileStr: string = parsedBody.data.data;
+
   const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
     upload_preset: 'gm0xdnab',
   });
 
   console.log('upploaded', uploadedResponse.public_id);
+
+  if (!uploadedResponse.public_id) {
+    return NextResponse.json(
+      {
+        error: 'Error uploading the image',
+      },
+      { status: 500 },
+    );
+  }
 
   return NextResponse.json({
     formDATA: uploadedResponse.public_id,
