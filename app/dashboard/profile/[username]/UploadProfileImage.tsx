@@ -71,9 +71,8 @@ export default function UploadProfileImage(props: Props) {
           name="image"
           onChange={handleFileInputChange}
           value={fileInputState}
-          className="form-input"
         />
-        <button className="btn">Submit</button>
+        <button>Submit</button>
       </form>
       {previewSource && (
         <img
