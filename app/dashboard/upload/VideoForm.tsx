@@ -11,7 +11,7 @@ type Props = {
 export default function VideoForm({ userProfileId }: Props) {
   const [titleInput, setTitleInput] = useState('');
   const [descriptionInput, setDescriptionInput] = useState('');
-  const [tagsInput, setTagsInput] = useState('');
+  const [tagsInput, setTagsInput] = useState<string[]>([]);
   const [locationInput, setLocationInput] = useState('');
   const [videoUrlInput, setVideoUrlInput] = useState('');
 
@@ -58,13 +58,33 @@ export default function VideoForm({ userProfileId }: Props) {
             required
           />
         </label>
-        <label>
+        {/* <label>
           Strokes to focus on
           <input
             value={tagsInput}
             onChange={(e) => setTagsInput(e.currentTarget.value)}
           />
+        </label> */}
+        <label>
+          Pick all the strokes you want to improve:
+          <select
+            multiple={true}
+            value={tagsInput}
+            onChange={(e) => {
+              const options = [...e.target.selectedOptions];
+              const values = options.map((option) => option.value);
+              setTagsInput(values);
+            }}
+          >
+            <option value="forhand">Forhand</option>
+            <option value="backhand">Backhand</option>
+            <option value="volley">Volley</option>
+            <option value="smash">Smash</option>
+            <option value="serve">Serve</option>
+            <option value="foot-work">foot-work</option>
+          </select>
         </label>
+
         <label>
           Location
           <input
