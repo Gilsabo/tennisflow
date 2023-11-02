@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-// import { Video } from '../../../migrations/00004-createTableVideos';
 import UploadVideo from './UploadVideo';
 import styles from './UploadVideoForm.module.css';
 
@@ -26,7 +25,7 @@ export default function VideoForm({ userProfileId }: Props) {
   console.log(request);
 
   async function createVideo() {
-    const response = await fetch('/api/userprofiles', {
+    const response = await fetch('/api/uservideos', {
       method: 'POST',
       body: JSON.stringify({
         videoUrl: videoUrlInput,
@@ -38,7 +37,7 @@ export default function VideoForm({ userProfileId }: Props) {
       }),
     });
     const data = await response.json();
-    console.log('adata', data);
+    console.log('datavideo', data);
   }
 
   return (
