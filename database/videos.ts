@@ -23,3 +23,11 @@ export const createUserVideo = cache(
     return videos;
   },
 );
+
+export const getVideos = cache(async () => {
+  // return users;
+  const videos = await sql<Video[]>`
+    SELECT * FROM videos
+  `;
+  return videos;
+});
