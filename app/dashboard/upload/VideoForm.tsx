@@ -15,6 +15,16 @@ export default function VideoForm({ userProfileId }: Props) {
   const [locationInput, setLocationInput] = useState('');
   const [videoUrlInput, setVideoUrlInput] = useState('');
 
+  const request = {
+    videoUrl: videoUrlInput,
+    title: titleInput,
+    description: descriptionInput,
+    tags: tagsInput,
+    location: locationInput,
+    userProfileId: userProfileId,
+  };
+  console.log(request);
+
   async function createVideo() {
     const response = await fetch('/api/userprofiles', {
       method: 'POST',
@@ -70,7 +80,7 @@ export default function VideoForm({ userProfileId }: Props) {
           onChange={(e) => setDescriptionInput(e.currentTarget.value)}
           required
         />
-        <button>Upload</button>
+        <button>Submit</button>
       </form>
       <UploadVideo setVideoUrlInput={setVideoUrlInput} />
     </div>

@@ -66,7 +66,7 @@ export default function UploadVideo(props: Props) {
           onChange={handleFileInputChange}
           value={fileInputState}
         />
-        <button>Submit</button>
+        <button>Upload</button>
       </form>
       {selectedFile && (
         <div>
