@@ -63,7 +63,7 @@ export async function POST(
   if (!userVideo) {
     return NextResponse.json(
       {
-        error: 'Error creating the new animal',
+        error: 'Error creating the new video',
       },
       { status: 500 },
     );
