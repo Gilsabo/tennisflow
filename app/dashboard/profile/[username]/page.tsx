@@ -17,15 +17,12 @@ export default async function UserProfilePage({ params }: Props) {
   // in user_profiles table so that we have the foreign kew
   const userId = await getUserIdByUserName(userNameWithoutURIelements);
 
-  console.log('user', userId);
-
   // handel error when the profile does not match------------------>>>>>>>>
   if (userId === undefined) {
     return notFound();
   }
 
   const profilePlayer = await getUserProfileByUserId(userId.id);
-  console.log('profilePlayerrrr', profilePlayer);
 
   return (
     <div>
