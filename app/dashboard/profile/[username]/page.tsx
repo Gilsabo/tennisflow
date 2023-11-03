@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getUserProfileByUserId } from '../../../../database/profiles';
 import { getUserIdByUserName } from '../../../../database/users';
+import EditProfile from './EditProfile';
 import Profile from './Profile';
 
 type Props = {
@@ -27,15 +28,7 @@ export default async function UserProfilePage({ params }: Props) {
   return (
     <div>
       {profilePlayer ? (
-        <div key={`div-profile-${profilePlayer.id}`}>
-          <div>{profilePlayer.firstName}</div>
-          <div>{profilePlayer.lastName}</div>
-          <div>{profilePlayer.email}</div>
-          <div>{profilePlayer.age}</div>
-          <div>{profilePlayer.yearsExperience}</div>
-          <div>{profilePlayer.dominantHand}</div>
-          <div>{profilePlayer.description}</div>
-        </div>
+        <EditProfile profilePlayer={profilePlayer} />
       ) : (
         <>
           <h2>{userNameWithoutURIelements} Profile</h2>
