@@ -24,14 +24,14 @@ export default async function DashboardVideoId(props: Props) {
   );
   console.log('userProfile', userProfile);
   return (
-    <>
+    <div>
       <div>{singleVideos[0]?.title}</div>
 
       <video
         id="doc-player"
         controls
         muted
-        autoPlay
+        // autoPlay
         className="cld-video-player cld-fluidcontrols"
         width={350}
         height={500}
@@ -51,6 +51,6 @@ export default async function DashboardVideoId(props: Props) {
       </video>
       <div>{userProfile?.firstName}</div>
       <div>{userProfile?.lastName}</div>
-    </>
+    </div>
   );
 }
