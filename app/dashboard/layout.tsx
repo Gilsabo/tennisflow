@@ -74,7 +74,6 @@ export default async function Layout(props: Props) {
             <li>
               <Link href="/dashboard/players"> Players</Link>
             </li>
-
             <li>
               <Link href="/dashboard/most-commented"> Most commented</Link>
             </li>
