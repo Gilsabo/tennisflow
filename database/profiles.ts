@@ -5,7 +5,10 @@ import { sql } from './connect';
 export const getUserProfiles = cache(async () => {
   // return userProfiles;
   const userProfiles = await sql<UserProfile[]>`
-    SELECT * FROM user_profiles
+    SELECT
+      *
+    FROM
+      user_profiles
   `;
   return userProfiles;
 });
@@ -46,13 +49,31 @@ export const createUserProfile = cache(
     userId: number,
   ) => {
     const [userProfile] = await sql<UserProfile[]>`
-    INSERT INTO user_profiles
-    (first_name, last_name, email, age, years_experience, dominant_hand, description, profile_picture_url, user_id)
-    VALUES
-    (${firstName},${lastName},${email},${age},${yearsExperience},${dominantHand},${description},${
-      profilePictureUrl || null
-    }, ${userId})
-    RETURNING *`;
+      INSERT INTO
+        user_profiles (
+          first_name,
+          last_name,
+          email,
+          age,
+          years_experience,
+          dominant_hand,
+          description,
+          profile_picture_url,
+          user_id
+        )
+      VALUES
+        (
+          ${firstName},
+          ${lastName},
+          ${email},
+          ${age},
+          ${yearsExperience},
+          ${dominantHand},
+          ${description},
+          ${profilePictureUrl || null},
+          ${userId}
+        ) RETURNING *
+    `;
     return userProfile;
   },
 );
