@@ -2,6 +2,7 @@ import { getUserProfileById } from '../../../database/profiles';
 // import { notFound } from 'next/navigation';
 // import { getUserProfileById } from '../../../database/profiles';
 import { getVideoByIdVideo } from '../../../database/videos';
+import Comments from './Comments';
 
 type Props = {
   params: {
@@ -25,32 +26,35 @@ export default async function DashboardVideoId(props: Props) {
   console.log('userProfile', userProfile);
   return (
     <div>
-      <div>{singleVideos[0]?.title}</div>
+      <div>
+        <div>{singleVideos[0]?.title}</div>
 
-      <video
-        id="doc-player"
-        controls
-        muted
-        // autoPlay
-        className="cld-video-player cld-fluidcontrols"
-        width={350}
-        height={500}
-      >
-        <source
-          src={`${imageURL}${singleVideos[0]?.videoUrl}`}
-          type="video/mp4"
-        />
-        <track
-          kind="captions"
-          src="/captions.vtt"
-          srcLang="en"
-          label="English"
-          default
-        />
-        Your browser does not support the video tag.
-      </video>
-      <div>{userProfile?.firstName}</div>
-      <div>{userProfile?.lastName}</div>
+        <video
+          id="doc-player"
+          controls
+          muted
+          // autoPlay
+          className="cld-video-player cld-fluidcontrols"
+          width={350}
+          height={500}
+        >
+          <source
+            src={`${imageURL}${singleVideos[0]?.videoUrl}`}
+            type="video/mp4"
+          />
+          <track
+            kind="captions"
+            src="/captions.vtt"
+            srcLang="en"
+            label="English"
+            default
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div>{userProfile?.firstName}</div>
+        <div>{userProfile?.lastName}</div>
+      </div>
+      <Comments />
     </div>
   );
 }
