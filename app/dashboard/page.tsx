@@ -1,35 +1,13 @@
+import { getVideos } from '../../database/videos';
 import styles from './dashBoard.module.css';
+import Vidoes from './Vidoes';
 
-export default function Dashboard() {
+export default async function Dashboard() {
+  const videos = await getVideos();
+  console.log('videossss', videos);
   return (
     <div className={styles.videoContainer}>
-      <div className={styles.video}>
-        <div>Video</div>
-      </div>
-      <div className={styles.video}>
-        <div>video</div>
-      </div>
-      <div className={styles.video}>
-        <div>video</div>
-      </div>
-      <div className={styles.video}>
-        <div>video</div>
-      </div>
-      <div className={styles.video}>
-        <div>video</div>
-      </div>
-      <div className={styles.video}>
-        <div>video</div>
-      </div>
-      <div className={styles.video}>
-        <div>video</div>
-      </div>
-      <div className={styles.video}>
-        <div>video</div>
-      </div>
-      <div className={styles.video}>
-        <div>video</div>
-      </div>
+      <Vidoes videos={videos} />
     </div>
   );
 }
