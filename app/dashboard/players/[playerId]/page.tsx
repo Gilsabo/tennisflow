@@ -15,20 +15,20 @@ export default async function PlayerPage(props: Props) {
     return notFound();
   }
   return (
-    <>
-      <div>PlayerPage</div>
-      <div>{singlePlayer.firstName}</div>
-      <div>{singlePlayer.lastName}</div>
-      <div>{singlePlayer.age}</div>
-      <div>{singlePlayer.yearsExperience}</div>
-      <div>{singlePlayer.dominantHand}</div>
-      <div>{singlePlayer.description}</div>
+    <div>
+      <h1>Player</h1>
+      <div>Name: {singlePlayer.firstName}</div>
+      <div>Last Name: {singlePlayer.lastName}</div>
+      <div>Age: {singlePlayer.age}</div>
+      <div>Yesars of experience: {singlePlayer.yearsExperience}</div>
+      <div>Dominant hand: {singlePlayer.dominantHand}</div>
+      <div>About me: {singlePlayer.description}</div>
       <img
         src={`${imageURL}${singlePlayer.profilePictureUrl}`}
         alt={`${singlePlayer.firstName}${singlePlayer.lastName}`}
         width={100}
         height={100}
       />
-    </>
+    </div>
   );
 }
