@@ -1,6 +1,6 @@
 import { getVideos } from '../../database/videos';
 import styles from './dashBoard.module.css';
-import Vidoes from './Vidoes';
+import Vidoes from './Videos';
 
 export default async function Dashboard() {
   const videos = await getVideos();
