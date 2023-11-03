@@ -14,7 +14,6 @@
     "bcrypt": "^5.1.1",
     "cloudinary": "^1.41.0",
     "dotenv": "^16.3.1",
-    "formidable": "^3.5.1",
     "ley": "^0.8.1",
     "next": "13.5.5",
     "next-cloudinary": "^5.2.0",
