@@ -14,7 +14,7 @@ export default function EditProfile(props: Props) {
         <div>Email: {props.profilePlayer.email}</div>
         <div>Age: {props.profilePlayer.age}</div>
         <div>Years of experience: {props.profilePlayer.yearsExperience}</div>
-        <div>Dominand hand: {props.profilePlayer.dominantHand}</div>
+        <div>Dominant hand: {props.profilePlayer.dominantHand}</div>
         <div>About me: {props.profilePlayer.description}</div>
       </div>
     </div>
