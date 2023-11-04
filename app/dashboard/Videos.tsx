@@ -19,7 +19,7 @@ const Videos = ({ videos }: Props) => {
             controls
             muted
             // autoPlay
-            className="cld-video-player cld-fluidcontrols"
+
             width={350}
             height={500}
           >
@@ -27,17 +27,11 @@ const Videos = ({ videos }: Props) => {
               src={`https://res.cloudinary.com/dqiq3eutn/video/upload/${video.videoUrl}`}
               type="video/mp4"
             />
-            <track
-              kind="captions"
-              src="/captions.vtt"
-              srcLang="en"
-              label="English"
-              default
-            />
+            <track srcLang="en" label="English" default />
             Your browser does not support the video tag.
           </video>
           <Link href={`/dashboard/${video.id}`}>
-            <div>Posted: {video.timestamp.toLocaleString()}</div>
+            <div>Posted on: {video.timestamp.toDateString()}</div>
           </Link>
         </div>
       ))}
