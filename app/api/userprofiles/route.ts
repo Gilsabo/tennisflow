@@ -12,7 +12,7 @@ import { UserProfile } from '../../../migrations/00002-createTableUserProfiles';
 // dominantHand: string;
 // description: string;
 // profilePictureUrl: string | null;
-type Error = {
+export type Error = {
   error: string;
 };
 
