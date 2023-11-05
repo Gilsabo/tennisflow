@@ -28,7 +28,10 @@ export default async function UserProfilePage({ params }: Props) {
   return (
     <div>
       {profilePlayer ? (
-        <EditProfile profilePlayer={profilePlayer} />
+        <EditProfile
+          profilePlayer={profilePlayer}
+          userName={userNameWithoutURIelements} // I pass the username to make dynamic api route
+        />
       ) : (
         <>
           <h2>{userNameWithoutURIelements} Profile</h2>
