@@ -90,3 +90,33 @@ export const getUserProfileByUserId = cache(async (userId: number) => {
   `;
   return userProfile;
 });
+
+export const updateProfileByUserId = cache(
+  async (
+    userId: number,
+    firstName: string,
+    lastName: string,
+    email: string,
+    age: number,
+    yearsExperience: number,
+    dominantHand: string,
+    description: string,
+    profilePictureUrl?: string,
+  ) => {
+    const [userProfile] = await sql<UserProfile[]>`
+      UPDATE user_profiles
+      SET
+        first_name = ${firstName},
+        last_name = ${lastName},
+        email = ${email},
+        age = ${age},
+        years_experience = ${yearsExperience},
+        dominant_hand = ${dominantHand},
+        description = ${description} profile_picture_url = ${profilePictureUrl ||
+      null}
+      WHERE
+        user_id = ${userId} RETURNING *
+    `;
+    return userProfile;
+  },
+);
