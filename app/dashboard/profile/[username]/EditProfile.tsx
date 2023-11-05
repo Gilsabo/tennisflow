@@ -4,6 +4,7 @@ import { UserProfile } from '../../../../migrations/00002-createTableUserProfile
 
 type Props = {
   profilePlayer: UserProfile;
+  userName: string;
 };
 
 export default function EditProfile(props: Props) {
@@ -17,10 +18,10 @@ export default function EditProfile(props: Props) {
   const [onEditDominantHandInput, setOnEditDominantHandInput] = useState('');
   const [onEditDescriptionInput, setOnEditDescriptionInput] = useState('');
   const [onEditProfilePictureUrlInput, setOnEditProfilePictureUrlInput] =
-    useState('');
+    useState<string | undefined>('hczauhey74t3zih407ll');
 
-  async function updateProfileByUserId(id: number) {
-    const response = await fetch(`/api/userprofiles/${id}`, {
+  async function updateProfileByUserId(userName: string) {
+    const response = await fetch(`/api/userprofiles/${userName}`, {
       method: 'PUT',
       body: JSON.stringify({
         firstName: onEditFirstNameInput,
@@ -31,10 +32,16 @@ export default function EditProfile(props: Props) {
         dominantHand: onEditDominantHandInput,
         description: onEditDescriptionInput,
         profilePictureUrl: onEditProfilePictureUrlInput,
+        userId: props.profilePlayer.id,
       }),
     });
 
     const data = await response.json();
+    console.log('userprofileupdatedata', data);
+
+    // if (!onEditProfilePictureUrlInput) {
+    //   return setOnEditProfilePictureUrlInput('');
+    // }
 
     // setAnimalList(
     //   animalList.map((animal) => {
@@ -152,7 +159,7 @@ export default function EditProfile(props: Props) {
       {onEditId === props.profilePlayer.id ? (
         <button
           onClick={async () => {
-            // await updateProfileByUserId(props.profilePlayer.id);
+            await updateProfileByUserId(props.userName);
             setOnEditId(0);
           }}
         >
@@ -165,10 +172,15 @@ export default function EditProfile(props: Props) {
             setOnEditLastNameInput(props.profilePlayer.lastName);
             setOnEditEmailInput(props.profilePlayer.email);
             setOnEditAgeInput(Number(props.profilePlayer.age));
-            setOnEditAgeInput(Number(props.profilePlayer.yearsExperience));
+            setOnEditYearsExperienceInput(
+              Number(props.profilePlayer.yearsExperience),
+            );
             setOnEditDominantHandInput(props.profilePlayer.dominantHand);
             setOnEditDescriptionInput(props.profilePlayer.description);
             setOnEditId(props.profilePlayer.id);
+            setOnEditProfilePictureUrlInput(
+              props.profilePlayer.profilePictureUrl,
+            );
           }}
         >
           Edit
