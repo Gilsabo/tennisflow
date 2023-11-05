@@ -91,9 +91,9 @@ export const getUserProfileByUserId = cache(async (userId: number) => {
   return userProfile;
 });
 
-export const updateProfileByUserId = cache(
+export const updateProfileByUserProfileId = cache(
   async (
-    userId: number,
+    userProfileId: number,
     firstName: string,
     lastName: string,
     email: string,
@@ -112,10 +112,10 @@ export const updateProfileByUserId = cache(
         age = ${age},
         years_experience = ${yearsExperience},
         dominant_hand = ${dominantHand},
-        description = ${description} profile_picture_url = ${profilePictureUrl ||
-      null}
+        description = ${description},
+        profile_picture_url = ${profilePictureUrl || null}
       WHERE
-        user_id = ${userId} RETURNING *
+        id = ${userProfileId} RETURNING *
     `;
     return userProfile;
   },
