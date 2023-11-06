@@ -11,17 +11,18 @@ type Props = {
 const Videos = ({ videos }: Props) => {
   console.log();
   return (
-    <div>
+    <div className="flex flex-wrap mt-8">
       {videos.map((video) => (
         <div key={`div-video${video.videoUrl}`}>
           <video
+            className="rounded-lg"
             id="doc-player"
             controls
             muted
             // autoPlay
 
-            width={350}
-            height={500}
+            width={200}
+            height={400}
           >
             <source
               src={`https://res.cloudinary.com/dqiq3eutn/video/upload/${video.videoUrl}`}
