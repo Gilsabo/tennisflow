@@ -1,7 +1,7 @@
 import { getVideos } from '../../database/videos';
-import Vidoes from './Videos';
+import Videos from './Videos';
 
 export default async function Dashboard() {
   const videos = await getVideos();
-  return <Vidoes videos={videos} />;
+  return <Videos videos={videos} />;
 }
