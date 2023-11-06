@@ -6,16 +6,18 @@ export const createComent = cache(
   async (videoId: number, userProfileId: number, commentUser: string) => {
     const [comment] = await sql<Comment[]>`
       INSERT INTO
-        users (
+        comments (
           video_id,
           user_profile_id,
-          comment_user
+          comment_user,
+          TIMESTAMP
         )
       VALUES
         (
           ${videoId},
           ${userProfileId},
-          ${commentUser}
+          ${commentUser},
+          CURRENT_TIMESTAMP
         ) RETURNING *
     `;
     return comment;
