@@ -1,6 +1,6 @@
 import { Sql } from 'postgres';
 
-export type Comments = {
+export type Comment = {
   id: number;
   video_id: number;
   userProfileId: number;
@@ -14,7 +14,7 @@ export async function up(sql: Sql) {
         id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
         video_id INTEGER NOT NULL REFERENCES videos,
         user_profile_id INTEGER NOT NULL REFERENCES user_profiles (id) ON DELETE CASCADE,
-        comment VARCHAR(250) NOT NULL,
+        comment_user VARCHAR(250) NOT NULL,
         TIMESTAMP TIMESTAMPTZ NOT NULL
       )
   `;
