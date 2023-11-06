@@ -1,6 +1,7 @@
 import { cookies } from 'next/headers';
 import Image from 'next/image';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import { ReactNode } from 'react';
 import LogoutButton from '../(auth)/logout/LogoutButton';
 import { getUserBySessionToken } from '../../database/users';
@@ -113,7 +114,9 @@ export default async function Layout(props: Props) {
                   <div>Profile</div>
                 </Link>
               ) : (
-                <Link href="/login">
+                <Link
+                  href={{ pathname: redirect(`/login?returnTo=/dashboard`) }}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
