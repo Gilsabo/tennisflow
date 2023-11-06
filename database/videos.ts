@@ -38,7 +38,6 @@ export const createUserVideo = cache(
 );
 
 export const getVideos = cache(async () => {
-  // return users;
   const videos = await sql<Video[]>`
     SELECT
       *
@@ -49,7 +48,6 @@ export const getVideos = cache(async () => {
 });
 
 export const getVideoByIdVideo = cache(async (idVideo: number) => {
-  // return users;
   const videos = await sql<Video[]>`
     SELECT
       *
