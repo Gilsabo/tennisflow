@@ -94,6 +94,7 @@ export default async function Layout(props: Props) {
             <li className="mt-4">
               {user ? (
                 <Link
+                  className="flex"
                   href={{ pathname: `/dashboard/profile/${user.userName}` }}
                 >
                   <svg
@@ -115,6 +116,7 @@ export default async function Layout(props: Props) {
                 </Link>
               ) : (
                 <Link
+                  className="flex"
                   href={{ pathname: redirect(`/login?returnTo=/dashboard`) }}
                 >
                   <svg
@@ -140,7 +142,7 @@ export default async function Layout(props: Props) {
               <Link href="/dashboard/my-videos"> My videos</Link>
             </li>
             <li className="mt-4">
-              <Link href="/dashboard/players"> Players</Link>
+              <Link href="/dashboard/players">Players</Link>
             </li>
             <li className="mt-4">
               <Link href="/dashboard/most-commented"> Most commented</Link>
