@@ -54,7 +54,6 @@ export default function Profile({ userId }: Props) {
 
   return (
     <div className={styles.mainContainer}>
-      <div>Profile</div>
       <form
         className={styles.form}
         onSubmit={async (event) => {
