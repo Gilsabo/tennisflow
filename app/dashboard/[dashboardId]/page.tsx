@@ -29,9 +29,9 @@ export default async function DashboardVideoId(props: Props) {
   if (!user) redirect(`/login?returnTo=/dashboard/${props.params.dashboardId}`);
 
   // Since we need the userProfild of the loggedin person, we need to take userProfile value of the logged in person
-  const userLoggedin = await getUserProfileByUserId(Number(user.id));
-  if (!userLoggedin) {
-    redirect(`/returnTo=/dashboard/${props.params.dashboardId}`);
+  const userLoggedinWithProfile = await getUserProfileByUserId(Number(user.id));
+  if (!userLoggedinWithProfile) {
+    redirect(`/login?returnTo=/dashboard/`);
   }
 
   // we take the table of the posted video to take the userProfileId and to render info of the video
@@ -69,7 +69,10 @@ export default async function DashboardVideoId(props: Props) {
         <div>{userProfile.firstName}</div>
         <div>{userProfile.lastName}</div>
       </div>
-      <Comments videoId={singleVideo[0]?.id} userProfileId={userLoggedin.id} />
+      <Comments
+        videoId={singleVideo[0]?.id}
+        userProfileId={userLoggedinWithProfile.id}
+      />
     </div>
   );
 }
