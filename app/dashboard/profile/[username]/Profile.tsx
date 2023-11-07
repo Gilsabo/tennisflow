@@ -1,7 +1,7 @@
 'use client';
 
+import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
-// import { getUserProfileIdByUsername } from '../../../../database/profiles';
 import styles from './Profile.module.css';
 import UploadProfileImage from './UploadProfileImage';
 
@@ -54,6 +54,7 @@ export default function Profile({ userId }: Props) {
 
   return (
     <div className={styles.mainContainer}>
+      <div>Profile</div>
       <form
         className={styles.form}
         onSubmit={async (event) => {
