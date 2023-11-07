@@ -1,4 +1,5 @@
 'use client';
+import { UserCircleIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
 
 type Props = {
@@ -49,7 +50,9 @@ export default function UploadProfileImage(props: Props) {
   };
 
   const handleSubmitFile = (e: React.FormEvent<HTMLFormElement>) => {
+    console.log('sent it');
     e.preventDefault();
+    console.log('Input field is empty!');
     if (!selectedFile) return;
     const reader = new FileReader();
     reader.readAsDataURL(selectedFile);
@@ -62,25 +65,43 @@ export default function UploadProfileImage(props: Props) {
   };
   return (
     <div>
-      <h1 className="title">Upload an Image</h1>
+      <h1 className="block text-sm mt-8 font-medium leading-6 text-gray-900">
+        Upload an Image
+      </h1>
 
-      <form onSubmit={handleSubmitFile} className="form">
-        <input
-          id="fileInput"
-          type="file"
-          name="image"
-          onChange={handleFileInputChange}
-          value={fileInputState}
-        />
-        <button>Submit</button>
+      <form onSubmit={handleSubmitFile}>
+        {previewSource ? (
+          <img
+            className="h-20 w-20 rounded-full"
+            src={previewSource}
+            alt="chosen"
+          />
+        ) : (
+          <UserCircleIcon
+            className="h-20 w-20 text-gray-300"
+            aria-hidden="true"
+          />
+        )}
+
+        <label className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+          Select File
+          <input
+            type="file"
+            name="image"
+            className="absolute hidden"
+            onChange={handleFileInputChange}
+            value={fileInputState}
+          />
+        </label>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+          }}
+          className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+        >
+          Upload
+        </button>
       </form>
-      {previewSource && (
-        <img
-          src={previewSource}
-          alt="chosen"
-          style={{ height: '150px', width: '150px' }}
-        />
-      )}
     </div>
   );
 }
