@@ -33,10 +33,10 @@ export default async function UserProfilePage({ params }: Props) {
           userName={userNameWithoutURIelements} // I pass the username to make dynamic api route
         />
       ) : (
-        <>
-          <h2>{userNameWithoutURIelements} Profile</h2>
+        <div className="">
+          <h2>{userNameWithoutURIelements}'s Profile</h2>
           <Profile userId={userId.id} />
-        </>
+        </div>
       )}
     </div>
   );
