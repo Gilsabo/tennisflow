@@ -73,8 +73,8 @@ export default async function Layout(props: Props) {
         <LogoutButton />
         <Link href="/dashboard/admin">Admin</Link>
       </header>
-      <main className="grid grid-cols-5 ">
-        <div className="pl-6  shadow-2xl bg-slate-50 h-screen">
+      <main className="grid grid-cols-5 h-screen">
+        <div className="pl-6  shadow-2xl bg-slate-50 h-full">
           <ul className="pt-4">
             <li className="mt-8 flex text-base text-gray-900">
               <Link className="flex" href="/dashboard">
@@ -175,7 +175,7 @@ export default async function Layout(props: Props) {
             </li>
           </ul>
         </div>
-        <div className="col-span-4 pl-20">{props.children}</div>
+        <div className="col-span-4">{props.children}</div>
       </main>
     </>
   );

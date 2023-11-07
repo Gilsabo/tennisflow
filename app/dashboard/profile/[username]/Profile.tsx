@@ -56,7 +56,7 @@ export default function Profile({ userId, userName }: Props) {
   }
 
   return (
-    <div>
+    <div className="ml-16 pl-20">
       <form
         onSubmit={async (event) => {
           event.preventDefault();
