@@ -5,6 +5,13 @@ import { redirect } from 'next/navigation';
 import { ReactNode } from 'react';
 import LogoutButton from '../(auth)/logout/LogoutButton';
 import { getUserBySessionToken } from '../../database/users';
+import dashboardLogo from '../../public/dashboardLogo.png';
+import historyLogo from '../../public/historyLogo.png';
+import MostCommented from '../../public/mostCommented.png';
+import mostViewdLogo from '../../public/mostViewdLogo.png';
+import playersLogo from '../../public/playersLogo.png';
+import userProfileLogo from '../../public/userProfileLogo.png';
+import videosLogo from '../../public/videosLogo.png';
 
 type Props = {
   children: ReactNode;
@@ -27,7 +34,7 @@ export default async function Layout(props: Props) {
 
   return (
     <>
-      <header className="flex items-center p-6 bg bg-slate-800 text-slate-50">
+      <header className="flex items-center p-2 bg bg-slate-800 text-slate-50 shadow-sm">
         <div className="flex mr-auto items-center ">
           <Image
             src="/images/tennisflow.png"
@@ -67,92 +74,108 @@ export default async function Layout(props: Props) {
         <Link href="/dashboard/admin">Admin</Link>
       </header>
       <main className="grid grid-cols-5 ">
-        <div className="pl-6 h-screen">
+        <div className="pl-6  shadow-2xl bg-slate-50 h-screen">
           <ul className="pt-4">
-            <li className="mt-8 flex">
+            <li className="mt-8 flex text-base text-gray-900">
               <Link className="flex" href="/dashboard">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-                  />
-                </svg>
-                <div>Dashboard</div>
+                <Image
+                  width={20}
+                  height={10}
+                  src={dashboardLogo}
+                  alt="dashboard Logo"
+                />
+                <div className="ml-2">Dashboard</div>
               </Link>
             </li>
-            <li className="mt-4">
-              <Link href="/dashboard/history"> History</Link>
+            <li className="mt-4 text-base text-gray-900">
+              <Link className="flex" href="/dashboard/history">
+                <Image
+                  width={20}
+                  height={10}
+                  src={historyLogo}
+                  alt="dashboard Logo"
+                />
+                <div className="ml-2">History</div>
+              </Link>
             </li>
-            <li className="mt-4">
+            <li className="mt-4 text-base text-gray-900">
               {user ? (
                 <Link
                   className="flex"
                   href={{ pathname: `/dashboard/profile/${user.userName}` }}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
+                  <Image
+                    width={20}
+                    height={10}
+                    src={userProfileLogo}
+                    alt="dashboard Logo"
+                  />
 
-                  <div>Profile</div>
+                  <div className="ml-2">Profile</div>
                 </Link>
               ) : (
                 <Link
                   className="flex"
                   href={{ pathname: redirect(`/login?returnTo=/dashboard`) }}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-
-                  <div>Profile</div>
+                  <Image
+                    width={20}
+                    height={10}
+                    src={userProfileLogo}
+                    alt="dashboard Logo"
+                  />
+                  <div className="ml-2">Profile</div>
                 </Link>
               )}
             </li>
-            <li className="mt-4">
-              <Link href="/dashboard/my-videos"> My videos</Link>
+            <li className="mt-4 text-base text-gray-900">
+              <Link className="flex " href="/dashboard/my-videos">
+                <Image
+                  width={20}
+                  height={10}
+                  src={videosLogo}
+                  alt="dashboard Logo"
+                />
+                <div className="ml-2">My videos</div>
+              </Link>
             </li>
-            <li className="mt-4">
-              <Link href="/dashboard/players">Players</Link>
+            <li className="mt-4 text-base text-gray-900">
+              <Link className="flex " href="/dashboard/players">
+                <Image
+                  width={20}
+                  height={10}
+                  src={playersLogo}
+                  alt="dashboard Logo"
+                />
+
+                <div className="ml-2">Players</div>
+              </Link>
             </li>
-            <li className="mt-4">
-              <Link href="/dashboard/most-commented"> Most commented</Link>
+            <li className="mt-4 text-base text-gray-900">
+              <Link className="flex " href="/dashboard/most-commented">
+                <Image
+                  width={20}
+                  height={10}
+                  src={MostCommented}
+                  alt="dashboard Logo"
+                />
+                <div className="ml-2">Most commented</div>
+              </Link>
             </li>
-            <li className="mt-4">
-              <Link href="/dashboard/most-viewed"> Most viewed</Link>
+            <li className="mt-4 text-base text-gray-900">
+              <Link className="flex " href="/dashboard/most-viewed">
+                <Image
+                  width={20}
+                  height={10}
+                  src={mostViewdLogo}
+                  alt="dashboard Logo"
+                />
+                <div className="ml-2">Most viewed</div>{' '}
+              </Link>
             </li>
           </ul>
         </div>
-        <div className="col-span-4">{props.children}</div>
+        <div className="col-span-4 pl-20">{props.children}</div>
       </main>
     </>
   );
