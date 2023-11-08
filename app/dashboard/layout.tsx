@@ -36,7 +36,7 @@ export default async function Layout(props: Props) {
     <main className="grid grid-cols-5 h-screen">
       <div className="pl-6  shadow-2xl bg-slate-50 h-full">
         <ul className="pt-4">
-          <li className="mt-8 flex text-base text-gray-900">
+          <li className="mt-8 flex text-sm text-gray-900">
             <Link className="flex" href="/dashboard">
               <Image
                 width={20}
@@ -47,7 +47,7 @@ export default async function Layout(props: Props) {
               <div className="ml-2">Dashboard</div>
             </Link>
           </li>
-          <li className="mt-4 text-base text-gray-900">
+          <li className="mt-4 text-sm text-gray-900">
             <Link className="flex" href="/dashboard/history">
               <Image
                 width={20}
@@ -58,7 +58,7 @@ export default async function Layout(props: Props) {
               <div className="ml-2">History</div>
             </Link>
           </li>
-          <li className="mt-4 text-base text-gray-900">
+          <li className="mt-4 text-sm text-gray-900">
             {user ? (
               <Link
                 className="flex"
@@ -88,7 +88,7 @@ export default async function Layout(props: Props) {
               </Link>
             )}
           </li>
-          <li className="mt-4 text-base text-gray-900">
+          <li className="mt-4 text-sm text-gray-900">
             <Link className="flex " href="/dashboard/my-videos">
               <Image
                 width={20}
@@ -99,7 +99,7 @@ export default async function Layout(props: Props) {
               <div className="ml-2">My videos</div>
             </Link>
           </li>
-          <li className="mt-4 text-base text-gray-900">
+          <li className="mt-4 text-sm text-gray-900">
             <Link className="flex " href="/dashboard/players">
               <Image
                 width={20}
@@ -111,7 +111,7 @@ export default async function Layout(props: Props) {
               <div className="ml-2">Players</div>
             </Link>
           </li>
-          <li className="mt-4 text-base text-gray-900">
+          <li className="mt-4 text-sm text-gray-900">
             <Link className="flex " href="/dashboard/most-commented">
               <Image
                 width={20}
@@ -122,7 +122,7 @@ export default async function Layout(props: Props) {
               <div className="ml-2">Most commented</div>
             </Link>
           </li>
-          <li className="mt-4 text-base text-gray-900">
+          <li className="mt-4 text-sm text-gray-900">
             <Link className="flex " href="/dashboard/most-viewed">
               <Image
                 width={20}
