@@ -11,7 +11,7 @@ type Props = {
 const Videos = ({ videos }: Props) => {
   console.log();
   return (
-    <div className="flex flex-wrap mt-8">
+    <div className="flex flex-wrap mt-8 justify-center">
       {videos.map((video) => (
         <div key={`div-video${video.videoUrl}`}>
           <video
