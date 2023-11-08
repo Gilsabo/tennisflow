@@ -68,7 +68,7 @@ export default function EditProfile(props: Props) {
             <span className="capitalize">{props.userName}</span>
           </h2>
           <p className="mt-1 text-sm leading-6 text-gray-600">
-            Use a permanent address where you can receive mail.
+            Modify your profile whenever you wish.
           </p>
         </div>
         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
