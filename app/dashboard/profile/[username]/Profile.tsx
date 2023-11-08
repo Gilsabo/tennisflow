@@ -217,7 +217,6 @@ export default function Profile({ userId, userName }: Props) {
                   </div>
                   <div className="flex items-center gap-x-3 mr-2 ">
                     <input
-                      // value="left-handex"
                       id="ambidextrous"
                       name="dominant-hand"
                       type="radio"
