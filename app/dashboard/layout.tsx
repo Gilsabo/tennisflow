@@ -44,7 +44,7 @@ export default async function Layout(props: Props) {
           />
           <div className="text-3xl">Tennisflow</div>
         </div>
-        <nav>
+        {/* <nav>
           <form action="/search" method="get">
             <label>
               Search:
@@ -52,8 +52,8 @@ export default async function Layout(props: Props) {
             </label>
             <button type="button">Search</button>
           </form>
-        </nav>
-        <Link href="/dashboard/upload">
+        </nav> */}
+        <Link className="mr-4" href="/dashboard/upload">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -68,10 +68,14 @@ export default async function Layout(props: Props) {
             />
           </svg>
         </Link>
-        <a href="/">notification</a>
-        {user ? <div>{user.userName}</div> : ''}
+        <a href="/" className="mr-4">
+          notification
+        </a>
+        {user ? <div className="mr-4">{user.userName}</div> : ''}
         <LogoutButton />
-        <Link href="/dashboard/admin">Admin</Link>
+        <Link className="ml-4 mr-4" href="/dashboard/admin">
+          Admin
+        </Link>
       </header>
       <main className="grid grid-cols-5 h-screen">
         <div className="pl-6  shadow-2xl bg-slate-50 h-full">
