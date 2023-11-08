@@ -55,24 +55,29 @@ export default function UploadVideo(props: Props) {
   };
 
   return (
-    <div>
-      <h1 className="title">Upload a video</h1>
-
-      <form onSubmit={handleSubmitFile} className="form">
-        <input
-          id="fileInput"
-          type="file"
-          name="video"
-          onChange={handleFileInputChange}
-          value={fileInputState}
-        />
-        <button>Upload</button>
+    <>
+      <form onSubmit={handleSubmitFile}>
+        <label className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+          Select File
+          <input
+            type="file"
+            name="video"
+            className="absolute hidden"
+            onChange={handleFileInputChange}
+            value={fileInputState}
+          />
+        </label>
+        <button className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+          Upload
+        </button>
       </form>
-      {selectedFile && (
-        <div>
-          <ReactPlayer url={URL.createObjectURL(selectedFile)} controls />
-        </div>
-      )}
-    </div>
+      <div>
+        {selectedFile && (
+          <div className="rounded-lg">
+            <ReactPlayer url={URL.createObjectURL(selectedFile)} controls />
+          </div>
+        )}
+      </div>
+    </>
   );
 }
