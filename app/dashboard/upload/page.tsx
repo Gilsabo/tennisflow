@@ -20,10 +20,5 @@ export default async function Upload() {
 
   if (!userProfileId) return;
 
-  return (
-    <div>
-      <div>UploadVideo</div>
-      <VideoForm userProfileId={userProfileId.id} />
-    </div>
-  );
+  return <VideoForm userProfileId={userProfileId.id} />;
 }
