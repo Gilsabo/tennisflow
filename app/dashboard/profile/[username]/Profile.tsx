@@ -260,69 +260,6 @@ export default function Profile({ userId, userName }: Props) {
             </div>
           </div>
         </div>
-        {/* <label>
-          First name
-          <input
-            value={firstNameInput}
-            onChange={(e) => setFirstNameInput(e.currentTarget.value)}
-            required
-          />
-        </label> */}
-        {/* <label>
-          Last name
-          <input
-            value={lastNameInput}
-            onChange={(e) => setLastNameInput(e.currentTarget.value)}
-            required
-          />
-        </label> */}
-        {/* <label>
-          E-mail
-          <input
-            value={emailInput}
-            onChange={(e) => setEmailInput(e.currentTarget.value)}
-            type="email"
-            required
-          />
-        </label> */}
-        {/* <label>
-          Age
-          <input
-            value={ageInput}
-            onChange={(e) => setAgeInput(Number(e.currentTarget.value))}
-            type="number"
-            required
-          />
-        </label> */}
-        {/* <label>
-          Years of experience
-          <input
-            value={yearsExperienceInput}
-            onChange={(e) =>
-              setYearsExperienceInput(Number(e.currentTarget.value))
-            }
-            type="number"
-            required
-          />
-        </label> */}
-        {/* <label>
-          Dominant hand
-          <input
-            value={dominantHandInput}
-            onChange={(e) => setDominantHandInput(e.currentTarget.value)}
-            required
-          />
-        </label> */}
-        {/* <textarea
-          rows={25}
-          cols={50}
-          maxLength={250}
-          value={descriptionInput}
-          onChange={(e) => setDescriptionInput(e.currentTarget.value)}
-          required
-        />
-        <button>Confirm</button> */}
-
         <div className="mt-6 flex items-center justify-start gap-x-6">
           <button className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
             Save
