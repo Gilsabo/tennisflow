@@ -136,7 +136,7 @@ export default async function Layout(props: Props) {
         </ul>
       </div>
       <div className="col-span-4">
-        <header className="flex items-center p-2 bg bg-slate-800 text-slate-50 shadow-sm">
+        <header className="flex items-center p-2 rounded bg bg-slate-800 text-slate-50 shadow-sm">
           <div className="flex mr-auto items-center ">
             <Image
               src="/images/tennisflow.png"
