@@ -24,7 +24,7 @@ export default async function Home() {
               width={90}
               height={90}
             />
-            <div className="text-2xl mt-auto">Tennisflow </div>
+            <div className="text-2xl mt-auto ">Tennisflow </div>
           </div>
           <nav className="pt-4 mt-auto">
             <ul className="flex ">
@@ -51,7 +51,7 @@ export default async function Home() {
           <div className="mt-auto">
             {user ? (
               <div className="flex">
-                <div className="pt-4 ml-8">{user.userName}</div>
+                <div className="pt-4 ml-8">logged in as {user.userName}</div>
                 <div className="mr-8 ml-8 mt-auto">
                   <LogoutButton />
                 </div>
