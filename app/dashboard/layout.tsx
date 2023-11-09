@@ -144,7 +144,7 @@ export default async function Layout(props: Props) {
               height={90}
               width={90}
             />
-            <div className="text-3xl">Tennisflow</div>
+            <div className="text-lg">Tennisflow</div>
           </div>
           {/* <nav>
           <form action="/search" method="get">
