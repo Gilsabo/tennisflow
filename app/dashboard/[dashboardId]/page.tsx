@@ -46,28 +46,41 @@ export default async function DashboardVideoId(props: Props) {
   }
 
   return (
-    <div>
-      <div>
-        <div>{singleVideo[0]?.title}</div>
-
+    <div className="flex justify-center">
+      <div className="ml-8 mt-4">
         <video
           id="doc-player"
           controls
           muted
-          // autoPlay
-          className="cld-video-player cld-fluidcontrols"
-          width={350}
-          height={500}
+          className="w-96 h-96 rounded-2xl "
         >
           <source
             src={`${imageURL}${singleVideo[0]?.videoUrl}`}
             type="video/mp4"
           />
-          <track src="/captions.vtt" srcLang="en" label="English" default />
-          Your browser does not support the video tag.
+          <track srcLang="en" label="English" default />
         </video>
-        <div>{userProfile.firstName}</div>
-        <div>{userProfile.lastName}</div>
+        <div className="w-96">
+          <div>{singleVideo[0]?.title}</div>
+          <div className="text-xs mt-4 mb-2">
+            {userProfile.firstName} {userProfile.lastName}
+          </div>
+          <div className="text-sm mb-2 italic">
+            " {singleVideo[0]?.description} "
+          </div>
+          <div>
+            {singleVideo[0]?.tags?.map((tag) => {
+              return (
+                <div
+                  className="inline-block bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400"
+                  key={`div-tags-${tag}`}
+                >
+                  # {tag}
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
       <Comments
         videoId={singleVideo[0]?.id}
