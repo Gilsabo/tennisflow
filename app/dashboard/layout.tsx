@@ -161,7 +161,7 @@ export default async function Layout(props: Props) {
               Admin
             </Link>
             {user ? (
-              <div className="mr-4">Logged in as {user.userName}</div>
+              <div className="ml-4 mr-4">Logged in as {user.userName}</div>
             ) : (
               ''
             )}
