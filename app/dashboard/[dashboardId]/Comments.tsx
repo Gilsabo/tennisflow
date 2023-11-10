@@ -24,9 +24,9 @@ export default function Comments(props: Props) {
   }
 
   return (
-    <div className="ml-8 mt-auto">
+    <div className="ml-8">
       <form
-        className="flex flex-col"
+        className="flex flex-col mt-8"
         onSubmit={async (e) => {
           e.preventDefault();
           await createComment();
@@ -36,8 +36,8 @@ export default function Comments(props: Props) {
         <div className=" shadow-inner bg-slate-50 rounded h-96 w-96 break-words">
           {commentInput}
         </div>
-        <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8  sm:grid-cols-6">
-          <div className="sm:col-span-3">
+        <div className="flex mt-8 w-96">
+          <div className="justify-around ">
             <label
               htmlFor="first-name"
               className="block text-sm font-medium leading-6 text-gray-900"
@@ -56,11 +56,11 @@ export default function Comments(props: Props) {
               />
             </div>
           </div>
-        </div>
-        <div className="mt-6 flex items-center justify-start gap-x-6">
-          <button className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-            Post
-          </button>
+          <div className=" ml-4 mt-auto flex items-center justify-start gap-x-6">
+            <button className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              Post
+            </button>
+          </div>
         </div>
       </form>
     </div>
