@@ -37,17 +37,19 @@ export default async function Layout(props: Props) {
       <div className="  shadow-2xl bg-slate-50 h-full">
         <Link
           href="/"
-          className=" bg-teal-800 flex items-center pl-6 pt-8 shadow"
+          className=" bg-teal-800 flex items-center pl-6 pt-8  shadow"
         >
-          <div className="text-xl font-semibold text-slate-200">Tennisflow</div>
           <Image
-            src="/images/tennisflow.png"
+            src="/images/tennisFlowLogo.svg"
             alt="icon tennisflow"
-            height={71.5}
-            width={71.5}
+            height={25}
+            width={25}
           />
+          <div className="text-xl font-semibold pl-2 py-4 text-slate-200">
+            Tennisflow
+          </div>
         </Link>
-        <ul className="pt-4 pl-6">
+        <ul className="pt-4 pl-6 ">
           <li className="mt-8 flex text-sm text-gray-900">
             <Link className="flex" href="/dashboard">
               <Image
@@ -148,18 +150,22 @@ export default async function Layout(props: Props) {
         </ul>
       </div>
       <div className="col-span-4">
-        <header className="  pl-6 pt-12   text-slate-800 shadow-lg">
-          <ul className="flex items-center pt-1">
+        <header className="  pl-6 pt-11   text-slate-800 shadow-lg pr-8">
+          <ul className="flex items-center justify-end pb-1.5">
             <li>
               <a href="/" className="mr-4">
                 Notifications
               </a>
             </li>
-            {user ? <div className="mr-4">{user.userName}</div> : ''}
-            <LogoutButton />
             <Link className="ml-4 mr-4" href="/dashboard/admin">
               Admin
             </Link>
+            {user ? (
+              <div className="mr-4">Logged in as {user.userName}</div>
+            ) : (
+              ''
+            )}
+            <LogoutButton />
           </ul>
         </header>
         {props.children}
