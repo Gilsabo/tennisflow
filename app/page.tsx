@@ -2,7 +2,7 @@ import { cookies } from 'next/headers';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getUserBySessionToken } from '../database/users';
-import tennisFlow from '../public/icon-192.png';
+import tennisFlowLogo from '../public/images/tennisFlowLogo.svg';
 import tennisCourt from '../public/tennisCourt.jpg';
 import LogoutButton from './(auth)/logout/LogoutButton';
 
@@ -16,13 +16,12 @@ export default async function Home() {
   return (
     <div>
       <div>
-        <header className="flex bg-teal-800 text-slate-200 pb-4 justify-around content-end ">
-          <div className="flex pl-2 items-center mt-auto">
+        <header className="flex px-36 bg-teal-800 text-slate-200 pt-12 pb-4 justify-between content-end ">
+          <div className="flex mt-auto">
             <Image
-              src={tennisFlow}
+              className="mr-3 w-8 h-8 ml-4"
+              src={tennisFlowLogo}
               alt="tennisflow logo"
-              width={90}
-              height={90}
             />
             <div className="text-2xl mt-auto ">Tennisflow </div>
           </div>
@@ -30,9 +29,6 @@ export default async function Home() {
             <ul className="flex ">
               <li className="ml-8">
                 <a href="/#home">Home</a>
-              </li>
-              <li className="ml-8">
-                <a href="/#getstarted">Get started</a>
               </li>
               <li className="ml-8">
                 <Link href="/dashboard">Dashboard</Link>
