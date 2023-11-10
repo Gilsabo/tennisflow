@@ -65,7 +65,7 @@ export default function EditProfile(props: Props) {
         <div className="border-b mt-8 border-gray-900/10 pb-12 ">
           <h2 className="text-base font-semibold leading-7 text-gray-900">
             Edit your profile,
-            <span className="capitalize">{props.userName}</span>
+            <span className="capitalize"> {props.userName}</span>
           </h2>
           <p className="mt-1 text-sm leading-6 text-gray-600">
             Modify your profile whenever you wish.
