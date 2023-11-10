@@ -34,8 +34,17 @@ export default async function Layout(props: Props) {
 
   return (
     <main className="grid grid-cols-5 h-screen">
-      <div className="pl-6  shadow-2xl bg-slate-50 h-full">
-        <ul className="pt-4">
+      <div className="  shadow-2xl bg-slate-50 h-full">
+        <div className=" bg-teal-800 flex items-center pl-6 pt-8 shadow">
+          <div className="text-xl font-semibold text-slate-200">Tennisflow</div>
+          <Image
+            src="/images/tennisflow.png"
+            alt="icon tennisflow"
+            height={71.5}
+            width={71.5}
+          />
+        </div>
+        <ul className="pt-4 pl-6">
           <li className="mt-8 flex text-sm text-gray-900">
             <Link className="flex" href="/dashboard">
               <Image
@@ -136,48 +145,36 @@ export default async function Layout(props: Props) {
         </ul>
       </div>
       <div className="col-span-4">
-        <header className="flex items-center p-2 rounded bg bg-slate-800 text-slate-50 shadow-sm">
-          <div className="flex mr-auto items-center ">
-            <Image
-              src="/images/tennisflow.png"
-              alt="icon tennisflow"
-              height={90}
-              width={90}
-            />
-            <div className="text-lg">Tennisflow</div>
-          </div>
-          {/* <nav>
-          <form action="/search" method="get">
-            <label>
-              Search:
-              <input name="search" placeholder="Enter your search..." />
-            </label>
-            <button type="button">Search</button>
-          </form>
-        </nav> */}
-          <Link className="mr-4" href="/dashboard/upload">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"
-              />
-            </svg>
-          </Link>
-          <a href="/" className="mr-4">
-            notification
-          </a>
-          {user ? <div className="mr-4">{user.userName}</div> : ''}
-          <LogoutButton />
-          <Link className="ml-4 mr-4" href="/dashboard/admin">
-            Admin
-          </Link>
+        <header className="  pl-6 pt-12   text-slate-800 shadow-lg">
+          <ul className="flex items-center pt-1">
+            <li>
+              <Link className="mr-4" href="/dashboard/upload">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"
+                  />
+                </svg>
+              </Link>
+            </li>
+            <li>
+              <a href="/" className="mr-4">
+                Notifications
+              </a>
+            </li>
+            {user ? <div className="mr-4">{user.userName}</div> : ''}
+            <LogoutButton />
+            <Link className="ml-4 mr-4" href="/dashboard/admin">
+              Admin
+            </Link>
+          </ul>
         </header>
         {props.children}
       </div>
