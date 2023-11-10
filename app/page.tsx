@@ -88,11 +88,13 @@ export default async function Home() {
           </Link>
         </div>
         <div className="w-2/4 h-60 m-auto ">
-          <Image
-            className=" w-11/12 h-96 ml-4 rounded-full"
-            src={tennisCourt}
-            alt="tennis court"
-          />
+          <div>
+            <Image
+              className="rounded-full"
+              src={tennisCourt}
+              alt="tennis court"
+            />
+          </div>
         </div>
       </section>
     </div>
