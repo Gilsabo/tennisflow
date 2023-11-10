@@ -15,7 +15,7 @@ export default async function PlayerPage(props: Props) {
     return notFound();
   }
   return (
-    <div className="mt-20">
+    <div className="mt-24">
       <div className="flex w-2/4 shadow-2xl  m-auto border rounded-3xl">
         <img
           src={`${imageURL}${singlePlayer.profilePictureUrl}`}
@@ -23,7 +23,7 @@ export default async function PlayerPage(props: Props) {
           width={200}
           height={100}
         />
-        <div className="p-4">
+        <div className="p-8">
           <div className="text-xl mb-8">"{singlePlayer.description}"</div>
           <div className="flex flex-col">
             <div className="text-sm">Name: {singlePlayer.firstName}</div>
