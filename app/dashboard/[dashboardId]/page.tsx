@@ -47,7 +47,7 @@ export default async function DashboardVideoId(props: Props) {
 
   return (
     <div className="flex justify-center">
-      <div className="ml-8 mt-4">
+      <div className="ml-8 mt-8">
         <video
           id="doc-player"
           controls
