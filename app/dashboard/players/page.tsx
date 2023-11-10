@@ -29,7 +29,7 @@ export default async function Players() {
                   <div className="mb-8 text-slate-800">
                     {userProfile.firstName}
                   </div>
-                  <div className="text-xs  text-orange-800">
+                  <div className="text-xs  text-slate-800">
                     {userProfile.age}
                   </div>
                   {userProfile.dominantHand === 'right-handed' ? (
