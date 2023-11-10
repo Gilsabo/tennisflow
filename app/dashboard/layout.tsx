@@ -35,7 +35,10 @@ export default async function Layout(props: Props) {
   return (
     <main className="grid grid-cols-5 h-screen">
       <div className="  shadow-2xl bg-slate-50 h-full">
-        <div className=" bg-teal-800 flex items-center pl-6 pt-8 shadow">
+        <Link
+          href="/"
+          className=" bg-teal-800 flex items-center pl-6 pt-8 shadow"
+        >
           <div className="text-xl font-semibold text-slate-200">Tennisflow</div>
           <Image
             src="/images/tennisflow.png"
@@ -43,7 +46,7 @@ export default async function Layout(props: Props) {
             height={71.5}
             width={71.5}
           />
-        </div>
+        </Link>
         <ul className="pt-4 pl-6">
           <li className="mt-8 flex text-sm text-gray-900">
             <Link className="flex" href="/dashboard">
