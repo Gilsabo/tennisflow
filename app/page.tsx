@@ -35,7 +35,7 @@ export default async function Home() {
                 <a href="/#getstarted">Get started</a>
               </li>
               <li className="ml-8">
-                <a href="/#videos">Videos</a>
+                <Link href="/dashboard">Dashboard</Link>
               </li>
               <li className="ml-8">
                 <a href="/#community">Community</a>
