@@ -72,11 +72,11 @@ export default async function Home() {
         </header>
       </div>
       <section className="bg-teal-800 text-slate-200 flex px-40 pt-20 pb-8">
-        <div className="w-2/4">
-          <h1 className="text-6xl mb-6">
+        <div className="w-2/4 ">
+          <h1 className="text-6xl mb-6 ">
             Elevate Your Game with Tennis Enthusiasts Community!
           </h1>
-          <h3 className="text-1xl mb-6">
+          <h3 className="text-xl mb-6 ">
             Upload your tennis strokes, get expert feedback, <br />
             and level up your skills with our supportive community.
           </h3>
@@ -87,13 +87,56 @@ export default async function Home() {
             Get started
           </Link>
         </div>
-        <div className="w-2/4 h-60 m-auto ">
+        <div className="w-2/4 h-80 m-auto ">
           <div>
             <Image
-              className="rounded-full"
+              className="rounded-2xl"
               src={tennisCourt}
               alt="tennis court"
             />
+          </div>
+        </div>
+      </section>
+      <section className="px-40 pt-28 pb-28">
+        <div className="flex flex-col items-center text-teal-800">
+          <h1 className="text-6xl text-center mb-10">
+            Ace Your Game, Connect, <br /> Progress Together
+          </h1>
+          <h3 className="text-xl text-center mb-14">
+            Discover a Community Where Passion Meets Progress <br /> Perfect for
+            Beginners and Pros Alike
+          </h3>
+          <div className="flex text-center ">
+            <div className="mr-14 shadow-md rounded-lg px-6">
+              <h3 className="font-semibold">Roger </h3>
+              <h3 className="mb-2 font-semibold">Rüttelracketli</h3>
+              <h1 className="mb-6">54</h1>
+              <p className="italic mb-6">
+                "I can't express how much Tennisflow has elevated my game. The
+                supportive community helped me refine my serve technique,
+                turning me into a more confident player"
+              </p>
+            </div>
+            <div className="mx-14 mt-20 shadow-md rounded-lg px-6">
+              <h3 className="font-semibold">Maria </h3>
+              <h3 className="mb-2 font-semibold">Smashapova</h3>
+              <h1 className="mb-6">36</h1>
+              <p className="italic mb-6">
+                "I stumbled upon Tennisflow as a beginner, and it transformed my
+                game. The insightful tips from the community have refined my
+                backhand, adding finesse to my shots"
+              </p>
+            </div>
+            <div className="ml-10 mt-40 shadow-md rounded-lg px-6">
+              <h3 className="font-semibold">Martinka</h3>
+              <h3 className="mb-2 font-semibold">Noodlevolleylova</h3>
+              <h1 className="mb-6">27</h1>
+              <p className="italic mb-6">
+                "My professional career took a turn for the better with
+                Tennisflow. The strategic discussions and collaborative spirit
+                of the community have significantly increased my match wins"
+              </p>
+            </div>
           </div>
         </div>
       </section>
