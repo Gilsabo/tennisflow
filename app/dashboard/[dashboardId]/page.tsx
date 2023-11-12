@@ -55,7 +55,7 @@ export default async function DashboardVideoId(props: Props) {
           />
           <track srcLang="en" label="English" default />
         </video>
-        <div className="w-96">
+        <div className="w-74">
           <div>{singleVideo[0]?.title}</div>
           <div className="text-xs mt-4 mb-2">
             {userProfile.firstName} {userProfile.lastName}
@@ -67,7 +67,7 @@ export default async function DashboardVideoId(props: Props) {
             {singleVideo[0]?.tags?.map((tag) => {
               return (
                 <div
-                  className="inline-block bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400"
+                  className="inline-block mb-1 bg-slate-200 break-words text-teal-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded  border-teal-800"
                   key={`div-tags-${tag}`}
                 >
                   # {tag}
