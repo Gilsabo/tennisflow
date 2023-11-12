@@ -33,15 +33,15 @@ export default async function Players() {
                     {userProfile.age}
                   </div>
                   {userProfile.dominantHand === 'right-handed' ? (
-                    <div className="bg-gray-100 text-gray-800 text-xs font-medium mr-2 mt-1.5 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
+                    <div className="inline-block mb-1 bg-slate-200 break-words text-teal-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded  border-teal-800">
                       {userProfile.dominantHand}
                     </div>
                   ) : userProfile.dominantHand === 'left-handed' ? (
-                    <div className="bg-yellow-100 text-yellow-800 text-xs font-medium mt-1.5  mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">
+                    <div className="inline-block mb-1 bg-slate-200 break-words  text-purple-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded  border-teal-800">
                       {userProfile.dominantHand}
                     </div>
                   ) : (
-                    <div className="bg-pink-100 text-pink-800 text-xs font-medium mt-1.5 mr-2 px-2.5 py-0.5 rounded dark:bg-pink-900 dark:text-pink-300">
+                    <div className="inline-block mb-1 bg-slate-200 break-words text-slate-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded  border-teal-800">
                       {userProfile.dominantHand}
                     </div>
                   )}
