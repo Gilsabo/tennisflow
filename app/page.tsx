@@ -3,6 +3,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getUserBySessionToken } from '../database/users';
 import tennisFlowLogo from '../public/images/tennisFlowLogo.svg';
+import atp from '../public/logoPartners/atpLogo.jpg';
+import australianOpen from '../public/logoPartners/australianOpenLogo.png';
+import head from '../public/logoPartners/headLogo.jpg';
+import itf from '../public/logoPartners/itfLogo.png';
+import rolandGarros from '../public/logoPartners/rolandGarrosLogo.png';
+import tennisEurope from '../public/logoPartners/tennisEuropeLogo.png';
+import UsOpen from '../public/logoPartners/usOpenLogo.png';
+import wilson from '../public/logoPartners/wilsonLogo.png';
+import wimbledon from '../public/logoPartners/wimbledonLogo.png';
+import wta from '../public/logoPartners/wtaLogo.png';
+import martina from '../public/Martina.jpg';
+import novak from '../public/Novak.jpg';
+import roger from '../public/Roger.jpg';
 import tennisCourt from '../public/tennisCourt.jpg';
 import LogoutButton from './(auth)/logout/LogoutButton';
 
@@ -98,7 +111,7 @@ export default async function Home() {
         </div>
       </section>
       <section className="px-40 pt-28 pb-28">
-        <div className="flex flex-col items-center text-teal-800">
+        <div className="flex flex-col items-center text-violet-900">
           <h1 className="text-6xl text-center mb-10">
             Ace Your Game, Connect, <br /> Progress Together
           </h1>
@@ -108,29 +121,50 @@ export default async function Home() {
           </h3>
           <div className="flex text-center ">
             <div className="mr-14 shadow-md rounded-lg px-6">
+              <div className="mb-4">
+                <Image
+                  className="rounded-2xl"
+                  src={roger}
+                  alt="Testimonial Roger"
+                />
+              </div>
               <h3 className="font-semibold">Roger </h3>
               <h3 className="mb-2 font-semibold">Rüttelracketli</h3>
-              <h1 className="mb-6">54</h1>
+              <h1 className="mb-6">36</h1>
               <p className="italic mb-6">
                 "I can't express how much Tennisflow has elevated my game. The
                 supportive community helped me refine my serve technique,
                 turning me into a more confident player"
               </p>
             </div>
-            <div className="mx-14 mt-20 shadow-md rounded-lg px-6">
-              <h3 className="font-semibold">Maria </h3>
-              <h3 className="mb-2 font-semibold">Smashapova</h3>
-              <h1 className="mb-6">36</h1>
+            <div className="mx-14 shadow-md rounded-lg px-6">
+              <div className="mb-4">
+                <Image
+                  className="rounded-2xl"
+                  src={novak}
+                  alt="Testimonial Novak"
+                />
+              </div>
+              <h3 className="font-semibold">Humbert </h3>
+              <h3 className="mb-2 font-semibold">Hurckrash</h3>
+              <h1 className="mb-6">40</h1>
               <p className="italic mb-6">
                 "I stumbled upon Tennisflow as a beginner, and it transformed my
                 game. The insightful tips from the community have refined my
                 backhand, adding finesse to my shots"
               </p>
             </div>
-            <div className="ml-10 mt-40 shadow-md rounded-lg px-6">
+            <div className="ml-10 shadow-md rounded-lg px-6">
+              <div className="mb-4">
+                <Image
+                  className="rounded-2xl"
+                  src={martina}
+                  alt="Testimonial Martina"
+                />
+              </div>
               <h3 className="font-semibold">Martinka</h3>
               <h3 className="mb-2 font-semibold">Noodlevolleylova</h3>
-              <h1 className="mb-6">27</h1>
+              <h1 className="mb-6">56</h1>
               <p className="italic mb-6">
                 "My professional career took a turn for the better with
                 Tennisflow. The strategic discussions and collaborative spirit
@@ -139,6 +173,81 @@ export default async function Home() {
             </div>
           </div>
         </div>
+      </section>
+      <section className="bg-teal-800 text-slate-200 flex px-40 pt-20 pb-8">
+        <div className="w-2/4 ">
+          <div className="w-2/4 h-80 m-auto ">
+            <div>
+              <Image
+                className="rounded-2xl"
+                src={tennisCourt}
+                alt="tennis court"
+              />
+            </div>
+          </div>
+          <h1 className="text-6xl mb-6 ">
+            Skip tutorial hell in 3 simple steps
+          </h1>
+          <h3 className="text-xl mb-6 ">
+            No more binge-watching videos that don't meet <br />
+            your specific needs. With our supportive community, <br />
+            you'll receive tailored feedback that suits you best.
+          </h3>
+          <Link
+            className=" bg-slate-200 rounded-lg  text-teal-800 border border-solid py-2 px-4"
+            href="/register"
+          >
+            Upload
+          </Link>
+        </div>
+      </section>
+      <section className="px-40 pt-28 pb-28 ">
+        <div className="text-6xl mb-14 flex flex-col items-center text-center text-violet-900">
+          Our Partners
+        </div>
+        <div className="flex flex-wrap justify-center ">
+          <Image
+            src={australianOpen}
+            alt="autralian open logo"
+            className="w-36 mx-2"
+          />
+          <Image
+            src={rolandGarros}
+            alt="roland garros logo"
+            className="w-36 h-36 mx-2"
+          />
+          <Image src={UsOpen} alt="us open logo" className="w-36 h-36 mx-2" />
+          <Image src={wilson} alt="wilson logo" className="w-36 h-36 mx-2" />
+          <Image src={head} alt="head logo" className="w-36" />
+          <Image
+            src={wimbledon}
+            alt="wimbledon logo"
+            className="w-36 h-36 mx-2"
+          />
+          <Image
+            src={wta}
+            alt="women tennis aassociation logo"
+            className="w-36 h-36 mx-2"
+          />
+          <Image
+            src={itf}
+            alt="itf federation logo"
+            className="w-36 h-36 mx-2"
+          />
+          <Image
+            src={atp}
+            alt="assotiation of tennis professinals logo"
+            className="w-36 h-36 mx-2"
+          />
+          <Image
+            src={tennisEurope}
+            alt="tennis europe logo"
+            className="w-36 h-36 mx-2"
+          />
+        </div>
+      </section>
+      <section>
+        <div className="px-40 pt-28 pb-28 bg-slate-200">d</div>
       </section>
     </div>
   );
