@@ -45,7 +45,7 @@ export default function Comments(props: Props) {
               leave your comment
             </label>
             <div className="mt-2">
-              <input
+              <textarea
                 value={commentInput}
                 onChange={(e) => setCommentInput(e.currentTarget.value)}
                 required
@@ -57,7 +57,7 @@ export default function Comments(props: Props) {
             </div>
           </div>
           <div className=" ml-4 mt-auto flex items-center justify-start gap-x-6">
-            <button className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            <button className="rounded-md  bg-violet-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
               Post
             </button>
           </div>
