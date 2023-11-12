@@ -3,6 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getUserBySessionToken } from '../database/users';
 import tennisFlowLogo from '../public/images/tennisFlowLogo.svg';
+import tennisLogoGreen from '../public/images/tennisLogoGreen.svg';
+import community from '../public/instrucionsSection/community.svg';
+import register from '../public/instrucionsSection/register.svg';
+import smartPhone from '../public/instrucionsSection/smartphone.svg';
+import upload from '../public/instrucionsSection/upload.svg';
 import atp from '../public/logoPartners/atpLogo.jpg';
 import australianOpen from '../public/logoPartners/australianOpenLogo.png';
 import head from '../public/logoPartners/headLogo.jpg';
@@ -13,10 +18,14 @@ import UsOpen from '../public/logoPartners/usOpenLogo.png';
 import wilson from '../public/logoPartners/wilsonLogo.png';
 import wimbledon from '../public/logoPartners/wimbledonLogo.png';
 import wta from '../public/logoPartners/wtaLogo.png';
+import email from '../public/logosSocialMedia/email.svg';
+import facebook from '../public/logosSocialMedia/facebook.svg';
+import instagram from '../public/logosSocialMedia/instagram.svg';
+import x from '../public/logosSocialMedia/x.svg';
 import martina from '../public/Martina.jpg';
 import novak from '../public/Novak.jpg';
 import roger from '../public/Roger.jpg';
-import tennisCourt from '../public/tennisCourt.jpg';
+import tennisCourt2 from '../public/tennisCourt2.jpg';
 import LogoutButton from './(auth)/logout/LogoutButton';
 
 export default async function Home() {
@@ -74,7 +83,7 @@ export default async function Home() {
                   Log in
                 </Link>
                 <Link
-                  className="ml-6 rounded-lg  bg-slate-200 text-teal-800 border border-solid py-2 px-4"
+                  className="ml-6 rounded-lg bg-slate-200 text-teal-800 border border-solid py-2 px-4"
                   href="/register"
                 >
                   Sign up
@@ -89,22 +98,22 @@ export default async function Home() {
           <h1 className="text-6xl mb-6 ">
             Elevate Your Game with Tennis Enthusiasts Community!
           </h1>
-          <h3 className="text-xl mb-6 ">
+          <h3 className="text-xl mb-10 ">
             Upload your tennis strokes, get expert feedback, <br />
             and level up your skills with our supportive community.
           </h3>
           <Link
-            className=" bg-slate-200 rounded-lg  text-teal-800 border border-solid py-2 px-4"
+            className=" bg-slate-200 rounded-lg text-teal-800 border border-solid py-2 px-4 inline-block"
             href="/register"
           >
             Get started
           </Link>
         </div>
-        <div className="w-2/4 h-80 m-auto ">
-          <div>
+        <div className="w-2/4">
+          <div className="flex flex-col items-end">
             <Image
-              className="rounded-2xl"
-              src={tennisCourt}
+              className="rounded-sm h-20 w-20"
+              src={tennisCourt2}
               alt="tennis court"
             />
           </div>
@@ -176,19 +185,56 @@ export default async function Home() {
       </section>
       <section className="bg-teal-800 text-slate-200 flex px-40 pt-20 pb-8">
         <div className="w-2/4 ">
-          <div className="w-2/4 h-80 m-auto ">
+          <div className="flex">
+            <div className="mr-8">
+              <div className="mb-8">
+                <Image
+                  src={smartPhone}
+                  alt="smartphone logo"
+                  className="w-20 h-20 mb-2"
+                />
+                <span className="text-2xl">1. </span>Record your desired video
+                in upright format
+              </div>
+
+              <div className="mb-8">
+                <Image
+                  src={register}
+                  alt="register logo"
+                  className="w-20 h-20 mb-2"
+                />
+                <span className="text-2xl">2. </span>Register into the platform
+                and complete the profile
+              </div>
+            </div>
             <div>
-              <Image
-                className="rounded-2xl"
-                src={tennisCourt}
-                alt="tennis court"
-              />
+              <div className="mb-8">
+                <Image
+                  src={upload}
+                  alt="upload logo"
+                  className="w-20 h-20 mb-2"
+                />
+                <span className="text-2xl">3. </span>Upload the video with the
+                correspondings tags
+              </div>
+
+              <div className="mb-8">
+                <Image
+                  src={community}
+                  alt="community logo"
+                  className="w-20 h-20 mb-2"
+                />
+                <span className="text-2xl">4. </span>Engage with the community
+                commenting others' content
+              </div>
             </div>
           </div>
+        </div>
+        <div className="text-right">
           <h1 className="text-6xl mb-6 ">
             Skip tutorial hell in 3 simple steps
           </h1>
-          <h3 className="text-xl mb-6 ">
+          <h3 className="text-xl mb-10 ">
             No more binge-watching videos that don't meet <br />
             your specific needs. With our supportive community, <br />
             you'll receive tailored feedback that suits you best.
@@ -247,7 +293,46 @@ export default async function Home() {
         </div>
       </section>
       <section>
-        <div className="px-40 pt-28 pb-28 bg-slate-200">d</div>
+        <div className="px-40 pt-28 pb-28 flex justify-between bg-slate-200 text-teal-800">
+          <div className="flex mb-auto">
+            <Image
+              className="mr-3 w-8 h-8 ml-4 text-teal-800"
+              src={tennisLogoGreen}
+              alt="tennisflow logo"
+            />
+            <div className="text-2xl mt-auto ">Tennisflow </div>
+          </div>
+          <div>
+            Company
+            <div className="text-sm mt-1">About Us</div>
+            <div className="text-sm mt-1">Careers</div>
+            <div className="text-sm mt-1">Our History</div>
+            <div className="text-sm mt-1">Terms and coditions</div>
+          </div>
+          <div>
+            Helpful Resources
+            <div className="text-sm mt-1">Knowledge Base</div>
+            <div className="text-sm mt-1">Tutorials</div>
+            <div className="text-sm mt-1">Feedback</div>
+          </div>
+          <div>
+            Contact Us
+            <div className="flex mt-2">
+              <Image className="w-5 h-5 mx-1" src={email} alt="email logo" />
+              <Image className="w-5 h-5 mx-1" src={x} alt="x logo" />
+              <Image
+                className="w-5 h-5 mx-1"
+                src={instagram}
+                alt="instagram logo"
+              />
+              <Image
+                className="w-5 h-5 mx-1"
+                src={facebook}
+                alt="facebooklogo"
+              />
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
