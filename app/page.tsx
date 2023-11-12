@@ -100,7 +100,7 @@ export default async function Home() {
           </h1>
           <h3 className="text-xl mb-10 ">
             Upload your tennis strokes, get expert feedback, <br />
-            and level up your skills with our supportive community.
+            and level up your skills with our supportive community
           </h3>
           <Link
             className=" bg-slate-200 rounded-lg text-teal-800 border border-solid py-2 px-4 inline-block"
@@ -235,7 +235,7 @@ export default async function Home() {
           <h3 className="text-xl mb-10 ">
             No more binge-watching videos that don't meet <br />
             your specific needs. With our supportive community, <br />
-            you'll receive tailored feedback that suits you best.
+            you'll receive tailored feedback that suits you best
           </h3>
           <Link
             className=" bg-slate-200 rounded-lg  text-teal-800 border border-solid py-2 px-4"
