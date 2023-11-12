@@ -25,7 +25,7 @@ import x from '../public/logosSocialMedia/x.svg';
 import martina from '../public/Martina.jpg';
 import novak from '../public/Novak.jpg';
 import roger from '../public/Roger.jpg';
-import tennisCourt2 from '../public/tennisCourt2.jpg';
+import tennisCourt from '../public/tennisCourt.jpg';
 import LogoutButton from './(auth)/logout/LogoutButton';
 
 export default async function Home() {
@@ -109,11 +109,11 @@ export default async function Home() {
             Get started
           </Link>
         </div>
-        <div className="w-2/4">
-          <div className="flex flex-col items-end">
+        <div className="w-2/4 relative">
+          <div className="absolute">
             <Image
-              className="rounded-sm h-20 w-20"
-              src={tennisCourt2}
+              className="rounded-lg rounded-e-full "
+              src={tennisCourt}
               alt="tennis court"
             />
           </div>
@@ -196,18 +196,6 @@ export default async function Home() {
                 <span className="text-2xl">1. </span>Record your desired video
                 in upright format
               </div>
-
-              <div className="mb-8">
-                <Image
-                  src={register}
-                  alt="register logo"
-                  className="w-20 h-20 mb-2"
-                />
-                <span className="text-2xl">2. </span>Register into the platform
-                and complete the profile
-              </div>
-            </div>
-            <div>
               <div className="mb-8">
                 <Image
                   src={upload}
@@ -217,7 +205,17 @@ export default async function Home() {
                 <span className="text-2xl">3. </span>Upload the video with the
                 correspondings tags
               </div>
-
+            </div>
+            <div>
+              <div className="mb-8">
+                <Image
+                  src={register}
+                  alt="register logo"
+                  className="w-20 h-20 mb-2"
+                />
+                <span className="text-2xl">2. </span>Register into the platform
+                and complete the profile
+              </div>
               <div className="mb-8">
                 <Image
                   src={community}
