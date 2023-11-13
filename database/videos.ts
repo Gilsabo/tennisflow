@@ -1,5 +1,8 @@
 import { cache } from 'react';
-import { Video } from '../migrations/00004-createTableVideos';
+import {
+  Video,
+  VideoWithComments,
+} from '../migrations/00004-createTableVideos';
 import { sql } from './connect';
 
 export const createUserVideo = cache(
@@ -57,4 +60,23 @@ export const getVideoByIdVideo = cache(async (idVideo: number) => {
       id = ${idVideo}
   `;
   return videos;
+});
+
+export const getVideoWithcomments = cache(async (videoId: number) => {
+  const videoWithComment = await sql<VideoWithComments[]>`
+    SELECT
+      comments.id,
+      comments.comment_user,
+      comments.timestamp,
+      user_profiles.first_name,
+      user_profiles.last_name,
+      user_profiles.profile_picture_url
+    FROM
+      comments
+      INNER JOIN videos ON videos.id = comments.video_id
+      INNER JOIN user_profiles ON user_profiles.id = comments.user_profile_id
+    WHERE
+      videos.id = ${videoId}
+  `;
+  return videoWithComment;
 });
