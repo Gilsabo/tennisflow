@@ -26,8 +26,6 @@ export default function Comments(props: Props) {
     console.log('commentsresponse', data);
   }
 
-  console.log('url', props.videoWithcomments[0]?.profilePictureUrl);
-
   return (
     <div className="ml-8">
       <form
