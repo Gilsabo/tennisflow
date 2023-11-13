@@ -58,10 +58,10 @@ export default function Comments(props: Props) {
                   <div className="text-sm mb-2 ">
                     {videoWithComment.commentUser}
                   </div>
-                  <div className="text-xs">
+                  <div className="text-xs text-teal-800">
                     {videoWithComment.firstName} {videoWithComment.lastName}
                   </div>
-                  <div className="text-xs">
+                  <div className="text-xs text-teal-800">
                     {videoWithComment.timestamp.toDateString()}
                   </div>
                 </div>
