@@ -12,12 +12,12 @@ export type Video = {
 };
 
 export type VideoWithComments = {
-  commentId: string;
+  id: string;
   commentUser: string;
-  commentTimestamp: string;
-  userProfileFirstName: string;
-  userProfileLastName: string;
-  userProfileProfilePictureUrl: string | null;
+  timestamp: Date;
+  firstName: string;
+  lastName: string;
+  profilePictureUrl: string | null;
 };
 
 export async function up(sql: Sql) {
