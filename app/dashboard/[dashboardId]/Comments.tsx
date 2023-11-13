@@ -1,4 +1,5 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { VideoWithComments } from '../../../migrations/00004-createTableVideos';
 
@@ -12,6 +13,8 @@ export default function Comments(props: Props) {
   const [commentInput, setCommentInput] = useState('');
 
   const imageURL = 'https://res.cloudinary.com/dqiq3eutn/image/upload/';
+
+  const router = useRouter();
 
   async function createComment() {
     const response = await fetch(`/api/comments`, {
@@ -88,7 +91,12 @@ export default function Comments(props: Props) {
             </div>
           </div>
           <div className=" ml-4 mt-auto flex items-center justify-start gap-x-6">
-            <button className="rounded-md  bg-violet-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            <button
+              onClick={() => {
+                router.refresh();
+              }}
+              className="rounded-md  bg-violet-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
               Post
             </button>
           </div>
