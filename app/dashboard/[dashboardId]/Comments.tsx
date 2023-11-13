@@ -1,14 +1,17 @@
 'use client';
-
 import { useState } from 'react';
+import { VideoWithComments } from '../../../migrations/00004-createTableVideos';
 
 type Props = {
   videoId: number | undefined;
   userProfileId: number;
+  videoWithcomments: VideoWithComments[];
 };
 
 export default function Comments(props: Props) {
   const [commentInput, setCommentInput] = useState('');
+
+  const imageURL = 'https://res.cloudinary.com/dqiq3eutn/image/upload/';
 
   async function createComment() {
     const response = await fetch(`/api/comments`, {
@@ -23,6 +26,8 @@ export default function Comments(props: Props) {
     console.log('commentsresponse', data);
   }
 
+  console.log('url', props.videoWithcomments[0]?.profilePictureUrl);
+
   return (
     <div className="ml-8">
       <form
@@ -33,8 +38,36 @@ export default function Comments(props: Props) {
           setCommentInput('');
         }}
       >
-        <div className=" shadow-inner bg-slate-50 rounded h-96 w-96 break-words">
-          {commentInput}
+        <div className="overflow-scroll bg-slate-50 rounded h-96 w-96 break-words">
+          {props.videoWithcomments.map((videoWithComment) => {
+            return (
+              <div
+                key={`div-comment-user-${videoWithComment.firstName}`}
+                className="flex p-3 shadow-inner rounded-lg m-3"
+              >
+                <div className="flex-shrink-0 mr-4 ">
+                  <img
+                    className="rounded-full h-8 "
+                    src={`${imageURL}${videoWithComment.profilePictureUrl}`}
+                    alt="profile pictre player"
+                    width={30}
+                    height={32}
+                  />
+                </div>
+                <div className="flex-shrink-1 ">
+                  <div className="text-sm mb-2 ">
+                    {videoWithComment.commentUser}
+                  </div>
+                  <div className="text-xs">
+                    {videoWithComment.firstName} {videoWithComment.lastName}
+                  </div>
+                  <div className="text-xs">
+                    {videoWithComment.timestamp.toDateString()}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
         <div className="flex mt-8 w-96">
           <div className="mr-auto ">
