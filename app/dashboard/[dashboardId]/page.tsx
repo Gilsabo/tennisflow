@@ -5,7 +5,10 @@ import {
   getUserProfileByUserId,
 } from '../../../database/profiles';
 import { getUserBySessionToken } from '../../../database/users';
-import { getVideoByIdVideo } from '../../../database/videos';
+import {
+  getVideoByIdVideo,
+  getVideoWithcomments,
+} from '../../../database/videos';
 import Comments from './Comments';
 
 type Props = {
@@ -45,6 +48,11 @@ export default async function DashboardVideoId(props: Props) {
     notFound();
   }
 
+  const videoWithcomments = await getVideoWithcomments(
+    Number(props.params.dashboardId),
+  );
+
+
   return (
     <div className="flex justify-center">
       <div className="ml-8 mt-8 w-60">
@@ -80,6 +88,7 @@ export default async function DashboardVideoId(props: Props) {
       <Comments
         videoId={singleVideo[0]?.id}
         userProfileId={userLoggedinWithProfile.id}
+        videoWithcomments={videoWithcomments}
       />
     </div>
   );
