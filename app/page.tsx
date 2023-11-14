@@ -37,7 +37,7 @@ export default async function Home() {
 
   return (
     <div>
-      <div>
+      <div className="sticky top-0 z-40">
         <header className="flex px-36 bg-teal-800 text-slate-200 pt-12 pb-4 justify-between content-end ">
           <div className="flex mt-auto">
             <Image
