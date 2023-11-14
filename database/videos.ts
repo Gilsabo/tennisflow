@@ -80,3 +80,17 @@ export const getVideoWithcomments = cache(async (videoId: number) => {
   `;
   return videoWithComment;
 });
+
+export const getUserVideosByUserProfileId = cache(
+  async (userProfileId: number) => {
+    const videos = await sql<Video[]>`
+      SELECT
+        *
+      FROM
+        videos
+      WHERE
+        user_profile_id = ${userProfileId}
+    `;
+    return videos;
+  },
+);
