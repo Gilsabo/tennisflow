@@ -83,12 +83,15 @@ export default function LoginFrom(props: Props) {
             />
           </div>
 
-          <button className="mt-8 w-60 m-16 rounded-md bg-slate-200 px-3 py-2 text-sm font-semibold text-teal-800 shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          <button className="mt-8 w-60 m-16 rounded-md bg-slate-200 px-3 py-2 text-sm font-semibold text-teal-800 shadow-sm hover:bg-purple-800 hover:text-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
             Log in
           </button>
         </div>
         {errors.map((error) => (
-          <div className="error" key={`error-${error.message}`}>
+          <div
+            className="p-4 rounded-xl w-80 m-auto text-center border-rose-600 text-rose-600 bg-slate-200"
+            key={`error-${error.message}`}
+          >
             Error: {error.message}
           </div>
         ))}
