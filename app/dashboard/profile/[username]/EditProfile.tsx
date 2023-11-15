@@ -1,4 +1,5 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { UserProfile } from '../../../../migrations/00002-createTableUserProfiles';
 
@@ -20,6 +21,8 @@ export default function EditProfile(props: Props) {
   const [onEditDescriptionInput, setOnEditDescriptionInput] = useState('');
   const [onEditProfilePictureUrlInput, setOnEditProfilePictureUrlInput] =
     useState<string | undefined>('');
+
+  const router = useRouter();
 
   function handleDominandHand(event: React.ChangeEvent<HTMLInputElement>) {
     // Updating the state with the selected radio button's value
@@ -294,6 +297,7 @@ export default function EditProfile(props: Props) {
               onClick={async () => {
                 await updateProfileByUserId(props.userName);
                 setOnEditId(0);
+                router.refresh();
               }}
             >
               save
