@@ -10,6 +10,7 @@ type Props = {
 export default function UploadVideo(props: Props) {
   const [fileInputState, setFileInputState] = useState('');
   const [selectedFile, setSelectedFile] = useState<File>();
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleFileInputChange = (
     e: React.ChangeEvent<HTMLInputElement>,
@@ -44,10 +45,13 @@ export default function UploadVideo(props: Props) {
   const handleSubmitFile = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!selectedFile) return;
+
+    setLoading(true);
     const reader = new FileReader();
     reader.readAsDataURL(selectedFile);
     reader.onloadend = async () => {
       await uploadVideoPlayer(reader.result);
+      setLoading(false);
     };
     reader.onerror = () => {
       console.error('AHHHHHHHH!!');
@@ -57,7 +61,7 @@ export default function UploadVideo(props: Props) {
   return (
     <>
       <form onSubmit={handleSubmitFile}>
-        <label className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+        <label className="rounded-md mt-4 bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
           Select File
           <input
             type="file"
@@ -65,10 +69,14 @@ export default function UploadVideo(props: Props) {
             className="absolute hidden"
             onChange={handleFileInputChange}
             value={fileInputState}
+            disabled={loading}
           />
         </label>
-        <button className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-          Upload
+        <button
+          disabled={loading}
+          className="rounded-md mt-4 bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+        >
+          {loading ? 'Uploading...' : 'Upload'}
         </button>
       </form>
       <div>
