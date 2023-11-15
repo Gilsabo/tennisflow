@@ -1,4 +1,5 @@
 'use client';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import UploadProfileImage from './UploadProfileImage';
 
@@ -22,20 +23,20 @@ export default function Profile({ userId, userName }: Props) {
     setDominantHandInput(event.target.id);
   }
 
-  const request = {
-    firstName: firstNameInput,
-    lastName: lastNameInput,
-    email: emailInput,
-    age: ageInput,
-    yearsExperience: yearsExperienceInput,
-    dominantHand: dominantHandInput,
-    description: descriptionInput,
-    profilePictureUrl: profilePictureUrlInput,
-    userId: userId,
-  };
+  // const request = {
+  //   firstName: firstNameInput,
+  //   lastName: lastNameInput,
+  //   email: emailInput,
+  //   age: ageInput,
+  //   yearsExperience: yearsExperienceInput,
+  //   dominantHand: dominantHandInput,
+  //   description: descriptionInput,
+  //   profilePictureUrl: profilePictureUrlInput,
+  //   userId: userId,
+  // };
 
-  console.log('rquesteeed', request);
-  console.log('eventssss,', dominantHandInput);
+  // console.log('rquesteeed', request);
+  // console.log('eventssss,', dominantHandInput);
   async function createUserProfile() {
     const response = await fetch('/api/userprofiles', {
       method: 'POST',
@@ -54,6 +55,8 @@ export default function Profile({ userId, userName }: Props) {
     const data = await response.json();
     console.log('adata', data);
   }
+
+  const router = useRouter();
 
   return (
     <div className="ml-16 pl-20">
@@ -260,7 +263,12 @@ export default function Profile({ userId, userName }: Props) {
           </div>
         </div>
         <div className="mt-6 flex items-center justify-start gap-x-6">
-          <button className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          <button
+            onClick={() => {
+              router.refresh();
+            }}
+            className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
             Save
           </button>
         </div>
