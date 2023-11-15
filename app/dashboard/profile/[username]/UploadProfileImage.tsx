@@ -10,6 +10,7 @@ export default function UploadProfileImage(props: Props) {
   const [fileInputState, setFileInputState] = useState('');
   const [previewSource, setPreviewSource] = useState<any>('');
   const [selectedFile, setSelectedFile] = useState<File>();
+  const [loading, setLoading] = useState<boolean>(false);
 
   const previewFile = (file: File) => {
     const reader = new FileReader();
@@ -50,17 +51,19 @@ export default function UploadProfileImage(props: Props) {
   };
 
   const handleSubmitFile = (e: React.FormEvent<HTMLFormElement>) => {
-    console.log('sent it');
     e.preventDefault();
-    console.log('Input field is empty!');
     if (!selectedFile) return;
+
+    setLoading(true);
     const reader = new FileReader();
     reader.readAsDataURL(selectedFile);
     reader.onloadend = async () => {
       await uploadImage(reader.result);
+      setLoading(false);
     };
     reader.onerror = () => {
       console.error('AHHHHHHHH!!');
+      setLoading(false);
     };
   };
   return (
@@ -91,10 +94,14 @@ export default function UploadProfileImage(props: Props) {
             className="absolute hidden"
             onChange={handleFileInputChange}
             value={fileInputState}
+            disabled={loading}
           />
         </label>
-        <button className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-          Upload
+        <button
+          className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+          disabled={loading}
+        >
+          {loading ? 'Uploading...' : 'Upload'}
         </button>
       </form>
     </div>
