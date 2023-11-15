@@ -1,4 +1,6 @@
 'use client';
+
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import UploadVideo from './UploadVideo';
 
@@ -13,7 +15,9 @@ export default function VideoForm({ userProfileId }: Props) {
   const [locationInput, setLocationInput] = useState('');
   const [videoUrlInput, setVideoUrlInput] = useState('');
 
-  console.log('taaags', tagsInput);
+  const router = useRouter();
+
+  // console.log('taaags', tagsInput);
 
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const checkboxId = e.target.id;
@@ -26,22 +30,6 @@ export default function VideoForm({ userProfileId }: Props) {
       setTagsInput((prevTags) => prevTags.filter((tag) => tag !== checkboxId));
     }
   };
-
-  const request = {
-    videoUrl: videoUrlInput,
-    title: titleInput,
-    description: descriptionInput,
-    tags: tagsInput,
-    location: locationInput,
-    userProfileId: userProfileId,
-  };
-  console.log(request);
-
-  // function handleMultipleStrokes(e:) {
-  //   const options = [...e.target.selectedOptions];
-  //   const values = options.map((option) => option.value);
-  //   setTagsInput(values);
-  // }
 
   async function createVideo() {
     const response = await fetch('/api/uservideos', {
@@ -57,6 +45,9 @@ export default function VideoForm({ userProfileId }: Props) {
     });
     const data = await response.json();
     console.log('datavideo', data);
+
+    router.push(`/dashboard`);
+    router.refresh();
   }
 
   return (
@@ -260,41 +251,6 @@ export default function VideoForm({ userProfileId }: Props) {
               when playing in the video.
             </p>
           </div>
-          {/* <label>
-            Pick all the strokes you want to improve:
-            <select
-              multiple={true}
-              value={tagsInput}
-              onChange={(e) => {
-                const options = [...e.target.selectedOptions];
-                const values = options.map((option) => option.value);
-                setTagsInput(values);
-              }}
-            >
-              <option value="forhand">Forhand</option>
-              <option value="backhand">Backhand</option>
-              <option value="volley">Volley</option>
-              <option value="smash">Smash</option>
-              <option value="serve">Serve</option>
-              <option value="foot-work">foot-work</option>
-            </select>
-          </label>
-
-          <label>
-            Location
-            <input
-              value={locationInput}
-              onChange={(e) => setLocationInput(e.currentTarget.value)}
-            />
-          </label>
-          <textarea
-            rows={25}
-            cols={50}
-            maxLength={250}
-            value={descriptionInput}
-            onChange={(e) => setDescriptionInput(e.currentTarget.value)}
-            required
-          /> */}
           <div className="mt-6 flex items-center justify-start gap-x-6">
             <button className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
               Save
