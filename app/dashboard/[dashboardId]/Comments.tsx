@@ -39,7 +39,7 @@ export default function Comments(props: Props) {
           setCommentInput('');
         }}
       >
-        <div className="overflow-auto scrollbar scrollbar-track-teal-800 scrollbar-thumb-rounded-xl scrollbar-thumb-slate-200 bg-slate-50 rounded h-96 w-96 break-words">
+        <div className="overflow-auto scrollbar scrollbar-track-slate-200 scrollbar-thumb-rounded-xl scrollbar-thumb-teal-800 bg-slate-50 rounded h-96 w-96 break-words">
           {props.videoWithcomments.map((videoWithComment) => {
             return (
               <div
