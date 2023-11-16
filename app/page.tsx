@@ -96,7 +96,7 @@ export default async function Home() {
       <section className="bg-teal-800 text-slate-200 flex px-40 pt-20 pb-8">
         <div className="w-2/4 ">
           <h1 className="text-6xl mb-6 ">
-            Elevate Your Game with Tennis Enthusiasts Community!
+            Elevate Your Game with Tennis fans Community!
           </h1>
           <h3 className="text-xl mb-10 ">
             Upload your tennis strokes, get expert feedback, <br />
