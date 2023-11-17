@@ -42,6 +42,7 @@ export default function LoginFrom(props: Props) {
 
   return (
     <div className="m-auto bg-slate-200 pt-40 h-screen">
+      {/* <div>Sign in to your account</div> */}
       <form
         className="border  bg-[#00503C] rounded-lg  w-96 h-96 m-auto"
         onSubmit={async (event) => await handleRegister(event)}
