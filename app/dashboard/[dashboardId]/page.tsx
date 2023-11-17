@@ -52,7 +52,6 @@ export default async function DashboardVideoId(props: Props) {
     Number(props.params.dashboardId),
   );
 
-
   return (
     <div className="flex justify-center">
       <div className="ml-8 mt-8 w-60">
@@ -75,7 +74,7 @@ export default async function DashboardVideoId(props: Props) {
             {singleVideo[0]?.tags?.map((tag) => {
               return (
                 <div
-                  className="inline-block mb-1 bg-slate-200 break-words text-teal-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded  border-teal-800"
+                  className="inline-block mb-1 bg-slate-200 break-words text-[#00503C] text-xs font-medium mr-2 px-2.5 py-0.5 rounded  border-[#00503C]"
                   key={`div-tags-${tag}`}
                 >
                   # {tag}

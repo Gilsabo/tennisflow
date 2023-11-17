@@ -39,7 +39,7 @@ export default function Comments(props: Props) {
           setCommentInput('');
         }}
       >
-        <div className="overflow-auto scrollbar scrollbar-track-slate-200 scrollbar-thumb-rounded-xl scrollbar-thumb-teal-800 bg-slate-50 rounded h-96 w-96 break-words">
+        <div className="overflow-auto scrollbar scrollbar-track-slate-200 scrollbar-thumb-rounded-xl scrollbar-thumb-[#00503C] bg-slate-50 rounded h-96 w-96 break-words">
           {props.videoWithcomments.map((videoWithComment) => {
             return (
               <div
@@ -59,10 +59,10 @@ export default function Comments(props: Props) {
                   <div className="text-sm mb-2 ">
                     {videoWithComment.commentUser}
                   </div>
-                  <div className="text-xs text-teal-800">
+                  <div className="text-xs text-[#00503C]">
                     {videoWithComment.firstName} {videoWithComment.lastName}
                   </div>
-                  <div className="text-xs text-teal-800">
+                  <div className="text-xs text-[#00503C]">
                     {videoWithComment.timestamp.toDateString()}
                   </div>
                 </div>
