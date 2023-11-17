@@ -38,7 +38,7 @@ export default async function Home() {
   return (
     <div>
       <div className="sticky top-0 z-40">
-        <header className="flex px-36 bg-teal-800 text-slate-200 pt-12 pb-4 justify-between content-end ">
+        <header className="flex px-36 bg-[#00503C] text-slate-200 pt-12 pb-4 justify-between content-end ">
           <div className="flex mt-auto">
             <Image
               className="mr-3 w-8 h-8 ml-4"
@@ -83,7 +83,7 @@ export default async function Home() {
                   Log in
                 </Link>
                 <Link
-                  className="ml-6 rounded-lg bg-slate-200 text-teal-800 border border-solid py-2 px-4"
+                  className="ml-6 rounded-lg bg-slate-200 text-[#00503C] border border-solid py-2 px-4"
                   href="/register"
                 >
                   Sign up
@@ -93,7 +93,7 @@ export default async function Home() {
           </div>
         </header>
       </div>
-      <section className="bg-teal-800 text-slate-200 flex px-40 pt-20 pb-8">
+      <section className="bg-[#00503C] text-slate-200 flex px-40 pt-20 pb-8">
         <div className="w-2/4 ">
           <h1 className="text-6xl mb-6 ">
             Elevate Your Game with Tennis fans Community!
@@ -103,7 +103,7 @@ export default async function Home() {
             and level up your skills with our supportive community
           </h3>
           <Link
-            className=" bg-slate-200 rounded-lg text-teal-800 border border-solid py-2 px-4 inline-block"
+            className=" bg-slate-200 rounded-lg text-[#00503C] border border-solid py-2 px-4 inline-block"
             href="/register"
           >
             Get started
@@ -183,7 +183,7 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-teal-800 text-slate-200 flex px-40 pt-20 pb-8">
+      <section className="bg-[#00503C] text-slate-200 flex px-40 pt-20 pb-8">
         <div className="w-2/4 ">
           <div className="flex">
             <div className="mr-8">
@@ -238,7 +238,7 @@ export default async function Home() {
             you'll receive tailored feedback that suits you best
           </h3>
           <Link
-            className=" bg-slate-200 rounded-lg  text-teal-800 border border-solid py-2 px-4"
+            className=" bg-slate-200 rounded-lg  text-[#00503C] border border-solid py-2 px-4"
             href="/register"
           >
             Upload
@@ -291,10 +291,10 @@ export default async function Home() {
         </div>
       </section>
       <section>
-        <div className="px-40 pt-28 pb-28 flex justify-between bg-slate-200 text-teal-800">
+        <div className="px-40 pt-28 pb-28 flex justify-between bg-slate-200 text-[#00503C]">
           <div className="flex mb-auto">
             <Image
-              className="mr-3 w-8 h-8 ml-4 text-teal-800"
+              className="mr-3 w-8 h-8 ml-4 text-[#00503C]"
               src={tennisLogoGreen}
               alt="tennisflow logo"
             />
