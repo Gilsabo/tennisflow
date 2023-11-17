@@ -37,7 +37,7 @@ export default async function Layout(props: Props) {
       <div className="  shadow-2xl bg-slate-50 h-full">
         <Link
           href="/"
-          className=" bg-teal-800 flex items-center pl-6 pt-8  shadow"
+          className=" bg-[#00503C] flex items-center pl-6 pt-8  shadow"
         >
           <Image
             src="/images/tennisFlowLogo.svg"
