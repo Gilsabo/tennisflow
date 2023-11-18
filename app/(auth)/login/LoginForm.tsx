@@ -29,10 +29,6 @@ export default function LoginFrom(props: Props) {
       setErrors(data.errors);
       return;
     }
-    // not secure way
-    // if (props.returnTo) {
-    //   router.push(props.returnTo);
-    // }
 
     router.push(
       getSafeReturnToPath(props.returnTo) ||
@@ -45,19 +41,19 @@ export default function LoginFrom(props: Props) {
   return (
     <div className="m-auto bg-slate-200 pt-40 h-screen">
       <div>
-        <div className=" flex text-lg font-semibold text-[#00503C]">
-          <Image
-            className="mr-3 w-8 h-8 ml-4 bg-[#00503C] text-[#00503C] rounded-full "
-            src={tennisFlowLogo}
-            alt="tennisflow logo"
-          />
-          <div>Sign in to your account</div>
-        </div>
         <form
           className=" w-96 h-96 m-auto"
           onSubmit={async (event) => await handleRegister(event)}
         >
           <div className="m-auto">
+            <div className=" flex text-lg font-semibold text-[#00503C]">
+              <Image
+                className="mr-3 w-8 h-8 ml-8 bg-[#00503C] text-[#00503C] rounded-full "
+                src={tennisFlowLogo}
+                alt="tennisflow logo"
+              />
+              <div>Sign in to your account</div>
+            </div>
             <div className="w-80 mt-10 mb-4 sm:col-span-3">
               <label
                 htmlFor="first-name"
