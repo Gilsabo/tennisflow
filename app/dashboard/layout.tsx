@@ -50,7 +50,7 @@ export default async function Layout(props: Props) {
           </div>
         </Link>
         <ul className="pt-4 pl-6 ">
-          <li className="mt-8 flex text-sm text-gray-900">
+          <li className="mt-8 flex text-sm group transition-all duration-300 ease-in-out text-gray-900">
             <Link className="flex" href="/dashboard">
               <Image
                 width={20}
@@ -58,10 +58,12 @@ export default async function Layout(props: Props) {
                 src={dashboardLogo}
                 alt="dashboard Logo"
               />
-              <div className="ml-2">Dashboard</div>
+              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                Dashboard
+              </div>
             </Link>
           </li>
-          <li className="mt-4 text-sm text-gray-900">
+          <li className="mt-4 text-sm group transition-all duration-300 ease-in-out text-gray-900">
             <Link className="flex" href="/dashboard/history">
               <Image
                 width={20}
@@ -69,10 +71,12 @@ export default async function Layout(props: Props) {
                 src={historyLogo}
                 alt="dashboard Logo"
               />
-              <div className="ml-2">History</div>
+              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                History
+              </div>
             </Link>
           </li>
-          <li className="mt-4 text-sm text-gray-900">
+          <li className="mt-4 text-sm group transition-all duration-300 ease-in-out text-gray-900">
             {user ? (
               <Link
                 className="flex"
@@ -85,7 +89,9 @@ export default async function Layout(props: Props) {
                   alt="dashboard Logo"
                 />
 
-                <div className="ml-2">Profile</div>
+                <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                  Profile
+                </div>
               </Link>
             ) : (
               <Link
@@ -98,11 +104,13 @@ export default async function Layout(props: Props) {
                   src={userProfileLogo}
                   alt="dashboard Logo"
                 />
-                <div className="ml-2">Profile</div>
+                <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                  Profile
+                </div>
               </Link>
             )}
           </li>
-          <li className="mt-4 text-sm text-gray-900">
+          <li className="mt-4 text-sm group transition-all duration-300 ease-in-out text-gray-900">
             <Link className="flex " href="/dashboard/my-videos">
               <Image
                 width={20}
@@ -110,10 +118,12 @@ export default async function Layout(props: Props) {
                 src={videosLogo}
                 alt="dashboard Logo"
               />
-              <div className="ml-2">My videos</div>
+              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                My videos
+              </div>
             </Link>
           </li>
-          <li className="mt-4 text-sm text-gray-900">
+          <li className="mt-4 text-sm group transition-all duration-300 ease-in-out text-gray-900">
             <Link className="flex " href="/dashboard/players">
               <Image
                 width={20}
@@ -122,10 +132,12 @@ export default async function Layout(props: Props) {
                 alt="dashboard Logo"
               />
 
-              <div className="ml-2">Players</div>
+              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                Players
+              </div>
             </Link>
           </li>
-          <li className="mt-4 text-sm text-gray-900">
+          <li className="mt-4 text-sm group transition-all duration-300 ease-in-out text-gray-900">
             <Link className="flex " href="/dashboard/most-commented">
               <Image
                 width={20}
@@ -133,10 +145,12 @@ export default async function Layout(props: Props) {
                 src={MostCommented}
                 alt="dashboard Logo"
               />
-              <div className="ml-2">Most commented</div>
+              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                Most commented
+              </div>
             </Link>
           </li>
-          <li className="mt-4 text-sm text-gray-900">
+          <li className="mt-4 text-sm group transition-all duration-300 ease-in-out text-gray-900 ">
             <Link className="flex " href="/dashboard/most-viewed">
               <Image
                 width={20}
@@ -144,7 +158,9 @@ export default async function Layout(props: Props) {
                 src={mostViewdLogo}
                 alt="dashboard Logo"
               />
-              <div className="ml-2">Most viewed</div>{' '}
+              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out ">
+                Most viewed
+              </div>
             </Link>
           </li>
         </ul>
@@ -153,11 +169,14 @@ export default async function Layout(props: Props) {
         <header className="  pl-6 pt-11   text-slate-800 shadow-lg pr-8">
           <ul className="flex items-center justify-end pb-1.5">
             <li>
-              <a href="/" className="mr-4">
+              <a href="/" className="mr-4 hover:text-[#00503C] ">
                 Notifications
               </a>
             </li>
-            <Link className="ml-4 mr-4" href="/dashboard/admin">
+            <Link
+              className="ml-4 mr-4 hover:text-[#00503C]"
+              href="/dashboard/admin"
+            >
               Admin
             </Link>
             {user ? (
