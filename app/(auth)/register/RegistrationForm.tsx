@@ -1,6 +1,8 @@
 'use client';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import tennisFlowLogo from '../../../public/images/tennisFlowLogo.svg';
 import { RegisterResponseBodyPost } from '../../api/(auth)/register/route';
 
 export default function RegistrationForm() {
@@ -33,16 +35,23 @@ export default function RegistrationForm() {
 
   return (
     <div className="m-auto bg-slate-200 pt-40 h-screen">
-      {/* <div>Create an account</div> */}
       <form
-        className="border  bg-[#00503C] rounded-lg  w-96 h-96 m-auto"
+        className="w-96 h-96 m-auto"
         onSubmit={async (event) => await handleRegister(event)}
       >
         <div className="m-auto">
+          <div className=" flex text-lg font-semibold text-[#00503C]">
+            <Image
+              className="mr-3 w-8 h-8 ml-7 bg-[#00503C] text-[#00503C] rounded-full "
+              src={tennisFlowLogo}
+              alt="tennisflow logo"
+            />
+            <div>Create an account</div>
+          </div>
           <div className="w-80 mt-10 mb-4 sm:col-span-3">
             <label
               htmlFor="first-name"
-              className=" ml-8 block text-sm font-medium leading-6 text-slate-200"
+              className=" ml-8 block text-sm font-medium leading-6 text-[#00503C]"
             >
               User name
             </label>
@@ -60,7 +69,7 @@ export default function RegistrationForm() {
         <div className=" w-80 sm:col-span-3">
           <label
             htmlFor="first-name"
-            className="block text-sm ml-8 font-medium leading-6 text-slate-200"
+            className="block text-sm ml-8 font-medium leading-6 text-[#00503C]"
           >
             Password
           </label>
