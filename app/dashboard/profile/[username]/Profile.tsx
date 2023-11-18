@@ -60,20 +60,23 @@ export default function Profile({ userId, userName }: Props) {
 
   return (
     <div className="ml-16 pl-20">
+      <div className="border-b mt-8 border-gray-900/10 pb-12 ">
+        <h2 className="text-base font-semibold leading-7 text-gray-900">
+          Create your profile, <span className="capitalize">{userName}</span>
+        </h2>
+        <p className="mt-1 text-sm leading-6 text-gray-600">
+          Use a permanent address where you can receive mail.
+        </p>
+      </div>
+      <UploadProfileImage
+        setProfilePictureUrlInput={setProfilePictureUrlInput}
+      />
       <form
         onSubmit={async (event) => {
           event.preventDefault();
           await createUserProfile();
         }}
       >
-        <div className="border-b mt-8 border-gray-900/10 pb-12 ">
-          <h2 className="text-base font-semibold leading-7 text-gray-900">
-            Create your profile, <span className="capitalize">{userName}</span>
-          </h2>
-          <p className="mt-1 text-sm leading-6 text-gray-600">
-            Use a permanent address where you can receive mail.
-          </p>
-        </div>
         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div className="sm:col-span-2">
             <label
@@ -267,15 +270,12 @@ export default function Profile({ userId, userName }: Props) {
             onClick={() => {
               router.refresh();
             }}
-            className="rounded-md bg-slate-200 px-3 py-2 text-sm font-semibold text-violet-900 shadow-sm hover:bg-violet-900 hover:text-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-900"
+            className="rounded-md mb-8 bg-slate-200 px-3 py-2 text-sm font-semibold text-violet-900 shadow-sm hover:bg-violet-900 hover:text-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-900"
           >
             Save
           </button>
         </div>
       </form>
-      <UploadProfileImage
-        setProfilePictureUrlInput={setProfilePictureUrlInput}
-      />
     </div>
   );
 }
