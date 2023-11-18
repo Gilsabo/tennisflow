@@ -87,7 +87,7 @@ export default function UploadProfileImage(props: Props) {
         )}
 
         <label className="rounded-md mt-2 bg-slate-200 px-2.5 py-1.5 text-sm font-semibold text-violet-900 hover:bg-violet-900 hover:text-slate-200 ml-2">
-          Select File
+          Select Photo
           <input
             type="file"
             name="image"
