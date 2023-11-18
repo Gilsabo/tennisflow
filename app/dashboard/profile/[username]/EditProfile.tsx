@@ -48,19 +48,6 @@ export default function EditProfile(props: Props) {
 
     const data = await response.json();
     console.log('userprofileupdatedata', data);
-
-    // if (!onEditProfilePictureUrlInput) {
-    //   return setOnEditProfilePictureUrlInput('');
-    // }
-
-    // setAnimalList(
-    //   animalList.map((animal) => {
-    //     if (animal.id === data.animal.id) {
-    // //       return data.animal;
-    // //     }
-    // //     return animal;
-    //   }),
-    // );
   }
   return (
     <div className="ml-16 pl-20">
@@ -293,7 +280,7 @@ export default function EditProfile(props: Props) {
         <div className="mt-6 flex items-center justify-start gap-x-6">
           {onEditId === props.profilePlayer.id ? (
             <button
-              className="rounded-md bg-violet-900 px-3 py-2 text-sm font-semibold text-slate-200 shadow-sm hover:bg-slate-200 hover:text-violet-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-900 "
+              className="rounded-md mb-8 bg-violet-900 px-3 py-2 text-sm font-semibold text-slate-200 shadow-sm hover:bg-slate-200 hover:text-violet-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-900 "
               onClick={async () => {
                 await updateProfileByUserId(props.userName);
                 setOnEditId(0);
@@ -304,7 +291,7 @@ export default function EditProfile(props: Props) {
             </button>
           ) : (
             <button
-              className="rounded-md bg-slate-200 mb-8 px-3 py-2 text-sm font-semibold text-violet-900 shadow-sm hover:bg-violet-900 hover:text-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-900 "
+              className="rounded-md  bg-slate-200 mb-8 px-3 py-2 text-sm font-semibold text-violet-900 shadow-sm hover:bg-violet-900 hover:text-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-900 "
               onClick={() => {
                 setOnEditFirstNameInput(props.profilePlayer.firstName);
                 setOnEditLastNameInput(props.profilePlayer.lastName);
