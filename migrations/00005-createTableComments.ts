@@ -7,6 +7,16 @@ export type Comment = {
   comment: string;
 };
 
+export type CommentsVideo = {
+  commentUser: string;
+  title: string;
+  videoId: number;
+  tags: string[] | undefined;
+  profilePictureUrl: string | null;
+  firstName: string;
+  lastName: string;
+};
+
 export async function up(sql: Sql) {
   await sql`
     CREATE TABLE
