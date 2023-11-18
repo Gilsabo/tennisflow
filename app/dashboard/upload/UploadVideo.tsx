@@ -32,11 +32,8 @@ export default function UploadVideo(props: Props) {
         headers: { 'Content-Type': 'application/json' },
       });
       setFileInputState('');
-
       const data = await response.json();
       props.setVideoUrlInput(data.formDATA);
-
-      console.log('dame la public id!', data, typeof data.formDATA);
     } catch (err) {
       console.error(err);
     }
@@ -54,15 +51,15 @@ export default function UploadVideo(props: Props) {
       setLoading(false);
     };
     reader.onerror = () => {
-      console.error('AHHHHHHHH!!');
+      console.error('error!');
     };
   };
 
   return (
     <>
-      <form onSubmit={handleSubmitFile}>
-        <label className="rounded-md mt-4 bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-          Select File
+      <form onSubmit={handleSubmitFile} className="mb-4">
+        <label className="rounded-md mt-2 bg-slate-200 px-2.5 py-1.5 text-sm font-semibold text-violet-900 hover:bg-violet-900 hover:text-slate-200 ml-2">
+          Select Video
           <input
             type="file"
             name="video"
@@ -74,15 +71,19 @@ export default function UploadVideo(props: Props) {
         </label>
         <button
           disabled={loading}
-          className="rounded-md mt-4 bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+          className="rounded-md mt-2 bg-slate-200 px-2.5 py-1.5 text-sm font-semibold text-violet-900 hover:bg-violet-900 hover:text-slate-200 ml-2"
         >
           {loading ? 'Uploading...' : 'Upload'}
         </button>
       </form>
       <div>
         {selectedFile && (
-          <div className="rounded-lg">
-            <ReactPlayer url={URL.createObjectURL(selectedFile)} controls />
+          <div>
+            <ReactPlayer
+              width={300}
+              url={URL.createObjectURL(selectedFile)}
+              controls
+            />
           </div>
         )}
       </div>
