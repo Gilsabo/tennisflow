@@ -80,7 +80,7 @@ export default function VideoForm({ userProfileId }: Props) {
             </label>
             <div className="mt-2">
               <input
-                className="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm sm:leading-6"
                 value={titleInput}
                 onChange={(e) => setTitleInput(e.currentTarget.value)}
                 required
@@ -99,7 +99,7 @@ export default function VideoForm({ userProfileId }: Props) {
                       id="forhand"
                       name="forhand"
                       type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                      className="h-4 w-4 rounded border-gray-300 text-violet-900 focus:ring-violet-900"
                       onChange={handleCheckboxChange}
                     />
                   </div>
@@ -118,7 +118,7 @@ export default function VideoForm({ userProfileId }: Props) {
                       id="backhand"
                       name="backhand"
                       type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                      className="h-4 w-4 rounded border-gray-300 text-violet-900 focus:ring-violet-900"
                       onChange={handleCheckboxChange}
                     />
                   </div>
@@ -137,7 +137,7 @@ export default function VideoForm({ userProfileId }: Props) {
                       id="volley"
                       name="volley"
                       type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                      className="h-4 w-4 rounded border-gray-300 violet-900 focus:ring-violet-900"
                       onChange={handleCheckboxChange}
                     />
                   </div>
@@ -156,7 +156,7 @@ export default function VideoForm({ userProfileId }: Props) {
                       id="smash"
                       name="smash"
                       type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                      className="h-4 w-4 rounded border-gray-300 text-violet-900 focus:ring-violet-900"
                       onChange={handleCheckboxChange}
                     />
                   </div>
@@ -175,7 +175,7 @@ export default function VideoForm({ userProfileId }: Props) {
                       id="serve"
                       name="serve"
                       type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                      className="h-4 w-4 rounded border-gray-300 text-violet-900 focus:ring-violet-900"
                       onChange={handleCheckboxChange}
                     />
                   </div>
@@ -194,7 +194,7 @@ export default function VideoForm({ userProfileId }: Props) {
                       id="foot-work"
                       name="foot-work"
                       type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                      className="h-4 w-4 rounded border-gray-300 text-violet-900 focus:ring-violet-900"
                       onChange={handleCheckboxChange}
                     />
                   </div>
@@ -219,7 +219,7 @@ export default function VideoForm({ userProfileId }: Props) {
             </label>
             <div className="mt-2">
               <input
-                className="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm sm:leading-6"
                 value={locationInput}
                 onChange={(e) => setLocationInput(e.currentTarget.value)}
                 required
@@ -243,7 +243,7 @@ export default function VideoForm({ userProfileId }: Props) {
                 value={descriptionInput}
                 onChange={(e) => setDescriptionInput(e.currentTarget.value)}
                 required
-                className="block w-3/4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="block w-3/4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm sm:leading-6"
               />
             </div>
             <p className="mt-3 text-sm leading-6 text-gray-600">
@@ -252,7 +252,7 @@ export default function VideoForm({ userProfileId }: Props) {
             </p>
           </div>
           <div className="mt-6 flex items-center justify-start gap-x-6">
-            <button className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            <button className="rounded-md bg-slate-200 px-3 py-2 text-sm font-semibold text-violet-900 shadow-sm hover:bg-violet-900 hover:text-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-900">
               Save
             </button>
           </div>
