@@ -86,7 +86,7 @@ export default function UploadProfileImage(props: Props) {
           />
         )}
 
-        <label className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+        <label className="rounded-md mt-2 bg-slate-200 px-2.5 py-1.5 text-sm font-semibold text-violet-900 hover:bg-violet-900 hover:text-slate-200 ml-2">
           Select File
           <input
             type="file"
@@ -98,7 +98,7 @@ export default function UploadProfileImage(props: Props) {
           />
         </label>
         <button
-          className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+          className="rounded-md mt-2 bg-slate-200 px-2.5 py-1.5 text-sm font-semibold text-violet-900 hover:bg-violet-900 hover:text-slate-200 ml-2"
           disabled={loading}
         >
           {loading ? 'Uploading...' : 'Upload'}
