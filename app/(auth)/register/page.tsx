@@ -3,6 +3,10 @@ import { redirect } from 'next/navigation';
 import { getValidSessionByToken } from '../../../database/sessions';
 import RegistrationForm from './RegistrationForm';
 
+export const metadata = {
+  title: 'Register',
+};
+
 export default async function RegisterPage() {
   // 1. Checking if the sessionToken cookie exists
   const sessionTokenCookie = cookies().get('sessionToken');

@@ -3,6 +3,10 @@ import { redirect } from 'next/navigation';
 import { getValidSessionByToken } from '../../../database/sessions';
 import LoginForm from './LoginForm';
 
+export const metadata = {
+  title: 'Log in',
+};
+
 type Props = { searchParams: { returnTo?: string | string[] } };
 
 export default async function LoginPage({ searchParams }: Props) {
