@@ -11,6 +11,10 @@ import {
 } from '../../../database/videos';
 import Comments from './Comments';
 
+export const metadata = {
+  title: 'Comments',
+};
+
 type Props = {
   params: {
     dashboardId: string;
