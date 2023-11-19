@@ -83,7 +83,7 @@ export default function RegistrationForm() {
             />
           </div>
 
-          <button className="mt-8 w-60 m-16 rounded-md bg-[#00503C] border border-solid border-slate-200 px-3 py-2 text-sm font-semibold text-slate-200 shadow-sm hover:bg-slate-200 hover:text-[#00503C]  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 hover:border hover:border-solid hover:border-[#00503C] ">
+          <button className="mt-8 w-60 m-16 rounded-md bg-slate-200 border border-solid border-[#00503C] px-3 py-2 text-sm font-semibold text-[#00503C] shadow-sm hover:bg-[#00503C] hover:text-slate-200  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300  ">
             Register
           </button>
         </div>
