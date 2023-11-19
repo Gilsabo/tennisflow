@@ -4,6 +4,10 @@ import { getUserIdByUserName } from '../../../../database/users';
 import EditProfile from './EditProfile';
 import Profile from './Profile';
 
+export const metadata = {
+  title: 'Profile',
+};
+
 type Props = {
   params: { username: string };
 };
