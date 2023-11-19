@@ -6,6 +6,10 @@ import { getUserProfileByUserId } from '../../../database/profiles';
 import { getUserBySessionToken } from '../../../database/users';
 import { getUserVideosByUserProfileId } from '../../../database/videos';
 
+export const metadata = {
+  title: 'My videos',
+};
+
 export default async function Myvideos() {
   const cookieStore = cookies();
   const sessionToken = cookieStore.get('sessionToken');

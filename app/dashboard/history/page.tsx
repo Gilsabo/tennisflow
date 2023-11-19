@@ -1,3 +1,7 @@
+export const metadata = {
+  title: 'History',
+};
+
 export default function History() {
   return (
     <div className="pt-20 flex flex-col items-center mb-10">

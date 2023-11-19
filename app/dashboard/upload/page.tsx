@@ -4,6 +4,10 @@ import { getUserProfileByUserId } from '../../../database/profiles';
 import { getUserBySessionToken } from '../../../database/users';
 import VideoForm from './VideoForm';
 
+export const metadata = {
+  title: 'Upload Video',
+};
+
 export default async function Upload() {
   const cookieStore = cookies();
   const sessionToken = cookieStore.get('sessionToken');

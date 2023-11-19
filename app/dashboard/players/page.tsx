@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import { getUserProfiles } from '../../../database/profiles';
 
+export const metadata = {
+  title: 'Players',
+};
+
 export default async function Players() {
   const userProfiles = await getUserProfiles();
   const imageURL = 'https://res.cloudinary.com/dqiq3eutn/image/upload/';

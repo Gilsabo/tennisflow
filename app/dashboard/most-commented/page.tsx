@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import { getAllCommentsFromEachVideo } from '../../../database/comments';
 
+export const metadata = {
+  title: 'Most commented',
+};
+
 export default async function MostCommented() {
   const videosWithCommentsFromSql = await getAllCommentsFromEachVideo();
 
