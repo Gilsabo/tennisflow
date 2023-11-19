@@ -21,7 +21,6 @@ export default function RegistrationForm() {
       }),
     });
     const data: RegisterResponseBodyPost = await response.json();
-    console.log('data', data);
 
     if ('errors' in data) {
       setErrors(data.errors);
@@ -84,7 +83,7 @@ export default function RegistrationForm() {
             />
           </div>
 
-          <button className="mt-8 w-60 m-16 rounded-md bg-[#00503C] border border-solid border-slate-200 px-3 py-2 text-sm font-semibold text-slate-200 shadow-sm hover:bg-slate-200 hover:text-[#00503C]  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300">
+          <button className="mt-8 w-60 m-16 rounded-md bg-[#00503C] border border-solid border-slate-200 px-3 py-2 text-sm font-semibold text-slate-200 shadow-sm hover:bg-slate-200 hover:text-[#00503C]  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 hover:border hover:border-solid hover:border-[#00503C] ">
             Register
           </button>
         </div>
