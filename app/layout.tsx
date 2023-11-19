@@ -10,7 +10,7 @@ export const metadata = {
     default: 'Tennisflow | all about tennis ',
     template: '%s | Tennisflow ',
   },
-  description: 'Graphic designer and painter',
+  description: 'Tennis platform for tennis enthusiasts',
 };
 
 export default function RootLayout(props: Props) {
