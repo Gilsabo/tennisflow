@@ -6,8 +6,11 @@ export type Props = {
 };
 
 export const metadata = {
-  title: 'Tennisflow',
-  description: 'All about tennis',
+  title: {
+    default: 'Tennisflow | all about tennis ',
+    template: '%s | Tennisflow ',
+  },
+  description: 'Graphic designer and painter',
 };
 
 export default function RootLayout(props: Props) {
