@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { createComent } from '../../../database/comments';
-import { Comment } from '../../../migrations/00005-createTableComments';
+import { Comment } from '../../../migrations/00004-createTableComments';
 import { Error } from '../userprofiles/route';
 
 type CreateCommentResponseBoyd =

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { createUserVideo } from '../../../database/videos';
-import { Video } from '../../../migrations/00004-createTableVideos';
+import { Video } from '../../../migrations/00003-createTableVideos';
 
 type Error = {
   error: string;
