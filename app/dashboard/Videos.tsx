@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Video } from '../../migrations/00004-createTableVideos';
+import { Video } from '../../migrations/00003-createTableVideos';
 
 type Props = {
   videos: Video[];
