@@ -11,15 +11,3 @@ cloudinary.config({
 });
 
 module.exports = { cloudinary };
-
-// const uploadator = async () => {
-//   try {
-//     const data = await cloudinary.uploader.upload(
-//       'https://upload.wikimedia.org/wikipedia/commons/a/ae/Olympic_flag.jpg',
-//       { public_id: 'olympic_flag' },
-//     );
-//     console.log(data.url); // Access the URL of the uploaded asset
-//   } catch (err) {
-//     console.error(err);
-//   }
-// };
