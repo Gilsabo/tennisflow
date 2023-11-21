@@ -2,7 +2,7 @@ import { cache } from 'react';
 import {
   Video,
   VideoWithComments,
-} from '../migrations/00004-createTableVideos';
+} from '../migrations/00003-createTableVideos';
 import { sql } from './connect';
 
 export const createUserVideo = cache(

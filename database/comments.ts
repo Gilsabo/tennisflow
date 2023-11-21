@@ -2,7 +2,7 @@ import { cache } from 'react';
 import {
   Comment,
   CommentsVideo,
-} from '../migrations/00005-createTableComments';
+} from '../migrations/00004-createTableComments';
 import { sql } from './connect';
 
 export const createComent = cache(
