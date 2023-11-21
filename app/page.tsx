@@ -115,6 +115,9 @@ export default async function Home() {
               className="rounded-lg rounded-e-full "
               src={tennisCourt}
               alt="tennis court"
+              width={300}
+              height={300}
+              style={{ width: '600px' }}
             />
           </div>
         </div>
@@ -129,7 +132,7 @@ export default async function Home() {
             Beginners and Pros Alike
           </h3>
           <div className="flex text-center ">
-            <div className="mr-14 shadow-md rounded-lg px-6">
+            <div className="mr-14 w-64 shadow-md rounded-lg px-6">
               <div className="mb-4">
                 <Image
                   className="rounded-2xl"
@@ -146,7 +149,7 @@ export default async function Home() {
                 turning me into a more confident player"
               </p>
             </div>
-            <div className="mx-14 shadow-md rounded-lg px-6">
+            <div className="mx-14 w-64 shadow-md rounded-lg px-6">
               <div className="mb-4">
                 <Image
                   className="rounded-2xl"
@@ -163,12 +166,14 @@ export default async function Home() {
                 backhand, adding finesse to my shots"
               </p>
             </div>
-            <div className="ml-10 shadow-md rounded-lg px-6">
+            <div className="ml-10 w-64 shadow-md rounded-lg px-6">
               <div className="mb-4">
                 <Image
                   className="rounded-2xl"
                   src={martina}
                   alt="Testimonial Martina"
+                  width={500}
+                  height={300}
                 />
               </div>
               <h3 className="font-semibold">Martinka</h3>
