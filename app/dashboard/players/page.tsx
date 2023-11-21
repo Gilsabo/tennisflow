@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { getUserProfiles } from '../../../database/profiles';
 
@@ -22,11 +23,12 @@ export default async function Players() {
                 className="flex"
                 href={`/dashboard/players/${userProfile.id}`}
               >
-                <img
+                <Image
                   className="rounded-full h-24"
                   src={`${imageURL}${userProfile.profilePictureUrl}`}
                   alt={`${userProfile.firstName}${userProfile.lastName}`}
                   width={100}
+                  height={100}
                 />
 
                 <div className="ml-4">
