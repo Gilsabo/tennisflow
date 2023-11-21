@@ -1,7 +1,7 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { VideoWithComments } from '../../../migrations/00004-createTableVideos';
+import { VideoWithComments } from '../../../migrations/00003-createTableVideos';
 
 type Props = {
   videoId: number | undefined;
