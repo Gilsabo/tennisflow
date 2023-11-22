@@ -14,7 +14,12 @@ const Videos = ({ videos }: Props) => {
     <div className="flex flex-wrap mt-8 justify-center">
       {videos.map((video) => (
         <div className="mr-2 ml-2 w-60 mb-4" key={`div-video${video.videoUrl}`}>
-          <video className="rounded-lg mb-1" id="doc-player" controls muted>
+          <video
+            className="rounded-lg mb-1 h-[26.5rem]"
+            id="doc-player"
+            controls
+            muted
+          >
             <source src={`${videoUrl}${video.videoUrl}`} type="video/mp4" />
             <track srcLang="en" label="English" default />
           </video>
