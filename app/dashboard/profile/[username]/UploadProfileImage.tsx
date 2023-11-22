@@ -69,7 +69,7 @@ export default function UploadProfileImage(props: Props) {
   return (
     <div>
       <h1 className="block text-sm mt-8 font-medium leading-6 text-gray-900">
-        Upload an Image
+        Upload an image
       </h1>
 
       <form onSubmit={handleSubmitFile}>
@@ -87,7 +87,7 @@ export default function UploadProfileImage(props: Props) {
         )}
 
         <label className="rounded-md mt-2 bg-slate-200 px-2.5 py-1.5 text-sm font-semibold text-violet-900 hover:bg-violet-900 hover:text-slate-200 ml-2">
-          Select Photo
+          Select photo
           <input
             type="file"
             name="image"
