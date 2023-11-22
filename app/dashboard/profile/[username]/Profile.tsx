@@ -23,20 +23,6 @@ export default function Profile({ userId, userName }: Props) {
     setDominantHandInput(event.target.id);
   }
 
-  // const request = {
-  //   firstName: firstNameInput,
-  //   lastName: lastNameInput,
-  //   email: emailInput,
-  //   age: ageInput,
-  //   yearsExperience: yearsExperienceInput,
-  //   dominantHand: dominantHandInput,
-  //   description: descriptionInput,
-  //   profilePictureUrl: profilePictureUrlInput,
-  //   userId: userId,
-  // };
-
-  // console.log('rquesteeed', request);
-  // console.log('eventssss,', dominantHandInput);
   async function createUserProfile() {
     const response = await fetch('/api/userprofiles', {
       method: 'POST',
@@ -65,7 +51,7 @@ export default function Profile({ userId, userName }: Props) {
           Create your profile, <span className="capitalize">{userName}</span>
         </h2>
         <p className="mt-1 text-sm leading-6 text-gray-600">
-          Use a permanent address where you can receive mail.
+          Use a permanent address where you can receive the notifications.
         </p>
       </div>
       <UploadProfileImage
