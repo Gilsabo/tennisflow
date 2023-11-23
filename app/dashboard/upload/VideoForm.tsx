@@ -137,7 +137,7 @@ export default function VideoForm({ userProfileId }: Props) {
                       id="volley"
                       name="volley"
                       type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 violet-900 focus:ring-violet-900"
+                      className="h-4 w-4 rounded border-gray-300 violet-900 text-violet-900 focus:ring-violet-900"
                       onChange={handleCheckboxChange}
                     />
                   </div>
