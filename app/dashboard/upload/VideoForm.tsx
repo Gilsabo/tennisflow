@@ -96,8 +96,8 @@ export default function VideoForm({ userProfileId }: Props) {
                 <div className="relative flex gap-x-3 mt-6 mr-4">
                   <div className="flex h-6 items-center">
                     <input
-                      id="forhand"
-                      name="forhand"
+                      id="forehand"
+                      name="forehand"
                       type="checkbox"
                       className="h-4 w-4 rounded border-gray-300 text-violet-900 focus:ring-violet-900"
                       onChange={handleCheckboxChange}
@@ -105,10 +105,10 @@ export default function VideoForm({ userProfileId }: Props) {
                   </div>
                   <div className="text-sm leading-6 ">
                     <label
-                      htmlFor="forhand"
+                      htmlFor="forehand"
                       className="font-medium text-gray-900 "
                     >
-                      Forhand
+                      Forehand
                     </label>
                   </div>
                 </div>
