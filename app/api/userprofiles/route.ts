@@ -43,7 +43,7 @@ export async function POST(
 
   if (!result.success) {
     // zod send you details about the error
-    // console.log(result.error);
+
     return NextResponse.json(
       {
         error: 'The data is incomplete',

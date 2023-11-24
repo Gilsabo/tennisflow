@@ -17,8 +17,6 @@ export default function VideoForm({ userProfileId }: Props) {
 
   const router = useRouter();
 
-  // console.log('taaags', tagsInput);
-
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const checkboxId = e.target.id;
 

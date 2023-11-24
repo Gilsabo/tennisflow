@@ -52,7 +52,6 @@ export default async function MostCommented() {
 
   // Convert the 'videos' object values to an array
   const videosWithComments = Object.values(videos);
-  console.log('transformeddd', videosWithComments);
 
   return (
     <div className="pt-20 flex flex-col items-center mb-10">

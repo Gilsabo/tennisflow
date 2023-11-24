@@ -23,7 +23,6 @@ type Props = {
 
 export default async function DashboardVideoId(props: Props) {
   const imageURL = 'https://res.cloudinary.com/dqiq3eutn/video/upload/';
-  console.log('params', props.params);
 
   // get user name by session token in order to get the userProfileId of the person who is logged in and comments the video
   const cookieStore = cookies();

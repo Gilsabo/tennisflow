@@ -33,14 +33,6 @@ export async function POST(
 
   const parsedBody = uploadVideoSchema.safeParse(body);
   // const fileStr = body.data;
-  console.log(
-    'bodyrrr',
-    body,
-    'typeof',
-    typeof parsedBody,
-    'parsedbody',
-    parsedBody,
-  );
 
   if (!parsedBody.success) {
     return NextResponse.json(
@@ -56,8 +48,6 @@ export async function POST(
     upload_preset: 'gm0xdnab',
     resource_type: 'video',
   });
-
-  console.log('upploaded', uploadedResponse.public_id);
 
   if (!uploadedResponse.public_id) {
     return NextResponse.json(

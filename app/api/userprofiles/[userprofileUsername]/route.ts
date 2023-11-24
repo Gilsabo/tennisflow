@@ -36,7 +36,6 @@ export async function PUT(
   const body = await request.json();
 
   const result = userProfileSchema.safeParse(body);
-  console.log('bodyrl', result);
   if (!result.success) {
     return NextResponse.json(
       {

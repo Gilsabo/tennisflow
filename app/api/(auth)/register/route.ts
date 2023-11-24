@@ -39,7 +39,6 @@ export async function POST(
   }
 
   const user = await getUserByUsername(result.data.userName);
-  console.log('userrrrr', user);
 
   if (user) {
     return NextResponse.json(
@@ -50,11 +49,7 @@ export async function POST(
 
   const passwordHash = await bcrypt.hash(result.data.password, 12);
 
-  console.log('result,', passwordHash, result.data.password);
-
   const newUser = await createUser(result.data.userName, passwordHash);
-
-  console.log('result', newUser);
 
   if (!newUser) {
     return NextResponse.json(

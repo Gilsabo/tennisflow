@@ -43,8 +43,6 @@ export default function UploadProfileImage(props: Props) {
       setPreviewSource('');
       const data = await response.json();
       props.setProfilePictureUrlInput(data.formDATA);
-
-      console.log('dame la public id!', data, typeof data.formDATA);
     } catch (err) {
       console.error(err);
     }

@@ -24,8 +24,6 @@ export default async function Layout(props: Props) {
   const user =
     sessionToken && (await getUserBySessionToken(sessionToken.value));
 
-  //   console.log('Check Xpath: ', headersList.get('x-pathname'));
-
   // // User has to be an admin
   // // Get user from the database that meets the admin requirements
 

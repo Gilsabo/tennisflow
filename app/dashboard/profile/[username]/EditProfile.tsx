@@ -27,7 +27,6 @@ export default function EditProfile(props: Props) {
   function handleDominandHand(event: React.ChangeEvent<HTMLInputElement>) {
     // Updating the state with the selected radio button's value
     setOnEditDominantHandInput(event.target.id);
-    console.log('dominant hand', onEditDominantHandInput);
   }
 
   async function updateProfileByUserId(userName: string) {

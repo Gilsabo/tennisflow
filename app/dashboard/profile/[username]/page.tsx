@@ -13,7 +13,6 @@ type Props = {
 };
 
 export default async function UserProfilePage({ params }: Props) {
-  console.log('params', params.username);
   // removes URICODE in case user typed user name with spaces OR OTHER CHARACTERS
   const userNameWithoutURIelements = decodeURIComponent(
     params.username.replace(/\+/g, ' '),

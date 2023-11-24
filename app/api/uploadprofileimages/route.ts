@@ -34,7 +34,6 @@ export async function POST(
   const body = await request.json();
   const parsedBody = uploadImageSchema.safeParse(body);
   // const fileStr = body.data;
-  console.log('body', body);
 
   if (!parsedBody.success) {
     return NextResponse.json(
@@ -49,8 +48,6 @@ export async function POST(
   const uploadedResponse = await cloudinary.uploader.upload(fileStr, {
     upload_preset: 'gm0xdnab',
   });
-
-  console.log('upploaded', uploadedResponse.public_id);
 
   if (!uploadedResponse.public_id) {
     return NextResponse.json(

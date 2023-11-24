@@ -23,8 +23,6 @@ export async function POST(
 
   const result = commentUserSchema.safeParse(body);
 
-  console.log('resuuult', result);
-
   if (!result.success) {
     return NextResponse.json(
       {
