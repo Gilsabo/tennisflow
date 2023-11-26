@@ -1,3 +1,3 @@
 export default function AdminInfo() {
-  return <div>AdminInfo</div>;
+  return <div>AdminInfo, working in progress...</div>;
 }
