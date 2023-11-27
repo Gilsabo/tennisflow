@@ -40,8 +40,8 @@ To run this project locally, the following steps are needed:
 - CSRF_SECRET=\<CRSF_SALT_KEY>
 7. Install the dependencies
 ```bash
-$ yarn
+$ pnpm
 ```
 8. Install dotenv-cli globally with:
 ```bash
-$ yarn global add dotenv-cli
+$ pnpm global add dotenv-cli
