@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tennisflow
 
-## Getting Started
+**Tennisflow** is a web application designed for tennis enthusiasts to share and receive feedback on tennis-related videos. Users can upload their tennis videos, engage with the community through comments, and personalize their profiles with pictures and additional videos. The application seamlessly integrates with the Cloudinary API for efficient media 
 
-First, run the development server:
+Deployed version on fly.io : https://tennisflow.fly.dev
 
+## Technologies used
+
+**Client:** Next.js, React, TypeScript, Tailwind
+
+**Server:** Node.js, Migrations, PostgreSQL
+
+## Screenshots
+
+### Landing page
+
+<img src="./public/siteimages/landingpage.png" width="70%">
+
+### Dashboard
+
+<img src="./public/siteimages/dashboard.png" width="70%">
+
+## Setup guide
+To run this project locally, the following steps are needed:
+1. Clone this repo on your local machine and connect to your GitHub account
+2. Download and install PostgreSQL (if not installed yet).
+- https://www.postgresql.org/download/
+
+3. Create a User and a Database for the project.
+
+4. Create a copy of the `.env.example` and name it `.env` on the root of the project and modify it with your PostgreSQL credentials. The file should include these four environment variables:
+
+- PGHOST=localhost
+- PGDATABASE=\<YOUR_POSTGRES_DATABASE>
+- PGUSERNAME=\<YOUR_POSTGRES_USERNAME>
+- PGPASSWORD=\<YOUR_POSTGRES_PASSWORD>
+5. Create a Cloudinary account and use the credentials for Image Uploads.
+6. Add the next environment variables to your .env file
+- BASE_URL=\<YOUR_API_URL>
+- CSRF_SECRET=\<CRSF_SALT_KEY>
+7. Install the dependencies
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+$ pnpm
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+8. Install dotenv-cli globally with:
+```bash
+$ pnpm global add dotenv-cli
