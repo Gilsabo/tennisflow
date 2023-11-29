@@ -123,7 +123,7 @@ export default async function Home() {
         </div>
       </section>
       <section className="px-40 pt-28 pb-28">
-        <div className="flex flex-col items-center text-violet-900">
+        <main className="flex flex-col items-center text-violet-900">
           <h1 className="text-6xl text-center mb-10">
             Ace Your Game, Connect, <br /> Progress Together
           </h1>
@@ -186,7 +186,7 @@ export default async function Home() {
               </p>
             </div>
           </div>
-        </div>
+        </main>
       </section>
       <section className="bg-[#00503C] text-slate-200 flex px-40 pt-20 pb-8">
         <div className="w-2/4 ">
