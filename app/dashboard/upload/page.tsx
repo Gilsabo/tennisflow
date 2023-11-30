@@ -12,7 +12,7 @@ export default async function Upload() {
   const cookieStore = cookies();
   const sessionToken = cookieStore.get('sessionToken');
   if (!sessionToken) return;
-  // i get the user_id to get the acces to the user_profile_id with the function getUserProfileByUserId(user.id)
+  // I get the user_id to get the acces to the user_profile_id with the function getUserProfileByUserId(user.id)
   const user = await getUserBySessionToken(sessionToken.value);
 
   if (!user) {
