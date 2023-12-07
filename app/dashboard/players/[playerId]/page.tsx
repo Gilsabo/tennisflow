@@ -16,7 +16,7 @@ export default async function PlayerPage(props: Props) {
   }
   return (
     <div className="mt-24">
-      <div className="flex w-2/4 shadow-2xl  m-auto border rounded-3xl">
+      <main className="flex w-2/4 shadow-2xl  m-auto border rounded-3xl">
         <img
           src={`${imageURL}${singlePlayer.profilePictureUrl}`}
           alt={`${singlePlayer.firstName}${singlePlayer.lastName}`}
@@ -37,7 +37,7 @@ export default async function PlayerPage(props: Props) {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 }
