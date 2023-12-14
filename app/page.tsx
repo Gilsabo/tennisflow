@@ -75,7 +75,7 @@ export default async function Home() {
                 </div>
               </div>
             ) : (
-              <div className="pt-4 mr-4 ">
+              <div className="pt-4 mr-4 w-60 ">
                 <Link
                   className="ml-8 rounded-lg border-slate-200 border border-solid py-2 px-4"
                   href="/login"
