@@ -27,9 +27,6 @@ export default async function Layout(props: Props) {
   // // User has to be an admin
   // // Get user from the database that meets the admin requirements
 
-  // // 3. Either redirect or render the login form
-  // if (!session) redirect(`/login?returnTo=${headersList.get('x-pathname')}`);
-
   return (
     <main className="grid grid-cols-5 h-screen">
       <div className="  shadow-2xl bg-slate-50 h-full">
