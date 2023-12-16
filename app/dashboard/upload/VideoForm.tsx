@@ -66,9 +66,6 @@ export default function VideoForm({ userProfileId }: Props) {
             await createVideo();
           }}
         >
-          {/* <label className="block text-sm font-medium leading-6 text-gray-900">
-          Title */}
-
           <div className="sm:col-span-3">
             <label
               htmlFor="title"
