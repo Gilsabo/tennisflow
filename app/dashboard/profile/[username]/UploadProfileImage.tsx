@@ -66,7 +66,7 @@ export default function UploadProfileImage(props: Props) {
   };
   return (
     <div>
-      <h1 className="block text-sm mt-8 font-medium leading-6 text-gray-900">
+      <h1 className="block text-sm mt-8 font-medium text-gray-900">
         Upload an image
       </h1>
 
