@@ -52,11 +52,11 @@ export default function EditProfile(props: Props) {
     <div className="ml-16 pl-20">
       <div>
         <div className="border-b mt-8 border-gray-900/10 pb-12 ">
-          <h2 className="text-base font-semibold leading-7 text-gray-900">
+          <h2 className="text-base font-semibold text-gray-900">
             Edit your profile,
             <span className="capitalize"> {props.userName}</span>
           </h2>
-          <p className="mt-1 text-sm leading-6 text-gray-600">
+          <p className="mt-1 text-sm text-gray-600">
             Modify your profile whenever you wish.
           </p>
         </div>
@@ -64,7 +64,7 @@ export default function EditProfile(props: Props) {
           <div className="sm:col-span-2">
             <label
               htmlFor="first-name"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium text-gray-900"
             >
               First name
             </label>
@@ -79,14 +79,14 @@ export default function EditProfile(props: Props) {
                   setOnEditFirstNameInput(event.currentTarget.value)
                 }
                 disabled={props.profilePlayer.id !== onEditId}
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm"
               />
             </div>
           </div>
           <div className="sm:col-span-2">
             <label
               htmlFor="last-name"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium text-gray-900"
             >
               Last name
             </label>
@@ -101,14 +101,14 @@ export default function EditProfile(props: Props) {
                   setOnEditLastNameInput(event.currentTarget.value)
                 }
                 disabled={props.profilePlayer.id !== onEditId}
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm"
               />
             </div>
           </div>
           <div className="sm:col-span-4">
             <label
               htmlFor="email"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium text-gray-900"
             >
               Email address
             </label>
@@ -123,14 +123,14 @@ export default function EditProfile(props: Props) {
                   setOnEditEmailInput(event.currentTarget.value)
                 }
                 disabled={props.profilePlayer.id !== onEditId}
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm"
               />
             </div>
           </div>
           <div className="sm:col-span-2 sm:col-start-1">
             <label
               htmlFor="age"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium text-gray-900"
             >
               Age
             </label>
@@ -145,7 +145,7 @@ export default function EditProfile(props: Props) {
                   setOnEditAgeInput(Number(event.currentTarget.value))
                 }
                 disabled={props.profilePlayer.id !== onEditId}
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm"
               />
             </div>
           </div>
@@ -153,7 +153,7 @@ export default function EditProfile(props: Props) {
           <div className="sm:col-span-2">
             <label
               htmlFor="Years of experience"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium text-gray-900"
             >
               Years of experience
             </label>
@@ -174,16 +174,16 @@ export default function EditProfile(props: Props) {
                 required
                 name="Years of experience"
                 id="Years of experience"
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm sm:leading-6"
+                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm"
               />
             </div>
           </div>
 
           <div className="border-b border-gray-900/10 pb-12 col-span-4">
-            <h2 className="text-base font-semibold leading-7 text-gray-900">
+            <h2 className="text-base font-semibold text-gray-900">
               Dominant hand
             </h2>
-            <p className="mt-1 text-sm leading-6 text-gray-600">
+            <p className="mt-1 text-sm text-gray-600">
               Chose your skillfull hand/s
             </p>
 
@@ -202,7 +202,7 @@ export default function EditProfile(props: Props) {
                     />
                     <label
                       htmlFor="right-handed"
-                      className=" text-sm font-medium leading-6 text-gray-900"
+                      className=" text-sm font-medium text-gray-900"
                     >
                       Right-handed
                     </label>
@@ -219,7 +219,7 @@ export default function EditProfile(props: Props) {
                     />
                     <label
                       htmlFor="left-handed"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block text-sm font-medium text-gray-900"
                     >
                       Left-handed
                     </label>
@@ -236,7 +236,7 @@ export default function EditProfile(props: Props) {
                     />
                     <label
                       htmlFor="ambidextrous"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block text-sm font-medium text-gray-900"
                     >
                       Ambidextrous
                     </label>
@@ -247,7 +247,7 @@ export default function EditProfile(props: Props) {
             <div className="col-span-full mt-8">
               <label
                 htmlFor="about"
-                className="block text-sm font-medium leading-6 text-gray-900"
+                className="block text-sm font-medium text-gray-900"
               >
                 About
               </label>
@@ -267,10 +267,10 @@ export default function EditProfile(props: Props) {
                   }
                   disabled={props.profilePlayer.id !== onEditId}
                   required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm"
                 />
               </div>
-              <p className="mt-3 text-sm leading-6 text-gray-600">
+              <p className="mt-3 text-sm text-gray-600">
                 Write a few sentences about your tennis journey.
               </p>
             </div>
