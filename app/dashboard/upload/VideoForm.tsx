@@ -51,10 +51,10 @@ export default function VideoForm({ userProfileId }: Props) {
   return (
     <div className="border-b border-gray-900/10 pb-12 ml-16 pl-20 ">
       <div className="pt-8">
-        <h2 className="text-base font-semibold leading-7 text-gray-900">
+        <h2 className="text-base font-semibold text-gray-900">
           Upload your video
         </h2>
-        <p className="mt-1 text-sm leading-6 text-gray-600">
+        <p className="mt-1 text-sm text-gray-600">
           Your are a little bit closer to get better. First upload the video and
           then complete all the fields.
         </p>
@@ -72,13 +72,13 @@ export default function VideoForm({ userProfileId }: Props) {
           <div className="sm:col-span-3">
             <label
               htmlFor="title"
-              className="block text-sm font-medium mt-10 leading-6 text-gray-900"
+              className="block text-sm font-medium mt-10 text-gray-900"
             >
               Title of the video
             </label>
             <div className="mt-2">
               <input
-                className="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm sm:leading-6"
+                className="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm"
                 value={titleInput}
                 onChange={(e) => setTitleInput(e.currentTarget.value)}
                 required
@@ -87,7 +87,7 @@ export default function VideoForm({ userProfileId }: Props) {
           </div>
           <div className="mt-10 space-y-10">
             <fieldset>
-              <legend className="text-sm font-semibold leading-6 text-gray-900">
+              <legend className="text-sm font-semibold text-gray-900">
                 Pick all the strokes you want to improve
               </legend>
               <div className="mt-6 space-y-6 flex flex-wrap">
@@ -101,7 +101,7 @@ export default function VideoForm({ userProfileId }: Props) {
                       onChange={handleCheckboxChange}
                     />
                   </div>
-                  <div className="text-sm leading-6 ">
+                  <div className="text-sm ">
                     <label
                       htmlFor="forehand"
                       className="font-medium text-gray-900 "
@@ -120,7 +120,7 @@ export default function VideoForm({ userProfileId }: Props) {
                       onChange={handleCheckboxChange}
                     />
                   </div>
-                  <div className="text-sm leading-6">
+                  <div className="text-sm">
                     <label
                       htmlFor="backhand"
                       className="font-medium text-gray-900"
@@ -139,7 +139,7 @@ export default function VideoForm({ userProfileId }: Props) {
                       onChange={handleCheckboxChange}
                     />
                   </div>
-                  <div className="text-sm leading-6">
+                  <div className="text-sm">
                     <label
                       htmlFor="volley"
                       className="font-medium text-gray-900"
@@ -158,7 +158,7 @@ export default function VideoForm({ userProfileId }: Props) {
                       onChange={handleCheckboxChange}
                     />
                   </div>
-                  <div className="text-sm leading-6">
+                  <div className="text-sm">
                     <label
                       htmlFor="smash"
                       className="font-medium text-gray-900"
@@ -177,7 +177,7 @@ export default function VideoForm({ userProfileId }: Props) {
                       onChange={handleCheckboxChange}
                     />
                   </div>
-                  <div className="text-sm leading-6">
+                  <div className="text-sm">
                     <label
                       htmlFor="serve"
                       className="font-medium text-gray-900"
@@ -196,7 +196,7 @@ export default function VideoForm({ userProfileId }: Props) {
                       onChange={handleCheckboxChange}
                     />
                   </div>
-                  <div className="text-sm leading-6">
+                  <div className="text-sm">
                     <label
                       htmlFor="foot-work"
                       className="font-medium text-gray-900"
@@ -211,13 +211,13 @@ export default function VideoForm({ userProfileId }: Props) {
           <div className="sm:col-span-3">
             <label
               htmlFor="title"
-              className="block text-sm font-medium mt-10 leading-6 text-gray-900"
+              className="block text-sm font-medium mt-10 text-gray-900"
             >
               Location
             </label>
             <div className="mt-2">
               <input
-                className="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm sm:leading-6"
+                className="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm"
                 value={locationInput}
                 onChange={(e) => setLocationInput(e.currentTarget.value)}
                 required
@@ -228,7 +228,7 @@ export default function VideoForm({ userProfileId }: Props) {
           <div className="col-span-full mt-8">
             <label
               htmlFor="about"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium text-gray-900"
             >
               Describe what you want to improve
             </label>
@@ -241,10 +241,10 @@ export default function VideoForm({ userProfileId }: Props) {
                 value={descriptionInput}
                 onChange={(e) => setDescriptionInput(e.currentTarget.value)}
                 required
-                className="block w-3/4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm sm:leading-6"
+                className="block w-3/4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm"
               />
             </div>
-            <p className="mt-3 text-sm leading-6 text-gray-600">
+            <p className="mt-3 text-sm text-gray-600">
               Explain not only what you think it is, but also what sensations
               when playing in the video.
             </p>

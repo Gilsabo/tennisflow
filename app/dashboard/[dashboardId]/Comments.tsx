@@ -74,7 +74,7 @@ export default function Comments(props: Props) {
           <div className="mr-auto ">
             <label
               htmlFor="first-name"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium text-gray-900"
             >
               leave your comment
             </label>
@@ -86,7 +86,7 @@ export default function Comments(props: Props) {
                 name="first-name"
                 id="first-name"
                 autoComplete="given-name"
-                className="block w-80 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm sm:leading-6"
+                className="block w-80 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm"
               />
             </div>
           </div>
