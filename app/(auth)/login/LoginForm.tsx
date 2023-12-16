@@ -57,7 +57,7 @@ export default function LoginFrom(props: Props) {
             <div className="w-80 mt-10 mb-4 sm:col-span-3">
               <label
                 htmlFor="first-name"
-                className=" ml-8 block text-sm font-medium leading-6 text-[#00503C]"
+                className=" ml-8 block text-sm font-medium text-[#00503C]"
               >
                 User name
               </label>
@@ -67,7 +67,7 @@ export default function LoginFrom(props: Props) {
                   name="user-name"
                   id="user-name"
                   autoComplete="given-name"
-                  className=" ml-8 block w-full rounded-md border-0 py-1.5 text-[#00503C] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-300  sm:text-sm sm:leading-6"
+                  className=" ml-8 block w-full rounded-md border-0 py-1.5 text-[#00503C] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-300  sm:text-sm"
                 />
               </div>
             </div>
@@ -75,7 +75,7 @@ export default function LoginFrom(props: Props) {
           <div className=" w-80 sm:col-span-3">
             <label
               htmlFor="first-name"
-              className="block text-sm ml-8 font-medium leading-6 text-[#00503C]"
+              className="block text-sm ml-8 font-medium text-[#00503C]"
             >
               Password
             </label>
@@ -86,7 +86,7 @@ export default function LoginFrom(props: Props) {
                 id="passowrd"
                 onChange={(event) => setPassword(event.currentTarget.value)}
                 autoComplete="given-name"
-                className="block w-full ml-8 rounded-md border-0 py-1.5 text-[#00503C] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 hover:text-slate-200 focus:ring-2 focus:ring-inset focus:ring-gray-300  sm:text-sm sm:leading-6"
+                className="block w-full ml-8 rounded-md border-0 py-1.5 text-[#00503C] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 hover:text-slate-200 focus:ring-2 focus:ring-inset focus:ring-gray-300  sm:text-sm"
               />
             </div>
 
