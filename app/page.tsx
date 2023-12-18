@@ -296,29 +296,29 @@ export default async function Home() {
         </div>
       </section>
       <section>
-        <div className="px-40 pt-28 pb-28 flex justify-between bg-slate-200 text-[#00503C]">
+        <div className="flex flex-col items-center text-center px-40 pt-28 pb-28 md:text-left md:px-24 lg:px-36 md:flex-row md:items-start md:justify-between bg-slate-200 text-[#00503C]">
           <div className="flex mb-auto">
             <Image
               className="mr-3 w-8 h-8 ml-4 text-[#00503C]"
               src={tennisLogoGreen}
               alt="tennisflow logo"
             />
-            <div className="text-2xl mt-auto ">Tennisflow </div>
+            <div className="text-2xl mt-auto pb-4">Tennisflow </div>
           </div>
-          <div>
+          <div className="mb-4">
             Company
             <div className="text-sm mt-1">About Us</div>
             <div className="text-sm mt-1">Careers</div>
             <div className="text-sm mt-1">Our History</div>
             <div className="text-sm mt-1">Terms and coditions</div>
           </div>
-          <div>
+          <div className="mb-4">
             Helpful Resources
             <div className="text-sm mt-1">Knowledge Base</div>
             <div className="text-sm mt-1">Tutorials</div>
             <div className="text-sm mt-1">Feedback</div>
           </div>
-          <div>
+          <div className="mb-4">
             Contact Us
             <div className="flex mt-2">
               <Image className="w-5 h-5 mx-1" src={email} alt="email logo" />
