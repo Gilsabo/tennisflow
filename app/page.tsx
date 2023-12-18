@@ -188,44 +188,44 @@ export default async function Home() {
           </div>
         </main>
       </section>
-      <section className="bg-[#00503C] text-slate-200 flex px-40 pt-20 pb-8">
-        <div className="w-2/4 ">
-          <div className="flex">
-            <div className="mr-8">
-              <div className="mb-8">
+      <section className="bg-[#00503C] text-slate-200 lg:flex px-40 pt-20 pb-8 md:px-24 lg:px-36">
+        <div className="xl:w-2/4">
+          <div className="md:flex">
+            <div className="mr-4">
+              <div className="mb-8 text-center xl:text-left">
                 <Image
                   src={smartPhone}
                   alt="smartphone logo"
-                  className="w-20 h-20 mb-2"
+                  className="w-20 h-20 m-auto xl:m-0"
                 />
                 <span className="text-2xl">1. </span>Record your desired video
                 in upright format
               </div>
-              <div className="mb-8">
+              <div className="mb-8 text-center xl:text-left">
                 <Image
                   src={upload}
                   alt="upload logo"
-                  className="w-20 h-20 mb-2"
+                  className="w-20 h-20 m-auto xl:m-0"
                 />
-                <span className="text-2xl">3. </span>Upload the video with the
+                <span className="text-2xl ">3. </span>Upload the video with the
                 correspondings tags
               </div>
             </div>
-            <div>
-              <div className="mb-8">
+            <div className="mr-4">
+              <div className="mb-8 mr-1 text-center xl:text-left">
                 <Image
                   src={register}
                   alt="register logo"
-                  className="w-20 h-20 mb-2"
+                  className="w-20 h-20 m-auto xl:m-0"
                 />
                 <span className="text-2xl">2. </span>Register into the platform
                 and complete the profile
               </div>
-              <div className="mb-8">
+              <div className="mb-8 text-center xl:text-left">
                 <Image
                   src={community}
                   alt="community logo"
-                  className="w-20 h-20 mb-2"
+                  className="w-20 h-20 m-auto xl:m-0"
                 />
                 <span className="text-2xl">4. </span>Engage with the community
                 commenting others' content
@@ -233,14 +233,14 @@ export default async function Home() {
             </div>
           </div>
         </div>
-        <div className="text-right">
-          <h1 className="text-6xl mb-6 ">
+        <div className="text-center lg:text-right xl:w-2/4">
+          <h1 className="text-6xl mb-6 xl:pl-28">
             Skip tutorial hell in 3 simple steps
           </h1>
-          <h3 className="text-xl mb-10 ">
-            No more binge-watching videos that don't meet <br />
-            your specific needs. With our supportive community, <br />
-            you'll receive tailored feedback that suits you best
+          <h3 className="text-xl mb-10 lg:pl-30 ">
+            No more binge-watching videos that don't meet your specific needs.
+            With our supportive community, you'll receive tailored feedback that
+            suits you best
           </h3>
           <Link
             className=" bg-slate-200 rounded-lg  text-[#00503C] border border-solid py-2 px-4"
