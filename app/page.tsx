@@ -94,7 +94,7 @@ export default async function Home() {
         </header>
       </div>
       <section className="bg-[#00503C] text-slate-200 flex px-40 pt-20 pb-8">
-        <div className="w-2/4 ">
+        <div className="w-full text-center xl:text-left xl:w-2/4 ">
           <h1 className="text-6xl mb-6 ">
             Elevate Your Game with Tennis fans Community!
           </h1>
@@ -109,10 +109,10 @@ export default async function Home() {
             Get started
           </Link>
         </div>
-        <div className="w-2/4 relative">
+        <div className="xl:w-2/4 relative">
           <div className="absolute">
             <Image
-              className="rounded-lg rounded-e-full "
+              className="rounded-lg rounded-e-full md:hidden xl:block"
               src={tennisCourt}
               alt="tennis court"
               width={300}
