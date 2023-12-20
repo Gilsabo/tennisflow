@@ -38,7 +38,7 @@ export default async function Home() {
   return (
     <div>
       <div className="sticky top-0 z-40">
-        <header className="flex px-36 bg-[#00503C] text-slate-200 pt-12 pb-4 justify-between content-end ">
+        <header className="flex px-2 sm:px-36 bg-[#00503C] text-slate-200 pt-12 pb-4 justify-between content-end">
           <div className="flex mt-auto">
             <Image
               className="mr-3 w-8 h-8 ml-4"
@@ -93,7 +93,7 @@ export default async function Home() {
           </div>
         </header>
       </div>
-      <section className="bg-[#00503C] text-slate-200 flex px-40 pt-20 pb-8">
+      <section className="bg-[#00503C] text-slate-200 flex px-2 sm:px-40 pt-20 pb-8">
         <div className="w-full text-center xl:text-left xl:w-2/4 ">
           <h1 className="text-6xl mb-6 ">
             Elevate Your Game with Tennis fans Community!
@@ -122,7 +122,7 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <section className="px-40 pt-28 pb-28">
+      <section className="px-2 sm:px-40 pt-28 pb-28">
         <main className="flex flex-col items-center text-violet-900">
           <h1 className="text-6xl text-center mb-10">
             Ace Your Game, Connect, <br /> Progress Together
@@ -186,7 +186,7 @@ export default async function Home() {
           </div>
         </main>
       </section>
-      <section className="bg-[#00503C] text-slate-200 lg:flex px-40 pt-20 pb-8 md:px-24 lg:px-36">
+      <section className="bg-[#00503C] text-slate-200 lg:flex px-2 sm:px-40 pt-20 pb-8 md:px-24 lg:px-36">
         <div className="xl:w-2/4">
           <div className="md:flex">
             <div className="mr-4">
@@ -248,7 +248,7 @@ export default async function Home() {
           </Link>
         </div>
       </section>
-      <section className="px-40 pt-28 pb-28 ">
+      <section className="px-2 sm:px-40 pt-28 pb-28 ">
         <div className="text-6xl mb-14 flex flex-col items-center text-center text-violet-900">
           Our Partners
         </div>
@@ -294,7 +294,7 @@ export default async function Home() {
         </div>
       </section>
       <section>
-        <div className="flex flex-col items-center text-center px-40 pt-28 pb-28 md:text-left md:px-24 lg:px-36 md:flex-row md:items-start md:justify-between bg-slate-200 text-[#00503C]">
+        <div className="flex flex-col items-center text-center px-2 sm:px-40 pt-28 pb-28 md:text-left md:px-24 lg:px-36 md:flex-row md:items-start md:justify-between bg-slate-200 text-[#00503C]">
           <div className="flex mb-auto">
             <Image
               className="mr-3 w-8 h-8 ml-4 text-[#00503C]"
