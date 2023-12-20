@@ -27,6 +27,7 @@ import novak from '../public/Novak.jpg';
 import roger from '../public/Roger.jpg';
 import tennisCourt from '../public/tennisCourt.jpg';
 import LogoutButton from './(auth)/logout/LogoutButton';
+import NavBar from './NavBar';
 
 export default async function Home() {
   const cookieStore = cookies();
@@ -38,34 +39,16 @@ export default async function Home() {
   return (
     <div>
       <div className="sticky top-0 z-40">
-        <header className="flex px-2 sm:px-36 bg-[#00503C] text-slate-200 pt-12 pb-4 justify-between content-end">
+        <header className="flex px-2 sm:px-36 bg-[#00503C] text-slate-200 pt-12 pb-4 justify-around lg:justify-between content-end">
           <div className="flex mt-auto">
             <Image
-              className="mr-3 w-8 h-8 ml-4"
+              className="mr-3 w-8 h-8 ml-4 hidden lg:block"
               src={tennisFlowLogo}
               alt="tennisflow logo"
             />
-            <div className="text-2xl mt-auto ">Tennisflow </div>
+            <div className="text-2xl mt-auto hidden xl:block ">Tennisflow </div>
           </div>
-          <nav className="pt-4 mt-auto">
-            <ul className="flex ">
-              <li className="ml-8">
-                <a href="/#home">Home</a>
-              </li>
-              <li className="ml-8">
-                <Link href="/dashboard">Dashboard</Link>
-              </li>
-              <li className="ml-8">
-                <a href="/#community">Community</a>
-              </li>
-              <li className="ml-8">
-                <a href="/#partners">Partners</a>
-              </li>
-              <li className="ml-8">
-                <a href="/#aboutus">About us</a>
-              </li>
-            </ul>
-          </nav>
+          <NavBar />
           <div className="mt-auto">
             {user ? (
               <div className="flex">
