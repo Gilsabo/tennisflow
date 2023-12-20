@@ -29,10 +29,10 @@ export default async function Layout(props: Props) {
 
   return (
     <main className="grid grid-cols-5 h-screen">
-      <div className="  shadow-2xl bg-slate-50 h-full">
+      <div className="shadow-2xl bg-slate-50 h-full w-48 lg:w-auto">
         <Link
           href="/"
-          className=" bg-[#00503C] flex items-center pl-6 pt-8  shadow"
+          className=" bg-[#00503C] flex items-center pl-6 pt-8 shadow"
         >
           <Image
             src="/images/tennisFlowLogo.svg"
@@ -44,7 +44,7 @@ export default async function Layout(props: Props) {
             Tennisflow
           </div>
         </Link>
-        <ul className="pt-4 pl-6 ">
+        <ul className="pt-4 pl-6">
           <li className="mt-8 flex text-sm group transition-all duration-300 ease-in-out text-gray-900">
             <Link className="flex" href="/dashboard">
               <Image
@@ -161,7 +161,7 @@ export default async function Layout(props: Props) {
         </ul>
       </div>
       <div className="col-span-4">
-        <header className="  pl-6 pt-11   text-slate-800 shadow-lg pr-8">
+        <header className="pl-6 pt-11 text-slate-800 shadow-lg pr-8">
           <ul className="flex items-center justify-end pb-1.5">
             <li>
               <a href="/" className="mr-4 hover:text-[#00503C] ">
