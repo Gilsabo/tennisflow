@@ -29,7 +29,7 @@ export default async function Layout(props: Props) {
 
   return (
     <main className="grid grid-cols-5 h-screen">
-      <div className="shadow-2xl bg-slate-50 h-full w-48 lg:w-auto">
+      <div className="shadow-2xl bg-slate-50 h-full">
         <Link
           href="/"
           className=" bg-[#00503C] flex items-center pl-6 pt-8 shadow"
@@ -39,8 +39,9 @@ export default async function Layout(props: Props) {
             alt="icon tennisflow"
             height={25}
             width={25}
+            className="text-xl ml-2 my-4"
           />
-          <div className="text-xl font-semibold pl-2 py-4 text-slate-200">
+          <div className="text-xl font-semibold pl-2 py-4 text-slate-200 hidden md:block">
             Tennisflow
           </div>
         </Link>
@@ -53,7 +54,7 @@ export default async function Layout(props: Props) {
                 src={dashboardLogo}
                 alt="dashboard Logo"
               />
-              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out hidden md:block">
                 Dashboard
               </div>
             </Link>
@@ -66,7 +67,7 @@ export default async function Layout(props: Props) {
                 src={historyLogo}
                 alt="dashboard Logo"
               />
-              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out hidden md:block">
                 History
               </div>
             </Link>
@@ -84,7 +85,7 @@ export default async function Layout(props: Props) {
                   alt="dashboard Logo"
                 />
 
-                <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out hidden md:block">
                   Profile
                 </div>
               </Link>
@@ -99,7 +100,7 @@ export default async function Layout(props: Props) {
                   src={userProfileLogo}
                   alt="dashboard Logo"
                 />
-                <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out hidden md:block">
                   Profile
                 </div>
               </Link>
@@ -113,7 +114,7 @@ export default async function Layout(props: Props) {
                 src={videosLogo}
                 alt="dashboard Logo"
               />
-              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out hidden md:block">
                 My videos
               </div>
             </Link>
@@ -127,7 +128,7 @@ export default async function Layout(props: Props) {
                 alt="dashboard Logo"
               />
 
-              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out hidden md:block">
                 Players
               </div>
             </Link>
@@ -140,7 +141,7 @@ export default async function Layout(props: Props) {
                 src={MostCommented}
                 alt="dashboard Logo"
               />
-              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out hidden md:block">
                 Most commented
               </div>
             </Link>
@@ -153,7 +154,7 @@ export default async function Layout(props: Props) {
                 src={mostViewdLogo}
                 alt="dashboard Logo"
               />
-              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out ">
+              <div className="ml-2 bg-left-bottom bg-gradient-to-r from-[#00503C]  to-[#00503C]  bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out hidden md:block">
                 Most viewed
               </div>
             </Link>
