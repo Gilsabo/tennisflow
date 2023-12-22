@@ -39,7 +39,7 @@ export default async function Layout(props: Props) {
             alt="icon tennisflow"
             height={25}
             width={25}
-            className="text-xl ml-2 my-4"
+            className="text-xl my-4"
           />
           <div className="text-xl font-semibold pl-2 py-4 text-slate-200 hidden md:block">
             Tennisflow
