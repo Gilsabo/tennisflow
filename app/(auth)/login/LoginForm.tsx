@@ -39,7 +39,7 @@ export default function LoginFrom(props: Props) {
   }
 
   return (
-    <div className="m-auto bg-slate-200 pt-40 h-screen">
+    <main className="m-auto bg-slate-200 pt-40 h-screen">
       <div>
         <form
           className=" w-96 h-96 m-auto"
@@ -104,6 +104,6 @@ export default function LoginFrom(props: Props) {
           ))}
         </form>
       </div>
-    </div>
+    </main>
   );
 }
