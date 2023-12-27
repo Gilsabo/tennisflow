@@ -67,7 +67,7 @@ export default function LoginFrom(props: Props) {
                   name="user-name"
                   id="user-name"
                   autoComplete="given-name"
-                  className="block rounded-md border-0 py-1.5 text-[#00503C] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-300  sm:text-sm"
+                  className="block w-full rounded-md border-0 py-1.5 text-[#00503C] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-300  sm:text-sm"
                 />
               </div>
             </div>
@@ -86,11 +86,11 @@ export default function LoginFrom(props: Props) {
                 id="passowrd"
                 onChange={(event) => setPassword(event.currentTarget.value)}
                 autoComplete="given-name"
-                className="block rounded-md border-0 py-1.5 text-[#00503C] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 hover:text-slate-200 focus:ring-2 focus:ring-inset focus:ring-gray-300  sm:text-sm"
+                className="block w-full rounded-md border-0 py-1.5 text-[#00503C] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 hover:text-slate-200 focus:ring-2 focus:ring-inset focus:ring-gray-300  sm:text-sm"
               />
             </div>
 
-            <button className="mt-8  m-16 rounded-md hover:bg-[#00503C] border border-solid border-[#00503C] px-3 py-2 text-sm font-semibold text-[#00503C] shadow-sm bg-slate-200 hover:text-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 ">
+            <button className="mt-8 w-full rounded-md hover:bg-[#00503C] border border-solid border-[#00503C] px-3 py-2 text-sm font-semibold text-[#00503C] shadow-sm bg-slate-200 hover:text-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300 ">
               Log in
             </button>
           </div>
