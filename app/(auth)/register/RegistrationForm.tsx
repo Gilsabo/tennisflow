@@ -47,8 +47,8 @@ export default function RegistrationForm() {
           className="mx-8"
           onSubmit={async (event) => await handleRegister(event)}
         >
-          <div className="">
-            <div className="">
+          <div>
+            <div>
               <label
                 htmlFor="first-name"
                 className="block text-sm font-medium text-[#00503C]"
@@ -66,7 +66,7 @@ export default function RegistrationForm() {
               </div>
             </div>
           </div>
-          <div className="">
+          <div>
             <label
               htmlFor="first-name"
               className="block mt-4 text-sm font-medium text-[#00503C]"
