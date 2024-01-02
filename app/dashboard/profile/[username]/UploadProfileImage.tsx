@@ -60,7 +60,6 @@ export default function UploadProfileImage(props: Props) {
       setLoading(false);
     };
     reader.onerror = () => {
-      console.error('AHHHHHHHH!!');
       setLoading(false);
     };
   };
