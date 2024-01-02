@@ -71,7 +71,7 @@ export default function UploadVideo(props: Props) {
         </label>
         <button
           disabled={loading}
-          className="rounded-md mt-6 bg-slate-200 px-2.5 py-1.5 text-sm font-semibold text-violet-900 hover:bg-violet-900 hover:text-slate-200 ml-2"
+          className="rounded-md mt-6 bg-slate-200 px-2.5 py-1.5 text-sm font-semibold text-violet-900 hover:bg-violet-900 hover:text-slate-200 sm:ml-2"
         >
           {loading ? 'Uploading...' : 'Upload'}
         </button>
