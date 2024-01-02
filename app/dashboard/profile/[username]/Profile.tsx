@@ -45,7 +45,7 @@ export default function Profile({ userId, userName }: Props) {
   const router = useRouter();
 
   return (
-    <div className="sm:ml-16 pl-20">
+    <div className="sm:ml-16 pl-20 mr-4">
       <div className="border-b mt-8 border-gray-900/10 pb-12 ">
         <h2 className="text-base font-semibold text-gray-900">
           Create your profile, <span className="capitalize">{userName}</span>
