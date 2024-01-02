@@ -54,7 +54,7 @@ export default function VideoForm({ userProfileId }: Props) {
         <h2 className="text-base font-semibold text-gray-900">
           Upload your video
         </h2>
-        <p className="mt-1 text-sm text-gray-600">
+        <p className="mt-1 text-sm text-gray-600 mb-4 sm:mb-0">
           Your are a little bit closer to get better. First upload the video and
           then complete all the fields.
         </p>
