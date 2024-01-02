@@ -49,7 +49,7 @@ export default function EditProfile(props: Props) {
     console.log('userprofileupdatedata', data);
   }
   return (
-    <div className="ml-16 pl-20">
+    <div className="sm:ml-16 pl-20">
       <div>
         <div className="border-b mt-8 border-gray-900/10 pb-12 ">
           <h2 className="text-base font-semibold text-gray-900">
@@ -60,8 +60,8 @@ export default function EditProfile(props: Props) {
             Modify your profile whenever you wish.
           </p>
         </div>
-        <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-          <div className="sm:col-span-2">
+        <div className="mt-10 grid gap-x-6 gap-y-8 grid-cols-6">
+          <div className="col-span-4 sm:col-span-2">
             <label
               htmlFor="first-name"
               className="block text-sm font-medium text-gray-900"
@@ -83,7 +83,7 @@ export default function EditProfile(props: Props) {
               />
             </div>
           </div>
-          <div className="sm:col-span-2">
+          <div className="col-span-4 sm:col-span-2">
             <label
               htmlFor="last-name"
               className="block text-sm font-medium text-gray-900"
@@ -105,7 +105,7 @@ export default function EditProfile(props: Props) {
               />
             </div>
           </div>
-          <div className="sm:col-span-4">
+          <div className="col-span-4">
             <label
               htmlFor="email"
               className="block text-sm font-medium text-gray-900"
@@ -127,7 +127,7 @@ export default function EditProfile(props: Props) {
               />
             </div>
           </div>
-          <div className="sm:col-span-2 sm:col-start-1">
+          <div className="col-span-4 sm:col-span-2 sm:col-start-1">
             <label
               htmlFor="age"
               className="block text-sm font-medium text-gray-900"
@@ -150,7 +150,7 @@ export default function EditProfile(props: Props) {
             </div>
           </div>
 
-          <div className="sm:col-span-2">
+          <div className="col-span-4 sm:col-span-2">
             <label
               htmlFor="Years of experience"
               className="block text-sm font-medium text-gray-900"
@@ -189,7 +189,7 @@ export default function EditProfile(props: Props) {
 
             <div className="mt-2 space-y-10 col-span-4">
               <fieldset>
-                <div className="mt-2 space-y-6 flex items-start">
+                <div className="mt-2 space-y-6 block sm:flex  items-start">
                   <div className="flex items-center gap-x-3 mr-2 mt-6">
                     <input
                       id="right-handed"
