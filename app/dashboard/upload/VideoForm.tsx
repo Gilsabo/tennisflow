@@ -60,7 +60,7 @@ export default function VideoForm({ userProfileId }: Props) {
         </p>
         <UploadVideo setVideoUrlInput={setVideoUrlInput} />
         <form
-          className="flex flex-col"
+          className="flex flex-col mr-4"
           onSubmit={async (event) => {
             event.preventDefault();
             await createVideo();
@@ -75,7 +75,7 @@ export default function VideoForm({ userProfileId }: Props) {
             </label>
             <div className="mt-2">
               <input
-                className="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm"
+                className="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm w-full sm:w-1/2 "
                 value={titleInput}
                 onChange={(e) => setTitleInput(e.currentTarget.value)}
                 required
@@ -214,7 +214,7 @@ export default function VideoForm({ userProfileId }: Props) {
             </label>
             <div className="mt-2">
               <input
-                className="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm"
+                className="block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm w-full sm:w-1/2"
                 value={locationInput}
                 onChange={(e) => setLocationInput(e.currentTarget.value)}
                 required
