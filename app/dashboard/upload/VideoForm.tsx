@@ -229,6 +229,9 @@ export default function VideoForm({ userProfileId }: Props) {
             >
               Describe what you want to improve
             </label>
+            <p className="mt-3 text-sm text-gray-600">
+              Explain what happens in the video.
+            </p>
             <div className="mt-2">
               <textarea
                 id="about"
@@ -241,10 +244,6 @@ export default function VideoForm({ userProfileId }: Props) {
                 className="block w-3/4 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-900 sm:text-sm"
               />
             </div>
-            <p className="mt-3 text-sm text-gray-600">
-              Explain not only what you think it is, but also what sensations
-              when playing in the video.
-            </p>
           </div>
           <div className="mt-6 flex items-center justify-start gap-x-6">
             <button className="rounded-md bg-slate-200 px-3 py-2 text-sm font-semibold text-violet-900 shadow-sm hover:bg-violet-900 hover:text-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-900">
