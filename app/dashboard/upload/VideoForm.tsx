@@ -49,7 +49,7 @@ export default function VideoForm({ userProfileId }: Props) {
   }
 
   return (
-    <div className="border-b border-gray-900/10 pb-12 ml-16 pl-20 ">
+    <div className="border-b border-gray-900/10 pb-12 ml-16 sm:pl-20 ">
       <div className="pt-8">
         <h2 className="text-base font-semibold text-gray-900">
           Upload your video
