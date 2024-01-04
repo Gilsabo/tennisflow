@@ -3,7 +3,6 @@ import { PlaywrightTestConfig } from '@playwright/test';
 // Config file docs: https://playwright.dev/docs/test-configuration
 const config: PlaywrightTestConfig = {
   webServer: {
-    // specifically to be changed for windows "pnpm start"
     command: 'pnpm start',
     port: 3000,
     stdout: 'pipe',
