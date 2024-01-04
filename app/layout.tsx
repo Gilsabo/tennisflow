@@ -7,7 +7,7 @@ export type Props = {
 
 export const metadata = {
   title: {
-    default: 'Tennisflow | all about tennis ',
+    default: 'Tennisflow | all about tennis',
     template: '%s | Tennisflow ',
   },
   description: 'Tennis platform for tennis enthusiasts',
