@@ -5,6 +5,7 @@ import React from 'react';
 import { getUserProfileByUserId } from '../../../database/profiles';
 import { getUserBySessionToken } from '../../../database/users';
 import { getUserVideosByUserProfileId } from '../../../database/videos';
+import DeleteVideoButton from './DeleteVideoButton';
 
 export const metadata = {
   title: 'My videos',
@@ -44,23 +45,31 @@ export default async function Myvideos() {
       ) : (
         <div className="flex flex-wrap mt-8 justify-center">
           {userWithProfileVideos.map((userWithProfileVideo) => (
-            <div
-              className="mr-2 ml-2 w-60 mb-4"
-              key={`div-video${userWithProfileVideo.videoUrl}`}
-            >
-              <video className="rounded-lg mb-1" id="doc-player" controls muted>
-                <source
-                  src={`https://res.cloudinary.com/dqiq3eutn/video/upload/${userWithProfileVideo.videoUrl}`}
-                  type="video/mp4"
-                />
-                <track srcLang="en" label="English" default />
-              </video>
-              <Link href={`/dashboard/${userWithProfileVideo.id}`}>
-                <div className="text-xs">
-                  Posted on: {userWithProfileVideo.timestamp.toDateString()}
-                </div>
-              </Link>
-            </div>
+            <>
+              <div
+                className="mr-2 ml-2 w-60 mb-4"
+                key={`div-video${userWithProfileVideo.videoUrl}`}
+              >
+                <video
+                  className="rounded-lg mb-1"
+                  id="doc-player"
+                  controls
+                  muted
+                >
+                  <source
+                    src={`https://res.cloudinary.com/dqiq3eutn/video/upload/${userWithProfileVideo.videoUrl}`}
+                    type="video/mp4"
+                  />
+                  <track srcLang="en" label="English" default />
+                </video>
+                <Link href={`/dashboard/${userWithProfileVideo.id}`}>
+                  <div className="text-xs">
+                    Posted on: {userWithProfileVideo.timestamp.toDateString()}
+                  </div>
+                </Link>
+              </div>
+              <DeleteVideoButton />
+            </>
           ))}
         </div>
       )}
