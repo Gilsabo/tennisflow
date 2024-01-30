@@ -13,17 +13,6 @@ type UserVideoResponseBodyPost =
     }
   | Error;
 
-// export type Video = {
-//   id: number;
-//   videoUrl: string;
-//   title: string;
-//   description: string;
-//   tags: string[] | undefined;
-//   location: string | undefined;
-//   timestamp: Date;
-//   userProfileId: number;
-// };
-
 const userVideoSchema = z.object({
   videoUrl: z.string(),
   title: z.string(),
