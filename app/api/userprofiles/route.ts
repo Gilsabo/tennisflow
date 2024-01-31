@@ -51,7 +51,7 @@ export async function POST(
       { status: 400 },
     );
   }
-  // Get the animals from the database
+
   const userProfile = await createUserProfile(
     result.data.firstName,
     result.data.lastName,
@@ -67,7 +67,7 @@ export async function POST(
   if (!userProfile) {
     return NextResponse.json(
       {
-        error: 'Error creating the new animal',
+        error: 'Error creating the new profile',
       },
       { status: 500 },
     );
