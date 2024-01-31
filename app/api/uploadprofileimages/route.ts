@@ -12,8 +12,6 @@ cloudinary.config({
   secure: true,
 });
 
-// import { z } from 'zod';
-
 type Error = {
   error: string;
 };
@@ -33,7 +31,6 @@ export async function POST(
 ): Promise<NextResponse<ResponsDataBodyFormData>> {
   const body = await request.json();
   const parsedBody = uploadImageSchema.safeParse(body);
-  // const fileStr = body.data;
 
   if (!parsedBody.success) {
     return NextResponse.json(
