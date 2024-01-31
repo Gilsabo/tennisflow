@@ -48,6 +48,20 @@ export default function EditProfile(props: Props) {
     const data = await response.json();
     console.log('userprofileupdatedata', data);
   }
+
+  async function deleteUser(userName: string) {
+    const response = await fetch(`/api/deleteusers/${userName}`, {
+      method: 'DELETE',
+      body: JSON.stringify({
+        id: props.profilePlayer.id,
+        userName: props.userName,
+      }),
+    });
+
+    const data = await response.json();
+    console.log('deletedUserName', data);
+  }
+
   return (
     <div className="sm:ml-16 pl-20">
       <div>
@@ -289,26 +303,46 @@ export default function EditProfile(props: Props) {
               save
             </button>
           ) : (
-            <button
-              className="rounded-md  bg-slate-200 mb-8 px-3 py-2 text-sm font-semibold text-violet-900 shadow-sm hover:bg-violet-900 hover:text-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-900 "
-              onClick={() => {
-                setOnEditFirstNameInput(props.profilePlayer.firstName);
-                setOnEditLastNameInput(props.profilePlayer.lastName);
-                setOnEditEmailInput(props.profilePlayer.email);
-                setOnEditAgeInput(Number(props.profilePlayer.age));
-                setOnEditYearsExperienceInput(
-                  Number(props.profilePlayer.yearsExperience),
-                );
-                setOnEditDominantHandInput(props.profilePlayer.dominantHand);
-                setOnEditDescriptionInput(props.profilePlayer.description);
-                setOnEditId(props.profilePlayer.id);
-                setOnEditProfilePictureUrlInput(
-                  props.profilePlayer.profilePictureUrl,
-                );
-              }}
-            >
-              Edit
-            </button>
+            <>
+              <button
+                className="rounded-md  bg-slate-200 mb-8 px-3 py-2 text-sm font-semibold text-violet-900 shadow-sm hover:bg-violet-900 hover:text-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-900 "
+                onClick={() => {
+                  setOnEditFirstNameInput(props.profilePlayer.firstName);
+                  setOnEditLastNameInput(props.profilePlayer.lastName);
+                  setOnEditEmailInput(props.profilePlayer.email);
+                  setOnEditAgeInput(Number(props.profilePlayer.age));
+                  setOnEditYearsExperienceInput(
+                    Number(props.profilePlayer.yearsExperience),
+                  );
+                  setOnEditDominantHandInput(props.profilePlayer.dominantHand);
+                  setOnEditDescriptionInput(props.profilePlayer.description);
+                  setOnEditId(props.profilePlayer.id);
+                  setOnEditProfilePictureUrlInput(
+                    props.profilePlayer.profilePictureUrl,
+                  );
+                }}
+              >
+                Edit
+              </button>
+              <button
+                onClick={() => {
+                  const confirmed = window.confirm(
+                    'Are you sure you want to delete your profile? This action cannot be undone.',
+                  );
+
+                  if (confirmed) {
+                    deleteUser(props.userName);
+                    router.push('/');
+                  } else {
+                    // User chose not to delete, you can handle this case as needed
+                    console.log('Deletion canceled');
+                  }
+                }}
+                className="rounded-md bg-slate-200 hover:border-red-500 mb-8 px-3 py-2 text-sm font-semibold text-red-500 shadow-sm  hover:text-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-red-500"
+              >
+                delete
+              </button>
+            </>
           )}
         </div>
       </div>
