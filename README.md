@@ -4,6 +4,10 @@
 
 Deployed version on fly.io : https://tennisflow.fly.dev
 
+## Motivation
+
+Tennis is widely recognized as the most popular individal sport in the world and it is played by millions of fans. However, learning, practicing and be able to afford this sport is not so easy. Expensive courts, lack of good trainers and the difficulty to find hitting partners might give you a hard time. Tennisflow aims to solve these issues by establishing a collaborative community ( akin to stackoverflow  ) where users support to one another, offering valuable personalized feedback and facilitating free improvement from any location. The ultimate aim is to bridge existing gaps and surpass financial hurdles, making learning tennis more accessible to all fans
+
 ## Technologies used
 
 **Client:** Next.js, React, TypeScript, Tailwind
@@ -26,7 +30,7 @@ To run this project locally, the following steps are needed:
 2. Download and install PostgreSQL (if not installed yet).
 - https://www.postgresql.org/download/
 
-3. Create a User and a Database for the project.
+3. Create a User and a Database for the project
 
 4. Create a copy of the `.env.example` and name it `.env` on the root of the project and modify it with your PostgreSQL credentials. The file should include these four environment variables:
 
