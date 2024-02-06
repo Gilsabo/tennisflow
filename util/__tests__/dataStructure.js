@@ -1,13 +1,13 @@
 import { expect, test } from '@jest/globals';
 
-videosWithComments[
+const videosWithComments = [
   ({
     videoId: 1,
     title: 'Volley',
     tags: ['backhand', 'volley'],
     firstName: 'Oriol',
     lastName: 'Gallach',
-    comments: [[Object], [Object]],
+    comments: [{ commentUser: 'Come on' }, { commentUser: ' let goo' }],
     profilePictureUrl: 'acps1mwix4ni42movpnd',
   },
   {
@@ -16,9 +16,9 @@ videosWithComments[
     tags: ['serve', 'foot-work'],
     firstName: 'Albert',
     lastName: 'Freixa',
-    comments: [[Object]],
+    comments: [{ commentUser: 'Come on' }],
     profilePictureUrl: 'g4dvhy6zcgflcagopepq',
-  })
+  }),
 ];
 
 function sortVideosByComments(videosWithComments) {
