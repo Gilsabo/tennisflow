@@ -45,7 +45,9 @@ export default async function Myvideos() {
       ) : (
         <div className="flex flex-wrap mt-8 justify-center">
           {userWithProfileVideos.map((userWithProfileVideo) => (
-            <React.Fragment>
+            <React.Fragment
+              key={`div-userWithProfileVideo${userWithProfileVideo.videoUrl}`}
+            >
               <div
                 className="mr-2 ml-2 w-60 mb-4"
                 key={`div-video${userWithProfileVideo.videoUrl}`}
