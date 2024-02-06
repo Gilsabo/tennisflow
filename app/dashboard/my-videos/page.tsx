@@ -1,7 +1,6 @@
 import { cookies } from 'next/headers';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
-import React from 'react';
 import { getUserProfileByUserId } from '../../../database/profiles';
 import { getUserBySessionToken } from '../../../database/users';
 import { getUserVideosByUserProfileId } from '../../../database/videos';
