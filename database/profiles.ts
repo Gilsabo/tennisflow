@@ -4,7 +4,7 @@ import { sql } from './connect';
 
 export const getUserProfiles = cache(async () => {
   // return userProfiles;
-  const userProfiles = await sql<UserProfile[]>`
+  const userProfiles: UserProfile[] = await sql<UserProfile[]>`
     SELECT
       *
     FROM
