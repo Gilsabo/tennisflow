@@ -7,7 +7,7 @@ const videosWithComments = [
     tags: ['backhand', 'volley'],
     firstName: 'Oriol',
     lastName: 'Gallach',
-    comments: [{ commentUser: 'Come on' }, { commentUser: ' let goo' }],
+    comments: [{ commentUser: 'Come on' }, { commentUser: 'let goo' }],
     profilePictureUrl: 'acps1mwix4ni42movpnd',
   },
   {
@@ -42,7 +42,7 @@ test('Sort videos by the number of comments in descending order', () => {
       tags: ['backhand', 'volley'],
       firstName: 'Oriol',
       lastName: 'Gallach',
-      comments: [{ commentUser: 'Comment 1' }, { commentUser: 'Comment 2' }],
+      comments: [{ commentUser: 'Come on' }, { commentUser: 'let goo' }],
       profilePictureUrl: 'acps1mwix4ni42movpnd',
     },
     {
@@ -51,7 +51,7 @@ test('Sort videos by the number of comments in descending order', () => {
       tags: ['serve', 'foot-work'],
       firstName: 'Albert',
       lastName: 'Freixa',
-      comments: [{ commentUser: 'Comment 1' }],
+      comments: [{ commentUser: 'Come on' }],
       profilePictureUrl: 'g4dvhy6zcgflcagopepq',
     },
   ]);
