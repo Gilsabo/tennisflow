@@ -1,7 +1,7 @@
 import { expect, test } from '@jest/globals';
 
 const videosWithComments = [
-  ({
+  {
     videoId: 1,
     title: 'Volley',
     tags: ['backhand', 'volley'],
@@ -18,7 +18,7 @@ const videosWithComments = [
     lastName: 'Freixa',
     comments: [{ commentUser: 'Come on' }],
     profilePictureUrl: 'g4dvhy6zcgflcagopepq',
-  }),
+  },
 ];
 
 function sortVideosByComments(videosWithComments) {
