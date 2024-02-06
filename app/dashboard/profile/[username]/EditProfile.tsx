@@ -1,6 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { UserProfile } from '../../../../migrations/00002-createTableUserProfiles';
 
 type Props = {
@@ -303,7 +303,7 @@ export default function EditProfile(props: Props) {
               save
             </button>
           ) : (
-            <>
+            <Fragment>
               <button
                 className="rounded-md  bg-slate-200 mb-8 px-3 py-2 text-sm font-semibold text-violet-900 shadow-sm hover:bg-violet-900 hover:text-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-900 "
                 onClick={() => {
@@ -342,7 +342,7 @@ export default function EditProfile(props: Props) {
               >
                 delete
               </button>
-            </>
+            </Fragment>
           )}
         </div>
       </div>
