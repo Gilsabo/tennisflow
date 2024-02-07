@@ -10,7 +10,6 @@
     "jsx": "preserve"
   },
   "include": [
-    "**/*.ts",
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
