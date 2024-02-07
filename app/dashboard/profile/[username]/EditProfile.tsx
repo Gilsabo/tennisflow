@@ -1,6 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { UserProfile } from '../../../../migrations/00002-createTableUserProfiles';
 
 type Props = {
