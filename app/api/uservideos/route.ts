@@ -17,7 +17,7 @@ const userVideoSchema = z.object({
   videoUrl: z.string(),
   title: z.string(),
   description: z.string(),
-  tags: z.array(z.string()).optional(),
+  tags: z.array(z.string()),
   location: z.string(),
   userProfileId: z.number(),
 });
