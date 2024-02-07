@@ -1,6 +1,6 @@
 import { expect, test } from '@jest/globals';
 
-const videosWithComments = [
+const videosWithCommentsfromUsers = [
   {
     videoId: 1,
     title: 'Volley',
@@ -21,10 +21,10 @@ const videosWithComments = [
   },
 ];
 
-function sortVideosByComments(videosWithComments) {
+function sortVideosByComments(videoInfos) {
   // Create a shallow copy to avoid mutating the original array
   return (
-    videosWithComments
+    videoInfos
       .slice()
       // Sort by comment length in descending order
       .sort((a, b) => b.comments.length - a.comments.length)
@@ -32,7 +32,7 @@ function sortVideosByComments(videosWithComments) {
 }
 
 test('Sort videos by the number of comments in descending order', () => {
-  const sortedVideos = sortVideosByComments(videosWithComments);
+  const sortedVideos = sortVideosByComments(videosWithCommentsfromUsers);
 
   // Check if the sorted array has the correct order
   expect(sortedVideos).toEqual([
