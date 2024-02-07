@@ -7,6 +7,9 @@ export type UserWithPasswordHash = User & {
   passwordHash: string;
 };
 
+export type Id = {
+  id: string;
+};
 export const getUsers = cache(async () => {
   // return users;
   const users = await sql<UserWithPasswordHash[]>`
@@ -93,7 +96,7 @@ export const getUserBySessionToken = cache(async (token: string) => {
 // takes the id by passing the name. this is needed to create the profile. We need the id from users table and pass it as foreing
 // in user_profiles table so that we have the foreign kew
 export const getUserIdByUserName = cache(async (userName: string) => {
-  const [id] = await sql<User[]>`
+  const [id] = await sql<Id[]>`
     SELECT
       id
     FROM
