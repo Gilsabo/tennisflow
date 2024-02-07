@@ -12,7 +12,7 @@ export type Video = {
 };
 
 export type VideoWithComments = {
-  id: string;
+  id: number;
   commentUser: string;
   timestamp: Date;
   firstName: string;
