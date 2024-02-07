@@ -2,7 +2,7 @@ import { Sql } from 'postgres';
 
 export type Comment = {
   id: number;
-  video_id: number;
+  videoId: number;
   userProfileId: number;
   commentUser: string;
   timestamp: Date;
