@@ -45,7 +45,7 @@ export const createUserProfile = cache(
     yearsExperience: number,
     dominantHand: string,
     description: string,
-    profilePictureUrl: string | undefined,
+    profilePictureUrl: string | null,
     userId: number,
   ) => {
     const [userProfile] = await sql<UserProfile[]>`
