@@ -35,7 +35,7 @@ export const getAllCommentsFromEachVideo = cache(async () => {
       videos.id AS video_id,
       videos.tags,
       user_profiles.profile_picture_url user_profiles.first_name,
-      user_profiles.last_name,
+      user_profiles.last_name
     FROM
       comments
       INNER JOIN videos ON videos.id = comments.video_id
