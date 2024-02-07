@@ -8,7 +8,7 @@ export type UserWithPasswordHash = User & {
 };
 
 export type Id = {
-  id: string;
+  id: number;
 };
 export const getUsers = cache(async () => {
   // return users;
