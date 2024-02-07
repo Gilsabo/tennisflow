@@ -4,7 +4,7 @@ export type Comment = {
   id: number;
   video_id: number;
   userProfileId: number;
-  comment: string;
+  commentUser: string;
 };
 
 export type CommentsVideo = {
