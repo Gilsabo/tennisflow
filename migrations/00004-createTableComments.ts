@@ -5,7 +5,8 @@ export type Comment = {
   video_id: number;
   userProfileId: number;
   commentUser: string;
-};
+  timestamp: Date;
+}[];
 
 export type CommentsVideo = {
   commentUser: string;
