@@ -5,7 +5,7 @@ export type Video = {
   videoUrl: string;
   title: string;
   description: string;
-  tags: string[] | null;
+  tags: string[];
   location: string | null;
   timestamp: Date;
   userProfileId: number;
