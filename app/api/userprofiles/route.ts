@@ -30,7 +30,7 @@ const userProfilsSchema = z.object({
   yearsExperience: z.number(),
   dominantHand: z.string(),
   description: z.string(),
-  profilePictureUrl: z.string().optional(),
+  profilePictureUrl: z.string().nullable(),
   userId: z.number(),
 });
 
