@@ -42,5 +42,6 @@ export const getAllCommentsFromEachVideo = cache(async () => {
       INNER JOIN videos ON videos.id = comments.video_id
       INNER JOIN user_profiles ON user_profiles.id = videos.user_profile_id
   `;
+
   return commentsFromVideo;
 });
