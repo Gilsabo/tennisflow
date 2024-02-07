@@ -9,7 +9,7 @@ export type UserWithPasswordHash = User & {
 
 export const getUsers = cache(async () => {
   // return users;
-  const users = await sql<User[]>`
+  const users = await sql<UserWithPasswordHash[]>`
     SELECT
       *
     FROM
