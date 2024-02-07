@@ -30,13 +30,12 @@ export const createComent = cache(
 export const getAllCommentsFromEachVideo = cache(async () => {
   const commentsFromVideo = await sql<CommentsVideo[]>`
     SELECT
+      comments.comment_user AS comment_user,
       videos.title,
       videos.id AS video_id,
       videos.tags,
-      comments.comment_user AS comment_user,
-      user_profiles.first_name,
+      user_profiles.profile_picture_url user_profiles.first_name,
       user_profiles.last_name,
-      user_profiles.profile_picture_url
     FROM
       comments
       INNER JOIN videos ON videos.id = comments.video_id
