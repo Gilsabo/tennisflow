@@ -20,7 +20,7 @@ export default function EditProfile(props: Props) {
   const [onEditDominantHandInput, setOnEditDominantHandInput] = useState('');
   const [onEditDescriptionInput, setOnEditDescriptionInput] = useState('');
   const [onEditProfilePictureUrlInput, setOnEditProfilePictureUrlInput] =
-    useState<string | undefined>('');
+    useState<string | null>('');
 
   const router = useRouter();
 
