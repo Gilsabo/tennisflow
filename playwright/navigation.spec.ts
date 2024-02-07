@@ -3,7 +3,7 @@ import test, { expect } from '@playwright/test';
 test('navigation login', async ({ page }) => {
   await page.goto('http://localhost:3000');
 
-  expect(page).toHaveTitle(/Tennisflow | all about tennis/);
+  await expect(page).toHaveTitle(/Tennisflow | all about tennis/);
 
   await page.getByRole('link', { name: 'Log in' }).click();
   await expect(page).toHaveURL(/.*login/);
@@ -23,7 +23,7 @@ test('navigation login to profile', async ({ page }) => {
 test('navigation register', async ({ page }) => {
   await page.goto('http://localhost:3000');
 
-  expect(page).toHaveTitle(/Tennisflow | all about tennis/);
+  await expect(page).toHaveTitle(/Tennisflow | all about tennis/);
 
   await page.getByRole('link', { name: 'Sign up' }).click();
   await expect(page).toHaveURL(/.*register/);
