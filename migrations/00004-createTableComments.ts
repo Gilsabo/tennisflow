@@ -12,7 +12,7 @@ export type CommentsVideo = {
   commentUser: string;
   title: string;
   videoId: number;
-  tags: string[];
+  tags: any;
   profilePictureUrl: string | null;
   firstName: string;
   lastName: string;

@@ -11,7 +11,7 @@ type Props = {
 export default function VideoForm({ userProfileId }: Props) {
   const [titleInput, setTitleInput] = useState('');
   const [descriptionInput, setDescriptionInput] = useState('');
-  const [tagsInput, setTagsInput] = useState<string[]>([]);
+  const [tagsInput, setTagsInput] = useState<any[]>([]);
   const [locationInput, setLocationInput] = useState('');
   const [videoUrlInput, setVideoUrlInput] = useState('');
 
