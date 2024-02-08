@@ -47,11 +47,7 @@ export const getVideos = cache(async () => {
     FROM
       videos
   `;
-  const videosWithParsedTags = videos.map((video) => ({
-    ...video,
-    tags: Array.isArray(video.tags) ? video.tags : JSON.parse(video.tags),
-  }));
-  return videosWithParsedTags;
+  return videos;
 });
 
 export const getVideoByIdVideo = cache(async (idVideo: number) => {
