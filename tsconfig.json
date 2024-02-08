@@ -16,7 +16,7 @@
     "**/*.jsx",
     "**/*.cjs",
     "**/*.mjs",
-    ".next/types/**/*.ts",
+
     ".eslintrc.cjs"
   ]
 }
