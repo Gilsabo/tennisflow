@@ -10,7 +10,7 @@ export const createUserVideo = cache(
     videoUrl: string,
     title: string,
     description: string,
-    tags: any,
+    tags: string[],
     location: string,
     userProfileId: number,
   ) => {
