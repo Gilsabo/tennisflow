@@ -30,7 +30,7 @@ const Videos = ({ videos }: Props) => {
             </div>
           </Link>
           <div>
-            {video.tags.map((tag) => (
+            {video.tags.map((tag: any) => (
               <div
                 key={`div-${tag}`}
                 className="inline-block mb-1 bg-slate-200 break-words text-[#00503C] text-xs font-medium mr-2 px-2.5 py-0.5 rounded  border-[#00503C]"

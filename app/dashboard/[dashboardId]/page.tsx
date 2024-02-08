@@ -74,7 +74,7 @@ export default async function DashboardVideoId(props: Props) {
             " {singleVideo[0]?.description} "
           </div>
           <div>
-            {singleVideo[0]?.tags.map((tag) => {
+            {singleVideo[0]?.tags.map((tag: any) => {
               return (
                 <div
                   className="inline-block mb-1 bg-slate-200 break-words text-[#00503C] text-xs font-medium mr-2 px-2.5 py-0.5 rounded  border-[#00503C]"
