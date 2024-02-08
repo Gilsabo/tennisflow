@@ -11,7 +11,7 @@ export default function DeleteVideoButton() {
         );
 
         if (confirmed) {
-          router.push('/');
+          alert('The video was succesfully deleted');
         } else {
           console.log('Deletion canceled');
         }
