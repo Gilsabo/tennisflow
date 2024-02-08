@@ -10,14 +10,11 @@
     "jsx": "preserve"
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
     "**/*.cjs",
     "**/*.mjs",
     ".next/types/**/*.ts",
     ".eslintrc.cjs"
-  ],
-  "exclude": ["**/videos.ts"]
+  ]
 }
