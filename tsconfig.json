@@ -18,5 +18,6 @@
     "**/*.mjs",
     ".next/types/**/*.ts",
     ".eslintrc.cjs"
-  ]
+  ],
+  "exclude": ["**/video.ts"]
 }
