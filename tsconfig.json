@@ -19,5 +19,5 @@
     ".next/types/**/*.ts",
     ".eslintrc.cjs"
   ],
-  "exclude": ["**/video.ts"]
+  "exclude": ["**/videos.ts"]
 }
