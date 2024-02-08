@@ -30,7 +30,7 @@ export const createUserVideo = cache(
           ${videoUrl},
           ${title},
           ${description},
-          ${sql.json(tags)},
+          ${tags},
           ${location},
           CURRENT_TIMESTAMP,
           ${userProfileId}
