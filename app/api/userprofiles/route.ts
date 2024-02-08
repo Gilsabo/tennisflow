@@ -3,20 +3,11 @@ import { z } from 'zod';
 import { createUserProfile } from '../../../database/profiles';
 import { UserProfile } from '../../../migrations/00002-createTableUserProfiles';
 
-// id: number;
-// firstName: string;
-// lastName: string;
-// email: string;
-// age: number;
-// yearsExperience: number;
-// dominantHand: string;
-// description: string;
-// profilePictureUrl: string | null;
 export type Error = {
   error: string;
 };
 
-type UserProfilesResponseBodyGet =
+export type UserProfilesResponseBodyGet =
   | {
       userProfile: UserProfile;
     }
