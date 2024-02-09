@@ -3,7 +3,7 @@ import { PlaywrightTestConfig } from '@playwright/test';
 // Config file docs: https://playwright.dev/docs/test-configuration
 const config: PlaywrightTestConfig = {
   webServer: {
-    command: 'pnpm start',
+    command: './node_modules/.bin/next start',
     port: 3000,
     stdout: 'pipe',
   },
