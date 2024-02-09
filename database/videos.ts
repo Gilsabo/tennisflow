@@ -50,6 +50,16 @@ export const getVideos = cache(async () => {
   return videos;
 });
 
+export const deleteVideo = cache(async (videoId: number) => {
+  const [deletedVideo] = await sql<Video[]>`
+    DELETE FROM videos
+    WHERE
+      id = ${videoId} RETURNING *;
+  `;
+
+  return deletedVideo;
+});
+
 export const getVideoByIdVideo = cache(async (idVideo: number) => {
   const videos = await sql<Video[]>`
     SELECT
