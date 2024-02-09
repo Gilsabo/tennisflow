@@ -28,9 +28,10 @@ export default function DeleteVideoButton(props: Props) {
         );
 
         if (confirmed) {
-          alert('The video was succesfully deleted');
           deleteVideo(props.videoId);
-          console.log(props.videoId, props.videoUrl);
+          alert('The video was succesfully deleted');
+          router.refresh;
+          router.push('/dashboard');
         } else {
           console.log('Deletion canceled');
         }
