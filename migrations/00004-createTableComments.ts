@@ -23,7 +23,7 @@ export async function up(sql: Sql) {
     CREATE TABLE
       comments (
         id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-        video_id INTEGER NOT NULL REFERENCES videos,
+        video_id INTEGER NOT NULL REFERENCES videos ON DELETE CASCADE,
         user_profile_id INTEGER NOT NULL REFERENCES user_profiles (id) ON DELETE CASCADE,
         comment_user VARCHAR(250) NOT NULL,
         TIMESTAMP TIMESTAMPTZ NOT NULL
