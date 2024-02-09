@@ -2,8 +2,8 @@
 import { useRouter } from 'next/navigation';
 
 type Props = {
-  videoUrl: string;
   videoId: number;
+  videoUrl: string;
 };
 export default function DeleteVideoButton(props: Props) {
   const router = useRouter();
@@ -12,8 +12,8 @@ export default function DeleteVideoButton(props: Props) {
     const response = await fetch(`/api/deletevideos/${videoId}`, {
       method: 'DELETE',
       body: JSON.stringify({
-        videoUrl: props.videoUrl,
         videoId: props.videoId,
+        videoUrl: props.videoUrl,
       }),
     });
     const data = await response.json();
