@@ -1,8 +1,25 @@
 'use client';
 import { useRouter } from 'next/navigation';
 
-export default function DeleteVideoButton() {
+type Props = {
+  videoUrl: string;
+  videoId: number;
+};
+export default function DeleteVideoButton(props: Props) {
   const router = useRouter();
+
+  async function deleteVideo(videoId: number) {
+    const response = await fetch(`/api/deletevideos/${videoId}`, {
+      method: 'DELETE',
+      body: JSON.stringify({
+        videoUrl: props.videoUrl,
+        videoId: props.videoId,
+      }),
+    });
+    const data = await response.json();
+    console.log('deletevideos', data);
+  }
+
   return (
     <button
       onClick={() => {
@@ -12,6 +29,8 @@ export default function DeleteVideoButton() {
 
         if (confirmed) {
           alert('The video was succesfully deleted');
+          deleteVideo(props.videoId);
+          console.log(props.videoId, props.videoUrl);
         } else {
           console.log('Deletion canceled');
         }
