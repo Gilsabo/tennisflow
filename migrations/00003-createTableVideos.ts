@@ -28,7 +28,7 @@ export async function up(sql: Sql) {
         video_url VARCHAR(250) NOT NULL UNIQUE,
         title VARCHAR(100) NOT NULL,
         description VARCHAR(250) NOT NULL,
-        tags JSONB,
+        tags VARCHAR(255)[],
         location VARCHAR(30),
         TIMESTAMP TIMESTAMPTZ NOT NULL,
         user_profile_id INTEGER NOT NULL REFERENCES user_profiles (id) ON DELETE CASCADE
