@@ -7,7 +7,7 @@ export type Error = {
   error: string;
 };
 
-export type videoResponseBodyDelete =
+export type VideoResponseBodyDelete =
   | {
       video: Video;
     }
@@ -20,7 +20,7 @@ const userSchema = z.object({
 
 export async function DELETE(
   request: NextRequest,
-): Promise<NextResponse<videoResponseBodyDelete>> {
+): Promise<NextResponse<VideoResponseBodyDelete>> {
   const body = await request.json();
 
   const result = userSchema.safeParse(body);
