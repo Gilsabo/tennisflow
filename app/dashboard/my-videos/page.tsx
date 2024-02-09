@@ -70,7 +70,10 @@ export default async function Myvideos() {
                   </div>
                 </Link>
               </div>
-              <DeleteVideoButton />
+              <DeleteVideoButton
+                videoUrl={userWithProfileVideo.videoUrl}
+                videoId={userWithProfileVideo.id}
+              />
             </React.Fragment>
           ))}
         </div>
