@@ -35,7 +35,7 @@ export async function DELETE(
       { status: 400 },
     );
   }
-  console.log('result,', result);
+
   const deleteUserInformations = await deleteUser(result.data.userName);
 
   if (!deleteUserInformations) {
