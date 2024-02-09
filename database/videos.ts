@@ -11,7 +11,7 @@ export const createUserVideo = cache(
     title: string,
     description: string,
     tags: string[] | null,
-    location: string,
+    location: string | null,
     userProfileId: number,
   ) => {
     const [videos] = await sql<Video[]>`
@@ -76,11 +76,11 @@ export const getVideoWithcomments = cache(async (videoId: number) => {
   const videoWithComment = await sql<VideoWithComments[]>`
     SELECT
       comments.id,
-      comments.comment_user AS commentUser,
+      comments.comment_user,
       comments.timestamp,
-      user_profiles.first_name AS firstName,
-      user_profiles.last_name AS lastName,
-      user_profiles.profile_picture_url AS profilePictureUrl
+      user_profiles.first_name,
+      user_profiles.last_name,
+      user_profiles.profile_picture_url
     FROM
       comments
       INNER JOIN videos ON videos.id = comments.video_id
