@@ -325,13 +325,13 @@ export default function EditProfile(props: Props) {
                 Edit
               </button>
               <button
-                onClick={() => {
+                onClick={async () => {
                   const confirmed = window.confirm(
                     'Are you sure you want to delete your profile? This action cannot be undone.',
                   );
 
                   if (confirmed) {
-                    deleteUser(props.userName);
+                    await deleteUser(props.userName);
                     router.push('/');
                   } else {
                     // User chose not to delete, you can handle this case as needed

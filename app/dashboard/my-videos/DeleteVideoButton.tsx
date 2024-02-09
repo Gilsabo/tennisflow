@@ -22,13 +22,13 @@ export default function DeleteVideoButton(props: Props) {
 
   return (
     <button
-      onClick={() => {
+      onClick={async () => {
         const confirmed = window.confirm(
           'Are you sure you want to delete your profile? This action cannot be undone.',
         );
 
         if (confirmed) {
-          deleteVideo(props.videoId);
+          await deleteVideo(props.videoId);
           alert('The video was succesfully deleted');
           router.refresh();
         } else {
