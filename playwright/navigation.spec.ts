@@ -10,7 +10,7 @@ test('navigation login', async ({ page }) => {
 });
 
 test('navigation login to profile', async ({ page }) => {
-  await page.goto('http://localhost:3000/login');
+  await page.goto('/login');
 
   const userNameInput = page.locator('#user-name');
   await userNameInput.fill('your-username');
@@ -21,7 +21,7 @@ test('navigation login to profile', async ({ page }) => {
 });
 
 test('navigation register', async ({ page }) => {
-  await page.goto('http://localhost:3000');
+  await page.goto('/');
 
   await expect(page).toHaveTitle(/Tennisflow | all about tennis/);
 
@@ -30,7 +30,7 @@ test('navigation register', async ({ page }) => {
 });
 
 test('profile form', async ({ page }) => {
-  await page.goto('http://localhost:3000/dashboard/profile/gil');
+  await page.goto('/dashboard/profile/gil');
   await page.getByTestId('profile-first-name').click();
   await page.getByTestId('profile-first-name').fill('Gil');
   await page.getByTestId('profile-first-name').press('Tab');
