@@ -19,7 +19,7 @@ jobs:
           pg_isready
       - name: Create database user
         run: |
-          sudo -u postgres psql --command="CREATE USER tennisflow PASSWORD 'tennisflow'" --command="\du"
+          sudo -u postgres psql --command="CREATE USER $PGUSERNAME PASSWORD '$PGPASSWORD'" --command="\du"
       - name: Create database and allow user
         run: |
           sudo -u postgres createdb --owner=$PGUSERNAME $PGDATABASE
@@ -88,4 +88,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flytennisflow
+      - run: flyctl deploy --remote-only
