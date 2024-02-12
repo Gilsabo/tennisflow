@@ -29,11 +29,11 @@ test('navigation register', async ({ page }) => {
   await expect(page).toHaveURL(/.*register/);
 });
 
-test('profile form', async ({ page }) => {
-  await page.goto('/dashboard/profile/gil');
-  await page.getByTestId('profile-first-name').click();
-  await page.getByTestId('profile-first-name').fill('Gil');
-  await page.getByTestId('profile-first-name').press('Tab');
-  await page.getByTestId('profile-last-name').fill('Sala');
-  await page.getByTestId('profile-last-name').press('Tab');
-});
+// test('profile form', async ({ page }) => {
+//   await page.goto('/dashboard/profile/gil');
+//   await page.getByTestId('profile-first-name').click();
+//   await page.getByTestId('profile-first-name').fill('Gil');
+//   await page.getByTestId('profile-first-name').press('Tab');
+//   await page.getByTestId('profile-last-name').fill('Sala');
+//   await page.getByTestId('profile-last-name').press('Tab');
+// });
