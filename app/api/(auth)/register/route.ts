@@ -9,8 +9,8 @@ import { User } from '../../../../migrations/00000-createTableUsers';
 import { secureCookieOptions } from '../../../../util/cookies';
 
 const registerSchema = z.object({
-  userName: z.string().min(3),
-  password: z.string().min(3),
+  userName: z.string().min(8),
+  password: z.string().min(8),
 });
 
 export type RegisterResponseBodyPost =
