@@ -26,8 +26,6 @@ export async function DELETE(
   const result = userSchema.safeParse(body);
 
   if (!result.success) {
-    // zod send you details about the error
-
     return NextResponse.json(
       {
         error: 'userName does not exist or is incorrect',
