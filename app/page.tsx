@@ -58,19 +58,25 @@ export default async function Home() {
                 </div>
               </div>
             ) : (
-              <div className="pt-4 mr-4 w-60 ">
-                <Link
-                  className="ml-8 rounded-lg border-slate-200 border border-solid py-2 px-4"
-                  href="/login"
-                >
-                  Log in
-                </Link>
-                <Link
-                  className="ml-6 rounded-lg bg-slate-200 text-[#00503C] border border-solid py-2 px-4"
-                  href="/register"
-                >
-                  Sign up
-                </Link>
+              <div className="pt-4 mr-4 w-60">
+                <ul className="flex">
+                  <li className="mr-4 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75">
+                    <Link
+                      href="/login"
+                      className="rounded-lg border-slate-200 border border-solid py-2 px-4"
+                    >
+                      Log in
+                    </Link>
+                  </li>
+                  <li className="transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75">
+                    <Link
+                      href="/register"
+                      className="rounded-lg bg-slate-200 text-[#00503C] border border-solid py-2 px-4"
+                    >
+                      Sign up
+                    </Link>
+                  </li>
+                </ul>
               </div>
             )}
           </div>
@@ -86,7 +92,7 @@ export default async function Home() {
             and level up your skills with our supportive community
           </h3>
           <Link
-            className=" bg-slate-200 rounded-lg text-[#00503C] border border-solid py-2 px-4 inline-block"
+            className=" bg-slate-200 rounded-lg text-[#00503C] border border-solid py-2 px-4 inline-block transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75"
             href="/register"
           >
             Get started

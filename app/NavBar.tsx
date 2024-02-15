@@ -13,19 +13,19 @@ export default function NavBar() {
     <>
       <nav className="pt-4 mt-auto hidden lg:block">
         <ul className="flex ">
-          <li className="ml-8">
+          <li className="ml-8 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75">
             <a href="/#home">Home</a>
           </li>
-          <li className="ml-8">
+          <li className="ml-8 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75">
             <Link href="/dashboard">Dashboard</Link>
           </li>
-          <li className="ml-8">
+          <li className="ml-8 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75">
             <a href="/#community">Community</a>
           </li>
-          <li className="ml-8">
+          <li className="ml-8 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75">
             <a href="/#partners">Partners</a>
           </li>
-          <li className="ml-8">
+          <li className="ml-8 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75">
             <a href="/#aboutus">About us</a>
           </li>
         </ul>
