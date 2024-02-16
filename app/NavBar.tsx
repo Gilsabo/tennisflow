@@ -13,7 +13,7 @@ export default function NavBar() {
     <>
       <nav className="pt-4 mt-auto hidden lg:block">
         <ul className="flex ">
-          <li className="ml-8 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75">
+          <li className="ml-8 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75 ">
             <a href="/#home">Home</a>
           </li>
           <li className="ml-8 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75">

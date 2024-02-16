@@ -63,7 +63,7 @@ export default async function Home() {
                   <li className="mr-4 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75">
                     <Link
                       href="/login"
-                      className="rounded-lg border-slate-200 border border-solid py-2 px-4"
+                      className="rounded-lg border-slate-200 border border-solid py-2 px-4 hover:border-violet-900"
                     >
                       Log in
                     </Link>
@@ -71,7 +71,7 @@ export default async function Home() {
                   <li className="transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75">
                     <Link
                       href="/register"
-                      className="rounded-lg bg-slate-200 text-[#00503C] border border-solid py-2 px-4"
+                      className="rounded-lg bg-slate-200 text-[#00503C] border border-solid py-2 px-4 hover:text-violet-900"
                     >
                       Sign up
                     </Link>
@@ -92,7 +92,7 @@ export default async function Home() {
             and level up your skills with our supportive community
           </h3>
           <Link
-            className=" bg-slate-200 rounded-lg text-[#00503C] border border-solid py-2 px-4 inline-block transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75"
+            className="bg-slate-200 rounded-lg text-[#00503C] border border-solid py-2 px-4 inline-block transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75 hover:text-violet-900"
             href="/register"
           >
             Get started
@@ -224,13 +224,13 @@ export default async function Home() {
           <h1 className="text-6xl mb-6 xl:pl-28">
             Skip tutorial hell in 3 simple steps
           </h1>
-          <h3 className="text-xl mb-10 lg:pl-30 ">
+          <h3 className="text-xl mb-10 lg:pl-30">
             No more binge-watching videos that don't meet your specific needs.
             With our supportive community, you'll receive tailored feedback that
             suits you best
           </h3>
           <Link
-            className=" bg-slate-200 rounded-lg  text-[#00503C] border border-solid py-2 px-4"
+            className="bg-slate-200 rounded-lg text-[#00503C] border border-solid py-2 px-4 inline-block transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75 hover:text-violet-900"
             href="/register"
           >
             Upload
