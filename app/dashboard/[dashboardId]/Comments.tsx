@@ -1,12 +1,12 @@
 'use client';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { VideoWithComments } from '../../../migrations/00003-createTableVideos';
+import { VideoWithComment } from '../../../migrations/00003-createTableVideos';
 
 type Props = {
   videoId: number | undefined;
   userProfileId: number;
-  videoWithcomments: VideoWithComments[];
+  videoWithcomments: VideoWithComment[];
 };
 
 export default function Comments(props: Props) {
