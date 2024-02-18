@@ -6,11 +6,11 @@ import { Error } from '../userprofiles/route';
 
 type CreateCommentResponseBody =
   | {
-      commentUser: Comment;
+      createdComment: Comment;
     }
   | Error;
 
-const commentRequestBodySchema = z.object({
+const commentUserSchema = z.object({
   videoId: z.number(),
   userProfileId: z.number(),
   commentUser: z.string(),
@@ -21,7 +21,7 @@ export async function POST(
 ): Promise<NextResponse<CreateCommentResponseBody>> {
   const body = await request.json();
 
-  const result = commentRequestBodySchema.safeParse(body);
+  const result = commentUserSchema.safeParse(body);
 
   if (!result.success) {
     return NextResponse.json(
@@ -48,6 +48,6 @@ export async function POST(
   }
 
   return NextResponse.json({
-    commentUser: commentUser,
+    createdComment: commentUser,
   });
 }
