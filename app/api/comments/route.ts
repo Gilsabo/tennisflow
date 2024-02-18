@@ -10,7 +10,7 @@ type CreateCommentResponseBody =
     }
   | Error;
 
-const commentUserSchema = z.object({
+const commentRequestBodySchema = z.object({
   videoId: z.number(),
   userProfileId: z.number(),
   commentUser: z.string(),
@@ -21,7 +21,7 @@ export async function POST(
 ): Promise<NextResponse<CreateCommentResponseBody>> {
   const body = await request.json();
 
-  const result = commentUserSchema.safeParse(body);
+  const result = commentRequestBodySchema.safeParse(body);
 
   if (!result.success) {
     return NextResponse.json(
