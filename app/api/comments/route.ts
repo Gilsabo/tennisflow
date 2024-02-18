@@ -4,7 +4,7 @@ import { createComent } from '../../../database/comments';
 import { Comment } from '../../../migrations/00004-createTableComments';
 import { Error } from '../userprofiles/route';
 
-type CreateCommentResponseBoyd =
+type CreateCommentResponseBody =
   | {
       commentUser: Comment;
     }
@@ -18,7 +18,7 @@ const commentUserSchema = z.object({
 
 export async function POST(
   request: NextRequest,
-): Promise<NextResponse<CreateCommentResponseBoyd>> {
+): Promise<NextResponse<CreateCommentResponseBody>> {
   const body = await request.json();
 
   const result = commentUserSchema.safeParse(body);
