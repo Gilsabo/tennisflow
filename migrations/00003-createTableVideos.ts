@@ -11,7 +11,7 @@ export type Video = {
   userProfileId: number;
 };
 
-export type VideoWithComments = {
+export type VideoWithComment = {
   id: number;
   commentUser: string;
   timestamp: Date;
