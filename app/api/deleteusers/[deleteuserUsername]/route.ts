@@ -7,7 +7,7 @@ export type Error = {
   error: string;
 };
 
-export type UserNameResponseBodyDelete =
+export type DeleteUserResponseBody =
   | {
       user: User;
     }
@@ -20,7 +20,7 @@ const userSchema = z.object({
 
 export async function DELETE(
   request: NextRequest,
-): Promise<NextResponse<UserNameResponseBodyDelete>> {
+): Promise<NextResponse<DeleteUserResponseBody>> {
   const body = await request.json();
 
   const result = userSchema.safeParse(body);
