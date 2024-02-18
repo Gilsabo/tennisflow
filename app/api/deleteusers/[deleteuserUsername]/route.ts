@@ -9,7 +9,7 @@ export type Error = {
 
 export type DeleteUserResponseBody =
   | {
-      user: User;
+      deletedUser: User;
     }
   | Error;
 
@@ -46,6 +46,6 @@ export async function DELETE(
   }
 
   return NextResponse.json({
-    user: deleteUserInformations,
+    deletedUser: deleteUserInformations,
   });
 }
