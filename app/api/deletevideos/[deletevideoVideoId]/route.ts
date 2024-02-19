@@ -13,7 +13,7 @@ export type DeleteVideoResponseBody =
     }
   | Error;
 
-const userSchema = z.object({
+const videoUserSchema = z.object({
   videoId: z.number(),
   videoUrl: z.string(),
 });
@@ -23,7 +23,7 @@ export async function DELETE(
 ): Promise<NextResponse<DeleteVideoResponseBody>> {
   const body = await request.json();
 
-  const result = userSchema.safeParse(body);
+  const result = videoUserSchema.safeParse(body);
 
   if (!result.success) {
     // zod send you details about the error
