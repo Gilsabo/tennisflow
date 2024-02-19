@@ -9,7 +9,7 @@ export type Error = {
 
 export type DeleteVideoResponseBody =
   | {
-      video: Video;
+      deletedVideo: Video;
     }
   | Error;
 
@@ -48,6 +48,6 @@ export async function DELETE(
   }
 
   return NextResponse.json({
-    video: deletedVideo,
+    deletedVideo: deletedVideo,
   });
 }
