@@ -16,9 +16,9 @@ type Error = {
   error: string;
 };
 
-type ResponsDataBodyFormData =
+type UploadVideoResponsBody =
   | {
-      formDATA: string;
+      uploadedVideo: string;
     }
   | Error;
 
@@ -28,7 +28,7 @@ const uploadVideoSchema = z.object({
 
 export async function POST(
   request: NextRequest,
-): Promise<NextResponse<ResponsDataBodyFormData>> {
+): Promise<NextResponse<UploadVideoResponsBody>> {
   const body = await request.json();
 
   const parsedBody = uploadVideoSchema.safeParse(body);
@@ -59,6 +59,6 @@ export async function POST(
   }
 
   return NextResponse.json({
-    formDATA: uploadedResponse.public_id,
+    uploadedVideo: uploadedResponse.public_id,
   });
 }

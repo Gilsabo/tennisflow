@@ -16,21 +16,21 @@ type Error = {
   error: string;
 };
 
-type ResponsDataBodyFormData =
+type UploadImageProfileResponseBody =
   | {
       uploadedProfileImage: string;
     }
   | Error;
 
-const uploadImageSchema = z.object({
+const uploadProfileImageSchema = z.object({
   data: z.string(),
 });
 
 export async function POST(
   request: NextRequest,
-): Promise<NextResponse<ResponsDataBodyFormData>> {
+): Promise<NextResponse<UploadImageProfileResponseBody>> {
   const body = await request.json();
-  const parsedBody = uploadImageSchema.safeParse(body);
+  const parsedBody = uploadProfileImageSchema.safeParse(body);
 
   if (!parsedBody.success) {
     return NextResponse.json(
