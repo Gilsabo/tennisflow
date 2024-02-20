@@ -7,9 +7,9 @@ export type Error = {
   error: string;
 };
 
-export type UserProfilesResponseBodyGet =
+export type UploadUserProfileResponseBody =
   | {
-      userProfile: UserProfile;
+      uploadedProfile: UserProfile;
     }
   | Error;
 
@@ -27,7 +27,7 @@ const userProfilsSchema = z.object({
 
 export async function POST(
   request: NextRequest,
-): Promise<NextResponse<UserProfilesResponseBodyGet>> {
+): Promise<NextResponse<UploadUserProfileResponseBody>> {
   const body = await request.json();
 
   const result = userProfilsSchema.safeParse(body);
@@ -65,6 +65,6 @@ export async function POST(
   }
 
   return NextResponse.json({
-    userProfile: userProfile,
+    uploadedProfile: userProfile,
   });
 }
