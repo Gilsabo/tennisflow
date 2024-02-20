@@ -18,7 +18,7 @@ type Error = {
 
 type ResponsDataBodyFormData =
   | {
-      formDATA: string;
+      uploadedProfileImage: string;
     }
   | Error;
 
@@ -56,6 +56,6 @@ export async function POST(
   }
 
   return NextResponse.json({
-    formDATA: uploadedResponse.public_id,
+    uploadedProfileImage: uploadedResponse.public_id,
   });
 }
