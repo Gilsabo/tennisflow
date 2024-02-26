@@ -30,7 +30,6 @@ export async function POST(
   const result = userVideoSchema.safeParse(body);
 
   if (!result.success) {
-    // zod send you details about the error
     return NextResponse.json(
       {
         error: 'The data is incomplete',
