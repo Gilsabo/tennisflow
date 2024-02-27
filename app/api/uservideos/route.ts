@@ -37,7 +37,7 @@ export async function POST(
       { status: 400 },
     );
   }
-  // Get the animals from the database
+
   const userVideo = await createUserVideo(
     result.data.videoUrl,
     result.data.title,
