@@ -32,7 +32,7 @@ export async function POST(
   if (!result.success) {
     return NextResponse.json(
       {
-        error: 'The data is incomplete',
+        error: 'The video data is incomplete',
       },
       { status: 400 },
     );
