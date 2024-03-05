@@ -42,7 +42,7 @@ export default function UploadProfileImage(props: Props) {
       setFileInputState('');
       setPreviewSource('');
       const data = await response.json();
-      props.setProfilePictureUrlInput(data.formDATA);
+      props.setProfilePictureUrlInput(data.uploadedProfileImage);
     } catch (err) {
       console.error(err);
     }
