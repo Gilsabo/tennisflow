@@ -1,7 +1,18 @@
+import { v2 as cloudinary } from 'cloudinary';
+import dotenv from 'dotenv';
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { deleteUser } from '../../../../database/users';
 import { User } from '../../../../migrations/00000-createTableUsers';
+
+dotenv.config();
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+  secure: true,
+});
 
 export type Error = {
   error: string;
@@ -16,6 +27,7 @@ export type DeleteUserResponseBody =
 const userSchema = z.object({
   id: z.number(),
   userName: z.string(),
+  profilePictureUrl: z.string(),
 });
 
 export async function DELETE(
@@ -33,6 +45,15 @@ export async function DELETE(
       { status: 400 },
     );
   }
+
+  console.log('result.data.profilePictureUrl', result.data.profilePictureUrl);
+
+  cloudinary.api
+    .delete_resources([`${result.data.profilePictureUrl}`], {
+      type: 'upload',
+      resource_type: 'image',
+    })
+    .then(console.log);
 
   const deleteUserInformations = await deleteUser(result.data.userName);
 
