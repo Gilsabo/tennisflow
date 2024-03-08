@@ -55,7 +55,7 @@ export default function EditProfile(props: Props) {
       body: JSON.stringify({
         id: props.profilePlayer.id,
         userName: props.userName,
-        profilePictureUrl: onEditProfilePictureUrlInput,
+        profilePictureUrl: props.profilePlayer.profilePictureUrl,
       }),
     });
 
