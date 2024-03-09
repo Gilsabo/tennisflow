@@ -40,7 +40,7 @@ export async function DELETE(
   if (!result.success) {
     return NextResponse.json(
       {
-        error: 'userName does not exist or is incorrect',
+        error: 'User name does not exist or is incorrect',
       },
       { status: 400 },
     );

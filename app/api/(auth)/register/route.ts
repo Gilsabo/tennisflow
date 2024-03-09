@@ -42,7 +42,7 @@ export async function POST(
 
   if (user) {
     return NextResponse.json(
-      { errors: [{ message: 'Username is already taken' }] },
+      { errors: [{ message: 'User name is already taken' }] },
       { status: 403 },
     );
   }
