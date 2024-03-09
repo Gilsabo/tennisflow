@@ -72,18 +72,6 @@ export async function POST(
     );
   }
 
-  // 6. Send the new cookie in the headers
-
-  // cookies().set({
-  //   name: 'sessionToken',
-  //   value: session.token,
-  //   httpOnly: true,
-  //   path: '/',
-  //   secure: process.env.NODE_ENV === 'production',
-  //   maxAge: 60 * 60 * 48, // Expires in 24 hours,
-  //   sameSite: 'lax', // this prevents CSRF attacks
-  // });
-
   cookies().set({
     name: 'sessionToken',
     value: session.token,
