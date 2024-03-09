@@ -32,7 +32,6 @@ export async function POST(
   const body = await request.json();
 
   const parsedBody = uploadVideoSchema.safeParse(body);
-  // const fileStr = body.data;
 
   if (!parsedBody.success) {
     return NextResponse.json(
