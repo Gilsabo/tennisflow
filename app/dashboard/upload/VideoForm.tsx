@@ -17,11 +17,11 @@ export default function VideoForm({ userProfileId }: Props) {
 
   const router = useRouter();
 
-  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const checkboxId = e.target.id;
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const checkboxId = event.target.id;
 
     // If the checkbox is checked, add its id to the tagsInput state
-    if (e.target.checked) {
+    if (event.target.checked) {
       setTagsInput((prevTags) => [...prevTags, checkboxId]);
     } else {
       // If the checkbox is unchecked, remove its id from the tagsInput state
