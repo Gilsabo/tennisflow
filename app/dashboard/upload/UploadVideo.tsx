@@ -33,7 +33,7 @@ export default function UploadVideo(props: Props) {
       });
       setFileInputState('');
       const data = await response.json();
-      props.setVideoUrlInput(data.formDATA);
+      props.setVideoUrlInput(data.uploadedVideo);
     } catch (err) {
       console.error(err);
     }
