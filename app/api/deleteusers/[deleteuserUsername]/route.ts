@@ -46,8 +46,6 @@ export async function DELETE(
     );
   }
 
-  console.log('result.data.profilePictureUrl', result.data.profilePictureUrl);
-
   cloudinary.api
     .delete_resources([`${result.data.profilePictureUrl}`], {
       type: 'upload',
