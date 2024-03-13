@@ -46,12 +46,25 @@ export async function DELETE(
     );
   }
 
-  cloudinary.api
-    .delete_resources([`${result.data.profilePictureUrl}`], {
-      type: 'upload',
-      resource_type: 'image',
-    })
-    .then(console.log);
+  // const deletedVideo = await cloudinary.api
+  //   .delete_resources([`${result.data.profilePictureUrl}`], {
+  //     type: 'upload',
+  //     resource_type: 'image',
+  //   })
+  //   .then(deletedVideo);
+
+  try {
+    const deletedVideo = await cloudinary.api.delete_resources(
+      [`${result.data.profilePictureUrl}`],
+      {
+        type: 'upload',
+        resource_type: 'image',
+      },
+    );
+    console.log(deletedVideo); // Handle the result here if needed
+  } catch (error) {
+    console.error('Error deleting resources:', error);
+  }
 
   const deleteUserInformations = await deleteUser(result.data.userName);
 
