@@ -55,7 +55,7 @@ export async function DELETE(
 
   try {
     const deletedVideo = await cloudinary.api.delete_resources(
-      [`${result.data.profilePictureUrl}`],
+      [result.data.profilePictureUrl],
       {
         type: 'upload',
         resource_type: 'image',
