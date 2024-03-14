@@ -61,9 +61,9 @@ export async function DELETE(
         resource_type: 'image',
       },
     );
-    console.log(deletedVideo); // Handle the result here if needed
+    console.log(deletedVideo);
   } catch (error) {
-    console.error('Error deleting resources:', error);
+    console.error('Error deleting profile image:', error);
   }
 
   const deleteUserInformations = await deleteUser(result.data.userName);
