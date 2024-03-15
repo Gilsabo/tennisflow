@@ -47,12 +47,18 @@ export async function DELETE(
     );
   }
 
-  cloudinary.api
-    .delete_resources([`${result.data.videoUrl}`], {
-      type: 'upload',
-      resource_type: 'video',
-    })
-    .then(console.log);
+  try {
+    const deletedVideo = await cloudinary.api.delete_resources(
+      [result.data.videoUrl],
+      {
+        type: 'upload',
+        resource_type: 'video',
+      },
+    );
+    console.log(deletedVideo);
+  } catch (error) {
+    console.log(error);
+  }
 
   const deletedVideo = await deleteVideo(result.data.videoId);
 
