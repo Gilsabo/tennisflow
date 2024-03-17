@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { deleteUser } from '../../../../database/users';
-import { User } from '../../../../migrations/00000-createTableUsers';
+import { UserWithProfilePictureUrl } from '../../../../migrations/00000-createTableUsers';
 
 dotenv.config();
 
@@ -20,7 +20,7 @@ export type Error = {
 
 export type DeleteUserResponseBody =
   | {
-      deletedUser: User;
+      deletedUser: UserWithProfilePictureUrl;
     }
   | Error;
 
