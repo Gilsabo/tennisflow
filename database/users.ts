@@ -11,7 +11,6 @@ export type Id = {
   id: number;
 };
 export const getUsers = cache(async () => {
-  // return users;
   const users = await sql<UserWithPasswordHash[]>`
     SELECT
       *
