@@ -54,14 +54,12 @@ export async function DELETE(
   //   .then(deletedVideo);
 
   try {
-    const deletedVideo = await cloudinary.api.delete_resources(
-      [result.data.profilePictureUrl],
-      {
+    const deletedCloudinaryProfilePicutre =
+      await cloudinary.api.delete_resources([result.data.profilePictureUrl], {
         type: 'upload',
         resource_type: 'image',
-      },
-    );
-    console.log(deletedVideo);
+      });
+    console.log(deletedCloudinaryProfilePicutre);
   } catch (error) {
     console.error('Error deleting profile image:', error);
   }
