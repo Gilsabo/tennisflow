@@ -1,9 +1,6 @@
 import 'server-only';
 import { cache } from 'react';
-import {
-  User,
-  UserWithProfilePictureUrl,
-} from '../migrations/00000-createTableUsers';
+import { User } from '../migrations/00000-createTableUsers';
 import { sql } from './connect';
 
 export type UserWithPasswordHash = User & {
@@ -25,7 +22,7 @@ export const getUsers = cache(async () => {
 });
 
 export const deleteUser = cache(async (userName: string) => {
-  const [deletedUser] = await sql<UserWithProfilePictureUrl[]>`
+  const [deletedUser] = await sql<User[]>`
     DELETE FROM users
     WHERE
       user_name = ${userName.toLowerCase()} RETURNING id,
