@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import tennisFlowLogo from '../../../public/images/tennisFlowLogo.svg';
@@ -97,6 +98,12 @@ export default function RegistrationForm() {
             </div>
           ))}
         </form>
+        <div className=" pl-8 mt-4 text-sm font-semibold text-[#00503C]">
+          Already have an account?{' '}
+          <Link href="/login">
+            <span className="text-violet-900">Sign in</span>
+          </Link>
+        </div>
       </div>
     </main>
   );
