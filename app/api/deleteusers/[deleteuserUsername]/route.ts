@@ -46,13 +46,6 @@ export async function DELETE(
     );
   }
 
-  // const deletedVideo = await cloudinary.api
-  //   .delete_resources([`${result.data.profilePictureUrl}`], {
-  //     type: 'upload',
-  //     resource_type: 'image',
-  //   })
-  //   .then(deletedVideo);
-
   try {
     const deletedCloudinaryProfilePicutre =
       await cloudinary.api.delete_resources([result.data.profilePictureUrl], {
