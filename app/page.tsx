@@ -120,9 +120,9 @@ export default async function Home() {
             Discover a Community Where Passion Meets Progress <br /> Perfect for
             Beginners and Pros Alike
           </h3>
-          <div className="flex flex-col mb-4 lg:flex-row text-center ">
+          <div className="flex flex-col mb-4 lg:flex-row text-center">
             <div className="mb-4 shadow-md rounded-lg px-6">
-              <div className="mb-4">
+              <div className="mb-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                 <Image
                   className="rounded-2xl"
                   src={roger}
@@ -139,7 +139,7 @@ export default async function Home() {
               </p>
             </div>
             <div className="mb-4 lg:mx-14 shadow-md rounded-lg px-6">
-              <div className="mb-4">
+              <div className="mb-4  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                 <Image
                   className="rounded-2xl"
                   src={novak}
@@ -156,7 +156,7 @@ export default async function Home() {
               </p>
             </div>
             <div className="lg:mb-4 shadow-md rounded-lg px-6">
-              <div className="mb-4">
+              <div className="mb-4  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
                 <Image
                   className="rounded-2xl"
                   src={martina}
