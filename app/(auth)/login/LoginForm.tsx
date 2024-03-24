@@ -42,9 +42,9 @@ export default function LoginFrom(props: Props) {
   return (
     <main className="m-auto bg-slate-200 pt-40 h-screen">
       <div className="mx-8 sm:mx-16 md:mx-32 lg:mx-80 xl:mx-64 xl:px-60 min-w-min">
-        <div className="flex text-lg font-semibold text-[#00503C] mb-4">
+        <div className="flex text-lg font-semibold text-[#00503C] mb-4 ">
           <Image
-            className="mr-3 w-8 h-8 ml-7 bg-[#00503C] text-[#00503C] rounded-full "
+            className="mr-3 w-8 h-8 ml-7 bg-[#00503C] text-[#00503C] rounded-full motion-safe:animate-spin"
             src={tennisFlowLogo}
             alt="tennisflow logo"
           />
