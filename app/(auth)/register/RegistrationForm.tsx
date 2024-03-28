@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import goBackArrow from '../../../public/images/goBackArrow.png';
 import tennisFlowLogo from '../../../public/images/tennisFlowLogo.svg';
 import { RegisterResponseBodyPost } from '../../api/(auth)/register/route';
 
@@ -98,12 +99,19 @@ export default function RegistrationForm() {
             </div>
           ))}
         </form>
-        <div className=" pl-8 mt-4 text-sm font-semibold text-[#00503C]">
+        <div className="pl-8 mt-4 text-sm font-semibold text-[#00503C]">
           Already have an account?{' '}
           <Link href="/login">
             <span className="text-violet-900">Sign in</span>
           </Link>
         </div>
+        <Link href="/">
+          <Image
+            className="mr-3 w-8 h-8 ml-7"
+            src={goBackArrow}
+            alt="o back arrow"
+          />
+        </Link>
       </div>
     </main>
   );
