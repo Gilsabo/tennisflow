@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import goBackArrow from '../../../public/images/goBackArrow.png';
 import tennisFlowLogo from '../../../public/images/tennisFlowLogo.svg';
 import { getSafeReturnToPath } from '../../../util/validation';
 import { LoginResponseBodyPost } from '../../api/(auth)/login/route';
@@ -110,6 +111,13 @@ export default function LoginFrom(props: Props) {
             <span className="text-violet-900">Sign up</span>
           </Link>
         </div>
+        <Link href="/">
+          <Image
+            className="mr-3 w-8 h-8 ml-7"
+            src={goBackArrow}
+            alt="go back arrow"
+          />
+        </Link>
       </div>
     </main>
   );
