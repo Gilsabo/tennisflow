@@ -104,9 +104,8 @@ export default async function Home() {
               className="rounded-lg rounded-e-full md:hidden xl:block"
               src={tennisCourt}
               alt="tennis court"
-              width={300}
+              width={600}
               height={300}
-              style={{ width: '600px' }}
             />
           </div>
         </div>
