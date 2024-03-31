@@ -297,7 +297,7 @@ export default async function Home() {
             <div className="text-sm mt-1">About Us</div>
             <div className="text-sm mt-1">Careers</div>
             <div className="text-sm mt-1">Our History</div>
-            <div className="text-sm mt-1">Terms and coditions</div>
+            <div className="text-sm mt-1">Terms and conditions</div>
           </div>
           <div className="mb-4">
             Helpful Resources
