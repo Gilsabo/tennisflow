@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import goBackArrow from '../../../public/images/goBackArrow.png';
+import goBackArrow from '../../../public/images/goBackArrow.svg';
 import tennisFlowLogo from '../../../public/images/tennisFlowLogo.svg';
 import { getSafeReturnToPath } from '../../../util/validation';
 import { LoginResponseBodyPost } from '../../api/(auth)/login/route';
@@ -113,7 +113,7 @@ export default function LoginFrom(props: Props) {
         </div>
         <Link href="/">
           <Image
-            className="mr-3 w-8 h-8 ml-7"
+            className="mr-3 w-8 h-8 ml-7 mt-6"
             src={goBackArrow}
             alt="go back arrow"
           />
