@@ -101,7 +101,7 @@ export default async function Home() {
         <div className="xl:w-2/4">
           <div>
             <Image
-              className="rounded-lg rounded-e-full md:hidden xl:block"
+              className="rounded-lg rounded-e-full hidden xl:block"
               src={playerServe}
               alt="tennis court"
               width={500}
