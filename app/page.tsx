@@ -24,8 +24,8 @@ import instagram from '../public/logosSocialMedia/instagram.svg';
 import x from '../public/logosSocialMedia/x.svg';
 import martina from '../public/Martina.jpg';
 import novak from '../public/Novak.jpg';
+import playerServe from '../public/playerServe.png';
 import roger from '../public/Roger.jpg';
-import tennisCourt from '../public/tennisCourt.jpg';
 import LogoutButton from './(auth)/logout/LogoutButton';
 import NavBar from './NavBar';
 
@@ -98,13 +98,13 @@ export default async function Home() {
             Get started
           </Link>
         </div>
-        <div className="xl:w-2/4 relative">
-          <div className="absolute">
+        <div className="xl:w-2/4">
+          <div>
             <Image
               className="rounded-lg rounded-e-full md:hidden xl:block"
-              src={tennisCourt}
+              src={playerServe}
               alt="tennis court"
-              width={600}
+              width={500}
               height={300}
             />
           </div>
