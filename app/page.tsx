@@ -103,7 +103,7 @@ export default async function Home() {
             <Image
               className="rounded-lg rounded-e-full hidden xl:block"
               src={playerServe}
-              alt="tennis court"
+              alt="player Serve"
               width={500}
               height={300}
             />
