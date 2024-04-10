@@ -36,7 +36,7 @@ export default async function Myvideos() {
       <div className="mb-8">My videos</div>
       <Link
         href="/dashboard/upload"
-        className=" bg-slate-200 rounded-lg  text-teal-800 border border-solid py-2 px-4"
+        className=" bg-slate-200 rounded-lg  text-teal-800 border border-solid py-2 px-4 animate-bounce"
       >
         Upload your video
       </Link>
