@@ -1,12 +1,12 @@
 # Tennisflow
 
-**Tennisflow** is a web application designed for tennis enthusiasts to share and receive feedback on tennis-related videos. Users can upload their tennis videos, engage with the community through comments, and personalize their profiles with pictures and additional videos. The application seamlessly integrates with the Cloudinary API for efficient media 
+**Tennisflow** is a web application designed for tennis enthusiasts to share and receive feedback on tennis-related videos. Users can upload their tennis videos, engage with the community through comments, and personalize their profiles with profile photos and additional videos. The application seamlessly integrates with the Cloudinary API for efficient media 
 
 Deployed version on fly.io : https://tennisflow.fly.dev
 
 ## Motivation
 
-Tennis is widely recognized as the most popular individual sport in the world and it is played by millions of fans. However, learning, practicing and be able to afford this sport is not so easy. Expensive courts, lack of good trainers and the difficulty to find hitting partners might give you a hard time. Tennisflow aims to solve these issues by establishing a collaborative community ( akin to stackoverflow  ) where users support to one another, offering valuable personalized feedback and facilitating free improvement from any location. The ultimate aim is to bridge existing gaps and surpass financial hurdles, making learning tennis more accessible to all fans
+Tennis is widely recognized as the most popular individual sport in the world and it is played by millions of fans. However, learning, practicing and be able to afford this sport is not so easy. Expensive courts and the difficulty to find hitting partners might give you a hard time. Tennisflow aims to solve these issues by establishing a collaborative community ( akin to stackoverflow  ) where users support to one another, offering valuable personalized feedback and facilitating free improvement from any location. The ultimate aim is to bridge existing gaps and surpass financial hurdles, making learning tennis more accessible to all fans
 
 ## Technologies used
 
