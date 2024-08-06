@@ -49,3 +49,8 @@ $ pnpm
 8. Install dotenv-cli globally with:
 ```bash
 $ pnpm global add dotenv-cli
+
+### Optiona features and future plans
+- Make it fully responsive
+- Make it Premium
+
