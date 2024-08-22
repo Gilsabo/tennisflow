@@ -54,4 +54,5 @@ $ pnpm global add dotenv-cli
 ### Optional features and future plans
 - Make it fully responsive
 - Make it Premium
+- Make business plan
 
