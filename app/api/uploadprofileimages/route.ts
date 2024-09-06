@@ -49,7 +49,7 @@ export async function POST(
   if (!uploadedResponse.public_id) {
     return NextResponse.json(
       {
-        error: 'Error uploading the image',
+        error: 'Error uploading the image .',
       },
       { status: 500 },
     );
