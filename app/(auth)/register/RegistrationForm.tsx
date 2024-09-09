@@ -95,7 +95,7 @@ export default function RegistrationForm() {
               className="p-4 rounded-xl w-80 m-auto text-center border-rose-600 text-rose-600 bg-slate-200"
               key={`error-${error.message}`}
             >
-              Error: {error.message}
+              {error.message}
             </div>
           ))}
         </form>
