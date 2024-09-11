@@ -9,8 +9,12 @@ import { User } from '../../../../migrations/00000-createTableUsers';
 import { secureCookieOptions } from '../../../../util/cookies';
 
 const registerSchema = z.object({
-  userName: z.string().min(3),
-  password: z.string().min(8),
+  userName: z
+    .string()
+    .min(3, { message: 'Username must be at least 3 characters long' }),
+  password: z
+    .string()
+    .min(8, { message: 'Password must contain at least 8 characters' }),
 });
 
 export type RegisterResponseBodyPost =
@@ -30,6 +34,7 @@ export async function POST(
   const result = registerSchema.safeParse(body);
 
   if (!result.success) {
+    console.log('Validation errors:', result.error.issues);
     return NextResponse.json(
       { errors: result.error.issues },
       {
