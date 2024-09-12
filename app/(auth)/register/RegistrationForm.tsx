@@ -92,7 +92,7 @@ export default function RegistrationForm() {
           </div>
           {errors.map((error) => (
             <div
-              className="p-4 rounded-xl w-80 m-auto text-center border-rose-600 text-rose-600 bg-slate-200"
+              className="p-4 rounded-xl w-80 m-auto text-center border-rose-600 font-semibold text-rose-600 bg-slate-200"
               key={`error-${error.message}`}
             >
               {error.message}
