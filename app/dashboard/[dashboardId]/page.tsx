@@ -56,9 +56,9 @@ export default async function DashboardVideoId(props: Props) {
   );
 
   return (
-    <div className="flex justify-center">
+    <div className="md:flex md:justify-center md:flex-row flex flex-col items-center">
       <div className="ml-8 mt-8 w-60">
-        <video id="doc-player" controls muted className="rounded-2xl ">
+        <video id="doc-player" controls muted className="rounded-2xl">
           <source
             src={`${imageURL}${singleVideo[0]?.videoUrl}`}
             type="video/mp4"
