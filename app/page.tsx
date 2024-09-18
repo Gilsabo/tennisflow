@@ -38,7 +38,7 @@ export default async function Home() {
 
   return (
     <div>
-      <div className="sticky top-0 z-40">
+      <div id="top" className="sticky top-0 z-40">
         <header className="flex px-2 sm:px-36 bg-[#00503C] text-slate-200 pt-12 pb-4 justify-around lg:justify-between content-end">
           <div className="flex mt-auto">
             <Image
@@ -283,13 +283,15 @@ export default async function Home() {
       </section>
       <section>
         <div className="flex flex-col items-center text-center px-2 sm:px-40 pt-28 pb-28 md:text-left md:px-24 lg:px-36 md:flex-row md:items-start md:justify-between bg-slate-200 text-[#00503C]">
-          <div className="flex mb-auto">
-            <Image
-              className="mr-3 w-8 h-8 ml-4 text-[#00503C]"
-              src={tennisLogoGreen}
-              alt="tennisflow logo"
-            />
-            <div className="text-2xl mt-auto pb-4">Tennisflow </div>
+          <div>
+            <Link href="#top" className="flex mb-auto">
+              <Image
+                className="mr-3 w-8 h-8 ml-4 text-[#00503C]"
+                src={tennisLogoGreen}
+                alt="tennisflow logo"
+              />
+              <div className="text-2xl mt-auto pb-4">Tennisflow </div>
+            </Link>
           </div>
           <div className="mb-4">
             Company
