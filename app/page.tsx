@@ -40,14 +40,18 @@ export default async function Home() {
     <div>
       <div id="top" className="sticky top-0 z-40">
         <header className="flex px-2 sm:px-36 bg-[#00503C] text-slate-200 pt-12 pb-4 justify-around lg:justify-between content-end">
-          <div className="flex mt-auto">
-            <Image
-              className="mr-3 w-8 h-8 ml-4 hidden lg:block"
-              src={tennisFlowLogo}
-              alt="tennisflow logo"
-            />
-            <div className="text-2xl mt-auto hidden xl:block ">Tennisflow </div>
-          </div>
+          <Link href="/">
+            <div className="flex mt-auto">
+              <Image
+                className="mr-3 w-8 h-8 ml-4 hidden lg:block"
+                src={tennisFlowLogo}
+                alt="tennisflow logo"
+              />
+              <div className="text-2xl mt-auto hidden xl:block ">
+                Tennisflow{' '}
+              </div>
+            </div>
+          </Link>
           <NavBar />
           <div className="mt-auto">
             {user ? (
