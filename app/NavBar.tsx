@@ -118,7 +118,12 @@ export default function NavBar() {
               </a>
             </li>
             <li className="ml-8 hover:text-[#00503C] hover:bg-slate-200 rounded pl-1">
-              <a href="/#partners">Partners</a>
+              <a
+                href="/#partners"
+                className="relative inline-block text-white before:absolute before:bottom-0 before:left-1/2 before:h-0.5 before:w-0 before:bg-white before:transition-all before:duration-500 before:ease-in-out hover:before:w-full hover:before:left-0"
+              >
+                Partners
+              </a>
             </li>
             <li className="ml-8 hover:text-[#00503C] hover:bg-slate-200 rounded pl-1">
               <a href="/#aboutus">About us</a>
