@@ -26,16 +26,6 @@ export const getUserProfileById = cache(async (id: number) => {
   return userProfile;
 });
 
-// id: number;
-// firstName: string;
-// lastName: string;
-// email: string;
-// age: number;
-// yearsExperience: number;
-// dominantHand: string;
-// description: string;
-// profilePictureUrl: string | null;
-
 export const createUserProfile = cache(
   async (
     firstName: string,
