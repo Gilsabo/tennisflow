@@ -14,7 +14,6 @@ export const getUserProfiles = cache(async () => {
 });
 
 export const getUserProfileById = cache(async (id: number) => {
-  // Postgres always returns an array
   const [userProfile] = await sql<UserProfile[]>`
     SELECT
       *
