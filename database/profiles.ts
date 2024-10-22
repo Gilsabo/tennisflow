@@ -3,7 +3,6 @@ import { UserProfile } from '../migrations/00002-createTableUserProfiles';
 import { sql } from './connect';
 
 export const getUserProfiles = cache(async () => {
-  // return userProfiles;
   const userProfiles: UserProfile[] = await sql<UserProfile[]>`
     SELECT
       *
