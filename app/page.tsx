@@ -48,10 +48,11 @@ export default async function Home() {
                 alt="tennisflow logo"
               />
               <div className="text-2xl mt-auto hidden xl:block ">
-                Tennisflow{' '}
+                Tennisflow
               </div>
             </div>
           </Link>
+          s
           <NavBar />
           <div className="mt-auto">
             {user ? (
