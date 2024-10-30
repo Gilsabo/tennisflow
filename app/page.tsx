@@ -189,7 +189,7 @@ export default async function Home() {
                   alt="smartphone logo"
                   className="w-20 h-20 m-auto xl:m-0"
                 />
-                <span className="text-2xl">1. </span>Record your desired video
+                <span className="text-base">1. </span>Record your desired video
                 in upright format
               </div>
               <div className="mb-8 text-center xl:text-left">
