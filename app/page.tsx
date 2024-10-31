@@ -52,7 +52,6 @@ export default async function Home() {
               </div>
             </div>
           </Link>
-          s
           <NavBar />
           <div className="mt-auto">
             {user ? (
