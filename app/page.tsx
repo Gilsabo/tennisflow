@@ -197,7 +197,7 @@ export default async function Home() {
                   alt="upload logo"
                   className="w-20 h-20 m-auto xl:m-0"
                 />
-                <span className="text-2xl ">3. </span>Upload the video with the
+                <span className="text-base">3. </span>Upload the video with the
                 correspondings tags
               </div>
             </div>
