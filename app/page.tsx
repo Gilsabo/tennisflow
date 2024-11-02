@@ -208,7 +208,7 @@ export default async function Home() {
                   alt="register logo"
                   className="w-20 h-20 m-auto xl:m-0"
                 />
-                <span className="text-2xl">2. </span>Register into the platform
+                <span className="text-base">2. </span>Register into the platform
                 and complete the profile
               </div>
               <div className="mb-8 text-center xl:text-left">
