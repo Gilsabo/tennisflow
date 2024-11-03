@@ -217,7 +217,7 @@ export default async function Home() {
                   alt="community logo"
                   className="w-20 h-20 m-auto xl:m-0"
                 />
-                <span className="text-2xl">4. </span>Engage with the community
+                <span className="text-base">4. </span>Engage with the community
                 commenting others' content
               </div>
             </div>
