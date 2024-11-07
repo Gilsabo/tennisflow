@@ -29,7 +29,7 @@ export default function NavBar() {
               Dashboard
             </Link>
           </li>
-          <li className="ml-8 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-110 duration-75">
+          <li className="ml-8">
             <a
               href="#community"
               className="relative inline-block text-white before:absolute before:bottom-0 before:left-1/2 before:h-0.5 before:w-0 before:bg-white before:transition-all before:duration-500 before:ease-in-out hover:before:w-full hover:before:left-0"
