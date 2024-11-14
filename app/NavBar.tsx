@@ -12,7 +12,7 @@ export default function NavBar() {
   return (
     <>
       <nav className="pt-4 mt-auto hidden lg:block">
-        <ul className="flex ">
+        <ul className="flex">
           <li className="ml-8">
             <Link
               href="/#home"
