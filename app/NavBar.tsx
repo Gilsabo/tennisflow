@@ -55,7 +55,7 @@ export default function NavBar() {
           </li>
         </ul>
       </nav>
-      <div className=" lg:hidden order-first">
+      <div className="lg:hidden order-first">
         <button onClick={toggleNavBar}>
           {isClick ? (
             <svg
