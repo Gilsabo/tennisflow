@@ -63,7 +63,7 @@ export default function RegistrationForm() {
                   name="user-name"
                   id="user-name"
                   autoComplete="given-name"
-                  className="block w-full rounded-md border-0 py-1.5 text-[#00503C] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-300  sm:text-sm"
+                  className="block w-full rounded-md border-0 py-1.5 text-[#00503C] font-medium shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-gray-300  sm:text-sm"
                 />
               </div>
             </div>
