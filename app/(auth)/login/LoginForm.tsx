@@ -69,7 +69,7 @@ export default function LoginFrom(props: Props) {
                   name="user-name"
                   id="user-name"
                   autoComplete="given-name"
-                  className="block w-full rounded-md border-0 font-medium py-1.5 text-[#00503C] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-300  sm:text-sm"
+                  className="block w-full hover:text-slate-200 rounded-md border-0 font-medium py-1.5 text-[#00503C] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-300  sm:text-sm"
                 />
               </div>
             </div>
