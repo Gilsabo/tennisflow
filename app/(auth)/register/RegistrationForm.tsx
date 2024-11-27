@@ -52,7 +52,7 @@ export default function RegistrationForm() {
           <div>
             <div>
               <label
-                htmlFor="first-name"
+                htmlFor="user-name"
                 className="block text-sm font-medium text-[#00503C]"
               >
                 User name
