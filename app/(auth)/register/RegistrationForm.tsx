@@ -70,7 +70,7 @@ export default function RegistrationForm() {
           </div>
           <div>
             <label
-              htmlFor="first-name"
+              htmlFor="user-name"
               className="block mt-4 text-sm font-medium text-[#00503C]"
             >
               Password
