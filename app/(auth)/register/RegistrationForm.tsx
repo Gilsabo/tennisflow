@@ -100,7 +100,7 @@ export default function RegistrationForm() {
           ))}
         </form>
         <div className="pl-8 mt-4 text-sm font-semibold text-[#00503C]">
-          Already have an account?{' '}
+          Already have an account?
           <Link href="/login">
             <span className="text-violet-900">Sign in</span>
           </Link>
