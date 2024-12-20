@@ -106,9 +106,9 @@ export default function LoginFrom(props: Props) {
           ))}
         </form>
         <div className=" pl-8 mt-4 text-sm font-semibold text-[#00503C]">
-          Not registered yet?{' '}
+          Not registered yet?
           <Link href="/register">
-            <span className="text-violet-900">Sign up</span>
+            <span className="text-violet-900 ml-2">Sign up</span>
           </Link>
         </div>
         <Link href="/">
