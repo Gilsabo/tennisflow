@@ -109,7 +109,7 @@ export default function RegistrationForm() {
           <Image
             className="mr-3 w-8 h-8 ml-7 mt-6"
             src={goBackArrow}
-            alt="go back arrow"
+            alt="go back button"
           />
         </Link>
       </div>
